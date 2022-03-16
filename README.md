@@ -1,2 +1,1 @@
-# matflow.io
-Website source for the MatFlow package
+Built content for the [MatFlow](https://github.com/hpcflow/matflow-new) website: https://matflow.io
