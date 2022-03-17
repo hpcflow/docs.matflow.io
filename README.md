@@ -1,1 +1,1 @@
-Built content for the [MatFlow](https://github.com/hpcflow/matflow-new) website: https://matflow.io
+[MatFlow](https://github.com/hpcflow/matflow-new) documentation website, served at: [docs.matflow.io](https://docs.matflow.io).
