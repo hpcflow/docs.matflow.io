@@ -1,9 +1,0 @@
-table.binary-downloads-table td {
-    border: 1px solid silver;
-}
-table.binary-downloads-table td {
-    padding: 0.3rem 0.6rem;
-}
-table.binary-downloads-table td:first-child {
-    text-align: center;
-}
