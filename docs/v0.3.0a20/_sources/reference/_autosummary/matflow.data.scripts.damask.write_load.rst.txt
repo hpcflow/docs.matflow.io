@@ -1,0 +1,37 @@
+matflow.data.scripts.damask.write\_load
+=======================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow.data.scripts.damask.write_load
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      format_1D_masked_array
+      format_2D_masked_array
+      masked_array_from_list
+      write_load
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

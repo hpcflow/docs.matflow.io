@@ -1,0 +1,6 @@
+matflow.data.scripts.damask.write\_load.format\_2D\_masked\_array
+=================================================================
+
+.. currentmodule:: matflow.data.scripts.damask.write_load
+
+.. autofunction:: format_2D_masked_array

@@ -1,0 +1,74 @@
+matflow.Jobscript
+=================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Jobscript
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Jobscript.compose_jobscript
+      ~Jobscript.from_json_like
+      ~Jobscript.get_EAR_ID_array
+      ~Jobscript.get_EAR_run_idx_array
+      ~Jobscript.get_commands_file_name
+      ~Jobscript.get_task_element_idx_array
+      ~Jobscript.get_task_insert_IDs_array
+      ~Jobscript.get_task_loop_idx_array
+      ~Jobscript.make_artifact_dirs
+      ~Jobscript.submit
+      ~Jobscript.to_dict
+      ~Jobscript.to_json_like
+      ~Jobscript.write_element_run_dir_file
+      ~Jobscript.write_jobscript
+      ~Jobscript.write_need_EARs_file
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Jobscript.EAR_idx
+      ~Jobscript.EARs
+      ~Jobscript.app
+      ~Jobscript.dependencies
+      ~Jobscript.element_run_dir_file_name
+      ~Jobscript.element_run_dir_file_path
+      ~Jobscript.index
+      ~Jobscript.is_array
+      ~Jobscript.jobscript_name
+      ~Jobscript.jobscript_path
+      ~Jobscript.need_EAR_file_name
+      ~Jobscript.need_EAR_file_path
+      ~Jobscript.num_actions
+      ~Jobscript.num_elements
+      ~Jobscript.os_name
+      ~Jobscript.resources
+      ~Jobscript.scheduler
+      ~Jobscript.scheduler_job_ID
+      ~Jobscript.scheduler_name
+      ~Jobscript.scheduler_version_info
+      ~Jobscript.shell
+      ~Jobscript.shell_name
+      ~Jobscript.submission
+      ~Jobscript.submit_time
+      ~Jobscript.task_actions
+      ~Jobscript.task_elements
+      ~Jobscript.task_insert_IDs
+      ~Jobscript.task_loop_idx
+      ~Jobscript.workflow
+      ~Jobscript.workflow_app_alias
+   
+   

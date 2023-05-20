@@ -1,0 +1,87 @@
+matflow.Workflow
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Workflow
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Workflow.add_loop
+      ~Workflow.add_submission
+      ~Workflow.add_task
+      ~Workflow.add_task_after
+      ~Workflow.add_task_before
+      ~Workflow.batch_update
+      ~Workflow.check_parameters_exist
+      ~Workflow.copy
+      ~Workflow.delete
+      ~Workflow.elements
+      ~Workflow.from_JSON_file
+      ~Workflow.from_JSON_string
+      ~Workflow.from_YAML_file
+      ~Workflow.from_YAML_string
+      ~Workflow.from_file
+      ~Workflow.from_template
+      ~Workflow.from_template_data
+      ~Workflow.get_EARs_from_IDs
+      ~Workflow.get_all_parameter_data
+      ~Workflow.get_element_iterations_from_IDs
+      ~Workflow.get_elements_from_IDs
+      ~Workflow.get_iteration_task_pathway
+      ~Workflow.get_parameter_data
+      ~Workflow.get_parameter_source
+      ~Workflow.get_task_elements
+      ~Workflow.get_task_elements_islice
+      ~Workflow.get_task_unique_names
+      ~Workflow.is_parameter_set
+      ~Workflow.rename
+      ~Workflow.resolve_jobscripts
+      ~Workflow.save_parameter
+      ~Workflow.save_parameters
+      ~Workflow.set_EAR_end
+      ~Workflow.set_EAR_start
+      ~Workflow.set_EAR_submission_indices
+      ~Workflow.show_all_EAR_statuses
+      ~Workflow.submit
+      ~Workflow.write_commands
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Workflow.app
+      ~Workflow.artifacts_path
+      ~Workflow.creation_info
+      ~Workflow.loops
+      ~Workflow.name
+      ~Workflow.num_added_tasks
+      ~Workflow.num_element_iterations
+      ~Workflow.num_elements
+      ~Workflow.num_loops
+      ~Workflow.num_submissions
+      ~Workflow.num_tasks
+      ~Workflow.store_format
+      ~Workflow.submissions
+      ~Workflow.submissions_path
+      ~Workflow.task_artifacts_path
+      ~Workflow.tasks
+      ~Workflow.template
+      ~Workflow.template_components
+      ~Workflow.ts_fmt
+      ~Workflow.ts_name_fmt
+   
+   

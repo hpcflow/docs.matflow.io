@@ -1,0 +1,6 @@
+matflow.data.scripts.damask.write\_load.masked\_array\_from\_list
+=================================================================
+
+.. currentmodule:: matflow.data.scripts.damask.write_load
+
+.. autofunction:: masked_array_from_list

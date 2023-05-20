@@ -1,0 +1,61 @@
+matflow.WorkflowTask
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: WorkflowTask
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowTask.add_elements
+      ~WorkflowTask.ensure_input_sources
+      ~WorkflowTask.generate_new_elements
+      ~WorkflowTask.get
+      ~WorkflowTask.get_all_element_iterations
+      ~WorkflowTask.get_dependent_elements
+      ~WorkflowTask.get_dependent_tasks
+      ~WorkflowTask.get_dir_name
+      ~WorkflowTask.get_element_dependencies
+      ~WorkflowTask.get_task_dependencies
+      ~WorkflowTask.initialise_EARs
+      ~WorkflowTask.new_empty_task
+      ~WorkflowTask.resolve_element_data_indices
+      ~WorkflowTask.test_action_rule
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowTask.app
+      ~WorkflowTask.dir_name
+      ~WorkflowTask.downstream_tasks
+      ~WorkflowTask.elements
+      ~WorkflowTask.index
+      ~WorkflowTask.inputs
+      ~WorkflowTask.insert_ID
+      ~WorkflowTask.name
+      ~WorkflowTask.num_EARs
+      ~WorkflowTask.num_actions
+      ~WorkflowTask.num_element_iterations
+      ~WorkflowTask.num_element_sets
+      ~WorkflowTask.num_elements
+      ~WorkflowTask.outputs
+      ~WorkflowTask.template
+      ~WorkflowTask.unique_name
+      ~WorkflowTask.upstream_tasks
+      ~WorkflowTask.workflow
+   
+   

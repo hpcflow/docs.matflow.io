@@ -1,0 +1,35 @@
+matflow.tests.test\_cli
+=======================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow.tests.test_cli
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      test_hpcflow_version
+      test_version
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

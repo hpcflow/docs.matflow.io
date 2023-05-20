@@ -1,0 +1,49 @@
+matflow.Submission
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Submission
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Submission.from_json_like
+      ~Submission.get_EAR_run_dirs
+      ~Submission.get_unique_schedulers
+      ~Submission.get_unique_shells
+      ~Submission.prepare_EAR_submission_idx_update
+      ~Submission.submit
+      ~Submission.to_dict
+      ~Submission.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Submission.JS_parallelism
+      ~Submission.app
+      ~Submission.index
+      ~Submission.jobscript_indices
+      ~Submission.jobscripts
+      ~Submission.needs_submit
+      ~Submission.outstanding_jobscripts
+      ~Submission.path
+      ~Submission.status
+      ~Submission.submission_attempts
+      ~Submission.submitted_jobscripts
+      ~Submission.workflow
+   
+   

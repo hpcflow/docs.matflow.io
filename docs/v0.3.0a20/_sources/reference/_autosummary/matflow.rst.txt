@@ -1,0 +1,140 @@
+﻿matflow
+=======
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow
+
+   
+   
+   .. rubric:: Module attributes
+
+   .. autosummary::
+      :toctree:
+   
+      app
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      get_OS_info
+      get_shell_info
+      make_and_submit_workflow
+      make_workflow
+      run_hpcflow_tests
+      run_tests
+      submit_workflow
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      Action
+      ActionEnvironment
+      ActionRule
+      ActionScope
+      ActionScopeType
+      Command
+      CommandFilesList
+      Element
+      ElementAction
+      ElementActionRun
+      ElementFilter
+      ElementGroup
+      ElementInputFiles
+      ElementInputs
+      ElementIteration
+      ElementOutputFiles
+      ElementOutputs
+      ElementParameter
+      ElementPropagation
+      ElementRepeats
+      ElementResources
+      ElementSet
+      Elements
+      Environment
+      EnvironmentsList
+      Executable
+      ExecutableInstance
+      ExecutablesList
+      FileNameExt
+      FileNameSpec
+      FileNameStem
+      FileSpec
+      GroupList
+      InputFile
+      InputFileGenerator
+      InputFileGeneratorSource
+      InputSource
+      InputSourceType
+      InputValue
+      Jobscript
+      Loop
+      NumCores
+      OutputFileParser
+      OutputFileParserSource
+      Parameter
+      ParameterPath
+      ParameterPropagationMode
+      ParameterValue
+      Parameters
+      ParametersList
+      ResourceList
+      ResourceSpec
+      SchemaInput
+      SchemaOutput
+      SchemaParameter
+      SubParameter
+      Submission
+      Task
+      TaskInputParameters
+      TaskList
+      TaskObjective
+      TaskOutputParameters
+      TaskSchema
+      TaskSchemasList
+      TaskSourceType
+      TaskTemplateList
+      ValuePerturbation
+      ValueSequence
+      Workflow
+      WorkflowBlueprint
+      WorkflowLoop
+      WorkflowLoopList
+      WorkflowTask
+      WorkflowTaskList
+      WorkflowTemplate
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   matflow.cli
+   matflow.data
+   matflow.param_classes
+   matflow.tests
+
