@@ -1,0 +1,52 @@
+matflow.ElementSet
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementSet
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementSet.ensure_element_sets
+      ~ElementSet.from_json_like
+      ~ElementSet.get_defined_parameter_types
+      ~ElementSet.get_defined_sub_parameter_types
+      ~ElementSet.get_locally_defined_inputs
+      ~ElementSet.get_sequence_by_path
+      ~ElementSet.get_sequence_from_path
+      ~ElementSet.get_task_dependencies
+      ~ElementSet.is_input_type_provided
+      ~ElementSet.prepare_persistent_copy
+      ~ElementSet.to_dict
+      ~ElementSet.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementSet.app
+      ~ElementSet.defined_input_types
+      ~ElementSet.elem_iter_global_indices
+      ~ElementSet.element_iterations
+      ~ElementSet.element_local_idx_range
+      ~ElementSet.elements
+      ~ElementSet.index
+      ~ElementSet.input_types
+      ~ElementSet.task
+      ~ElementSet.task_template
+      ~ElementSet.undefined_input_types
+   
+   
