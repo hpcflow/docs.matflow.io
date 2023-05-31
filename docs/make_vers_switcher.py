@@ -2,10 +2,18 @@ import json
 from pathlib import Path
 import re
 
+def pad_version(version,pad_length=3):
+    p=""
+    for n in re.findall(r'\d+', version):
+        p=p+str(n.zfill(pad_length))
+    if 'a' not in version:
+        p=p+'999'   # stable versions before pre-releases (with `reverse=True`)
+    return p
+
 docs_dir = Path(__file__).parent.resolve()
 all_vers = sorted(
     (i.name for i in docs_dir.glob('*') if i.is_dir() and not i.is_symlink()),
-    key=lambda i: i + 'z', # stable versions before pre-releases (with `reverse=True`)
+    key=lambda i: pad_version(i),
     reverse=True,
 )
 
@@ -24,7 +32,7 @@ for idx, vers in enumerate(all_vers):
         name = f"dev ({vers})"
     else:
         name = vers
-    vers_switcher.append({"name": name, "version": vers.lstrip('v')})
+    vers_switcher.append({"name": name, "version": vers.lstrip('v'), "url": "/docs/"+vers+"/"})
 
 with docs_dir.joinpath('switcher.json').open('w') as fh:
     json.dump(vers_switcher, fh, indent=4)
