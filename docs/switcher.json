@@ -1,66 +1,82 @@
 [
     {
-        "name": "dev (v0.3.0a7)",
-        "version": "0.3.0a7"
-    },
-    {
-        "name": "v0.3.0a6",
-        "version": "0.3.0a6"
-    },
-    {
-        "name": "v0.3.0a5",
-        "version": "0.3.0a5"
-    },
-    {
-        "name": "v0.3.0a4",
-        "version": "0.3.0a4"
-    },
-    {
-        "name": "v0.3.0a2",
-        "version": "0.3.0a2"
-    },
-    {
-        "name": "v0.3.0a21",
-        "version": "0.3.0a21"
+        "name": "dev (v0.3.0a21)",
+        "version": "0.3.0a21",
+        "url": "/docs/v0.3.0a21/"
     },
     {
         "name": "v0.3.0a20",
-        "version": "0.3.0a20"
-    },
-    {
-        "name": "v0.3.0a1",
-        "version": "0.3.0a1"
+        "version": "0.3.0a20",
+        "url": "/docs/v0.3.0a20/"
     },
     {
         "name": "v0.3.0a19",
-        "version": "0.3.0a19"
+        "version": "0.3.0a19",
+        "url": "/docs/v0.3.0a19/"
     },
     {
         "name": "v0.3.0a18",
-        "version": "0.3.0a18"
+        "version": "0.3.0a18",
+        "url": "/docs/v0.3.0a18/"
     },
     {
         "name": "v0.3.0a17",
-        "version": "0.3.0a17"
+        "version": "0.3.0a17",
+        "url": "/docs/v0.3.0a17/"
     },
     {
         "name": "v0.3.0a15",
-        "version": "0.3.0a15"
+        "version": "0.3.0a15",
+        "url": "/docs/v0.3.0a15/"
     },
     {
         "name": "v0.3.0a14",
-        "version": "0.3.0a14"
+        "version": "0.3.0a14",
+        "url": "/docs/v0.3.0a14/"
     },
     {
         "name": "v0.3.0a13",
-        "version": "0.3.0a13"
+        "version": "0.3.0a13",
+        "url": "/docs/v0.3.0a13/"
     },
     {
         "name": "v0.3.0a10",
-        "version": "0.3.0a10"
+        "version": "0.3.0a10",
+        "url": "/docs/v0.3.0a10/"
+    },
+    {
+        "name": "v0.3.0a7",
+        "version": "0.3.0a7",
+        "url": "/docs/v0.3.0a7/"
+    },
+    {
+        "name": "v0.3.0a6",
+        "version": "0.3.0a6",
+        "url": "/docs/v0.3.0a6/"
+    },
+    {
+        "name": "v0.3.0a5",
+        "version": "0.3.0a5",
+        "url": "/docs/v0.3.0a5/"
+    },
+    {
+        "name": "v0.3.0a4",
+        "version": "0.3.0a4",
+        "url": "/docs/v0.3.0a4/"
+    },
+    {
+        "name": "v0.3.0a2",
+        "version": "0.3.0a2",
+        "url": "/docs/v0.3.0a2/"
+    },
+    {
+        "name": "v0.3.0a1",
+        "version": "0.3.0a1",
+        "url": "/docs/v0.3.0a1/"
     },
     {
         "name": "v0.3.0a0",
-        "version": "0.3.0a0"
+        "version": "0.3.0a0",
+        "url": "/docs/v0.3.0a0/"
     }
 ]
