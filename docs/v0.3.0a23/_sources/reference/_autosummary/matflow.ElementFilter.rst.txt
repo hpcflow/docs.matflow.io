@@ -1,0 +1,31 @@
+matflow.ElementFilter
+=====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementFilter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementFilter.parameter_path
+      ~ElementFilter.condition
+   
+   
