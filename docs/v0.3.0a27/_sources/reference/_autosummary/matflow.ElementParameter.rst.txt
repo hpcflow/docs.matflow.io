@@ -1,0 +1,39 @@
+matflow.ElementParameter
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementParameter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementParameter.get_size
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementParameter.app
+      ~ElementParameter.data_idx_is_set
+      ~ElementParameter.is_set
+      ~ElementParameter.value
+      ~ElementParameter.task
+      ~ElementParameter.path
+      ~ElementParameter.parent
+      ~ElementParameter.element
+      ~ElementParameter.data_idx
+   
+   
