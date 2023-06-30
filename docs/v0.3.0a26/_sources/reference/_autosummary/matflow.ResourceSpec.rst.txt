@@ -1,0 +1,50 @@
+matflow.ResourceSpec
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ResourceSpec
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ResourceSpec.from_json_like
+      ~ResourceSpec.make_persistent
+      ~ResourceSpec.to_dict
+      ~ResourceSpec.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ResourceSpec.ALLOWED_PARAMETERS
+      ~ResourceSpec.app
+      ~ResourceSpec.element_set
+      ~ResourceSpec.normalised_path
+      ~ResourceSpec.normalised_resources_path
+      ~ResourceSpec.num_cores
+      ~ResourceSpec.os_name
+      ~ResourceSpec.scheduler
+      ~ResourceSpec.scheduler_args
+      ~ResourceSpec.scheduler_options
+      ~ResourceSpec.scratch
+      ~ResourceSpec.shell
+      ~ResourceSpec.shell_args
+      ~ResourceSpec.time_limit
+      ~ResourceSpec.use_job_array
+      ~ResourceSpec.workflow
+      ~ResourceSpec.workflow_template
+   
+   

@@ -1,0 +1,73 @@
+matflow.ElementActionRun
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementActionRun
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementActionRun.compose_commands
+      ~ElementActionRun.compose_source
+      ~ElementActionRun.get
+      ~ElementActionRun.get_EAR_dependencies
+      ~ElementActionRun.get_IFG_input_values
+      ~ElementActionRun.get_OFP_inputs
+      ~ElementActionRun.get_OFP_output_files
+      ~ElementActionRun.get_data_idx
+      ~ElementActionRun.get_dependent_EARs
+      ~ElementActionRun.get_environment
+      ~ElementActionRun.get_input_dependencies
+      ~ElementActionRun.get_input_values
+      ~ElementActionRun.get_parameter_names
+      ~ElementActionRun.get_parameter_sources
+      ~ElementActionRun.get_resources
+      ~ElementActionRun.get_template_resources
+      ~ElementActionRun.write_source
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementActionRun.action
+      ~ElementActionRun.app
+      ~ElementActionRun.data_idx
+      ~ElementActionRun.dir_diff
+      ~ElementActionRun.element
+      ~ElementActionRun.element_action
+      ~ElementActionRun.element_iteration
+      ~ElementActionRun.end_time
+      ~ElementActionRun.exit_code
+      ~ElementActionRun.id_
+      ~ElementActionRun.index
+      ~ElementActionRun.input_files
+      ~ElementActionRun.inputs
+      ~ElementActionRun.is_pending
+      ~ElementActionRun.metadata
+      ~ElementActionRun.output_files
+      ~ElementActionRun.outputs
+      ~ElementActionRun.resources
+      ~ElementActionRun.skip
+      ~ElementActionRun.snapshot_end
+      ~ElementActionRun.snapshot_start
+      ~ElementActionRun.start_time
+      ~ElementActionRun.submission_idx
+      ~ElementActionRun.submission_status
+      ~ElementActionRun.success
+      ~ElementActionRun.task
+      ~ElementActionRun.workflow
+   
+   
