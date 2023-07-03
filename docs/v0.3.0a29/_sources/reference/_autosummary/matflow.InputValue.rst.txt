@@ -1,0 +1,39 @@
+matflow.InputValue
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: InputValue
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~InputValue.from_json_like
+      ~InputValue.make_persistent
+      ~InputValue.to_dict
+      ~InputValue.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InputValue.app
+      ~InputValue.is_sub_value
+      ~InputValue.normalised_inputs_path
+      ~InputValue.normalised_path
+      ~InputValue.value
+      ~InputValue.workflow
+   
+   
