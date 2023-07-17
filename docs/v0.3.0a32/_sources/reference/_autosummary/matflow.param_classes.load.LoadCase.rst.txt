@@ -1,0 +1,27 @@
+matflow.param_classes.load.LoadCase
+===================================
+
+.. currentmodule:: matflow.param_classes.load
+
+.. autoclass:: LoadCase
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~LoadCase.helper_method
+      ~LoadCase.to_dict
+      ~LoadCase.uniaxial
+   
+   
+
+   
+   
+   

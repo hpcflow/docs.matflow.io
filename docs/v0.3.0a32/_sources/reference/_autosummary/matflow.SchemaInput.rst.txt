@@ -1,0 +1,42 @@
+matflow.SchemaInput
+===================
+
+.. currentmodule:: matflow
+
+.. autoclass:: SchemaInput
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SchemaInput.from_json_like
+      ~SchemaInput.to_dict
+      ~SchemaInput.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SchemaInput.app
+      ~SchemaInput.default_value
+      ~SchemaInput.group
+      ~SchemaInput.input_or_output
+      ~SchemaInput.name
+      ~SchemaInput.propagation_mode
+      ~SchemaInput.task_schema
+      ~SchemaInput.typ
+      ~SchemaInput.where
+      ~SchemaInput.parameter
+   
+   

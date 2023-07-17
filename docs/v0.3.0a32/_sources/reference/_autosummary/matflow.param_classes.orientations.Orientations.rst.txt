@@ -1,0 +1,35 @@
+matflow.param_classes.orientations.Orientations
+===============================================
+
+.. currentmodule:: matflow.param_classes.orientations
+
+.. autoclass:: Orientations
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Orientations.from_JSON_like
+      ~Orientations.from_random
+      ~Orientations.quat_sample_random
+      ~Orientations.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Orientations.ori_format
+      ~Orientations.data
+   
+   
