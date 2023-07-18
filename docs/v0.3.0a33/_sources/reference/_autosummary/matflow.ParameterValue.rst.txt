@@ -1,0 +1,25 @@
+matflow.ParameterValue
+======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ParameterValue
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ParameterValue.to_dict
+   
+   
+
+   
+   
+   
