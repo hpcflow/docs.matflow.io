@@ -1,0 +1,25 @@
+matflow.param_classes.orientations.OrientationRepresentation
+============================================================
+
+.. currentmodule:: matflow.param_classes.orientations
+
+.. autoclass:: OrientationRepresentation
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OrientationRepresentation.QUATERNION
+      ~OrientationRepresentation.EULER
+   
+   
