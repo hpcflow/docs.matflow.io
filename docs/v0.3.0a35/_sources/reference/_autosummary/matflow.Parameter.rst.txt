@@ -1,0 +1,36 @@
+matflow.Parameter
+=================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Parameter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Parameter.from_json_like
+      ~Parameter.to_dict
+      ~Parameter.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Parameter.app
+      ~Parameter.is_file
+      ~Parameter.typ
+      ~Parameter.sub_parameters
+   
+   
