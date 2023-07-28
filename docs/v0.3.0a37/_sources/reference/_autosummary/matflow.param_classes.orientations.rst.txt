@@ -1,0 +1,49 @@
+matflow.param_classes.orientations
+==================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow.param_classes.orientations
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      get_enum_by_name_or_val
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      EulerDefinition
+      LatticeDirection
+      OrientationRepresentation
+      OrientationRepresentationType
+      Orientations
+      QuatOrder
+      UnitCellAlignment
+   
+   
+
+   
+   
+   
+
+
+
