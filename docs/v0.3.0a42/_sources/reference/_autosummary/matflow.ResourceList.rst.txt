@@ -1,0 +1,38 @@
+matflow.ResourceList
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ResourceList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ResourceList.add_object
+      ~ResourceList.from_json_like
+      ~ResourceList.get
+      ~ResourceList.get_all
+      ~ResourceList.list_attrs
+      ~ResourceList.to_dict
+      ~ResourceList.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ResourceList.element_set
+      ~ResourceList.workflow_template
+   
+   
