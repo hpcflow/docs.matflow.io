@@ -1,0 +1,44 @@
+matflow.ElementResources
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementResources
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementResources.from_json_like
+      ~ElementResources.get_jobscript_hash
+      ~ElementResources.to_dict
+      ~ElementResources.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementResources.app
+      ~ElementResources.num_cores
+      ~ElementResources.os_name
+      ~ElementResources.scheduler
+      ~ElementResources.scheduler_args
+      ~ElementResources.scheduler_options
+      ~ElementResources.scratch
+      ~ElementResources.shell
+      ~ElementResources.shell_args
+      ~ElementResources.time_limit
+      ~ElementResources.use_job_array
+   
+   
