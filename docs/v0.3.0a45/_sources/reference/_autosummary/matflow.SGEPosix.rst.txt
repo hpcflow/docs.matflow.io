@@ -1,0 +1,53 @@
+matflow.SGEPosix
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: SGEPosix
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SGEPosix.cancel_jobs
+      ~SGEPosix.format_array_request
+      ~SGEPosix.format_core_request_lines
+      ~SGEPosix.format_options
+      ~SGEPosix.format_std_stream_file_option_lines
+      ~SGEPosix.format_switch
+      ~SGEPosix.get_job_state_info
+      ~SGEPosix.get_job_statuses
+      ~SGEPosix.get_submit_command
+      ~SGEPosix.get_version_info
+      ~SGEPosix.is_jobscript_active
+      ~SGEPosix.parse_submission_output
+      ~SGEPosix.wait_for_jobscripts
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SGEPosix.DEFAULT_ARRAY_ITEM_VAR
+      ~SGEPosix.DEFAULT_ARRAY_SWITCH
+      ~SGEPosix.DEFAULT_CWD_SWITCH
+      ~SGEPosix.DEFAULT_DEL_CMD
+      ~SGEPosix.DEFAULT_JS_CMD
+      ~SGEPosix.DEFAULT_SHEBANG_ARGS
+      ~SGEPosix.DEFAULT_SHELL_ARGS
+      ~SGEPosix.DEFAULT_SHOW_CMD
+      ~SGEPosix.DEFAULT_SUBMIT_CMD
+      ~SGEPosix.app
+      ~SGEPosix.state_lookup
+   
+   
