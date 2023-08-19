@@ -1,0 +1,35 @@
+matflow.Parameters
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Parameters
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Parameters.islice
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Parameters.default
+      ~Parameters.raise_on_missing
+      ~Parameters.task
+      ~Parameters.path
+      ~Parameters.return_element_parameters
+   
+   
