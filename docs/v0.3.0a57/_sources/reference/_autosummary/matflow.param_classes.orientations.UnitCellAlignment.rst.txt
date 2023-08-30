@@ -1,0 +1,35 @@
+matflow.param_classes.orientations.UnitCellAlignment
+====================================================
+
+.. currentmodule:: matflow.param_classes.orientations
+
+.. autoclass:: UnitCellAlignment
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~UnitCellAlignment.from_hex_convention_DAMASK
+      ~UnitCellAlignment.from_hex_convention_MTEX
+      ~UnitCellAlignment.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~UnitCellAlignment.x
+      ~UnitCellAlignment.y
+      ~UnitCellAlignment.z
+   
+   
