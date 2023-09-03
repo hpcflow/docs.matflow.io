@@ -1,0 +1,45 @@
+matflow.ElementAction
+=====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementAction
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementAction.get
+      ~ElementAction.get_data_idx
+      ~ElementAction.get_parameter_names
+      ~ElementAction.get_parameter_sources
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementAction.action
+      ~ElementAction.action_idx
+      ~ElementAction.app
+      ~ElementAction.element
+      ~ElementAction.element_iteration
+      ~ElementAction.input_files
+      ~ElementAction.inputs
+      ~ElementAction.num_runs
+      ~ElementAction.output_files
+      ~ElementAction.outputs
+      ~ElementAction.runs
+      ~ElementAction.task
+   
+   

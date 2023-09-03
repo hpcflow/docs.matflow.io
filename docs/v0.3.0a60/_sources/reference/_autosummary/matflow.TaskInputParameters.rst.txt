@@ -1,0 +1,30 @@
+matflow.TaskInputParameters
+===========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: TaskInputParameters
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskInputParameters.task
+   
+   
