@@ -1,0 +1,39 @@
+matflow.param_classes.seeds.MicrostructureSeeds
+===============================================
+
+.. currentmodule:: matflow.param_classes.seeds
+
+.. autoclass:: MicrostructureSeeds
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MicrostructureSeeds.from_JSON_like
+      ~MicrostructureSeeds.from_file
+      ~MicrostructureSeeds.from_random
+      ~MicrostructureSeeds.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MicrostructureSeeds.num_seeds
+      ~MicrostructureSeeds.orientations
+      ~MicrostructureSeeds.random_seed
+      ~MicrostructureSeeds.position
+      ~MicrostructureSeeds.box_size
+      ~MicrostructureSeeds.phase_label
+   
+   
