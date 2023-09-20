@@ -1,0 +1,66 @@
+matflow.Task
+============
+
+.. currentmodule:: matflow
+
+.. autoclass:: Task
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Task.add_group
+      ~Task.all_schema_actions
+      ~Task.from_json_like
+      ~Task.get_available_task_input_sources
+      ~Task.get_input_statuses
+      ~Task.get_param_provided_element_sets
+      ~Task.get_schema_action
+      ~Task.get_task_unique_names
+      ~Task.is_input_type_required
+      ~Task.prepare_element_resolution
+      ~Task.provides_parameters
+      ~Task.set_sequence_parameters
+      ~Task.to_dict
+      ~Task.to_json_like
+      ~Task.to_persistent
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Task.all_schema_input_normalised_paths
+      ~Task.all_schema_input_types
+      ~Task.all_schema_inputs
+      ~Task.all_schema_output_types
+      ~Task.all_schema_outputs
+      ~Task.all_sourced_normalised_paths
+      ~Task.app
+      ~Task.defined_input_types
+      ~Task.dir_name
+      ~Task.element_sets
+      ~Task.index
+      ~Task.insert_ID
+      ~Task.name
+      ~Task.non_universal_input_types
+      ~Task.num_all_schema_actions
+      ~Task.num_element_sets
+      ~Task.objective
+      ~Task.output_labels
+      ~Task.schemas
+      ~Task.undefined_input_types
+      ~Task.undefined_inputs
+      ~Task.universal_input_types
+   
+   
