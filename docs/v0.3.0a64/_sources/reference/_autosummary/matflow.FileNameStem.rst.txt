@@ -1,0 +1,35 @@
+matflow.FileNameStem
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: FileNameStem
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~FileNameStem.from_json_like
+      ~FileNameStem.to_dict
+      ~FileNameStem.to_json_like
+      ~FileNameStem.value
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FileNameStem.app
+      ~FileNameStem.file_name
+   
+   
