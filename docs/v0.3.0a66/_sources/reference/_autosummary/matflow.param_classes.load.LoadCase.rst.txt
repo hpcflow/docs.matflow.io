@@ -1,0 +1,43 @@
+matflow.param_classes.load.LoadCase
+===================================
+
+.. currentmodule:: matflow.param_classes.load
+
+.. autoclass:: LoadCase
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~LoadCase.biaxial
+      ~LoadCase.example_uniaxial
+      ~LoadCase.multistep
+      ~LoadCase.planar_2D
+      ~LoadCase.plane_strain
+      ~LoadCase.random_2D
+      ~LoadCase.random_3D
+      ~LoadCase.to_dict
+      ~LoadCase.uniaxial
+      ~LoadCase.uniaxial_cyclic
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LoadCase.num_steps
+      ~LoadCase.type
+      ~LoadCase.types
+      ~LoadCase.steps
+   
+   
