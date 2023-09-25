@@ -1,0 +1,31 @@
+matflow.Elements
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Elements
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Elements.islice
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Elements.task
+   
+   
