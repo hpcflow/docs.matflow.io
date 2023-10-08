@@ -1,0 +1,817 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>matflow.CommandFilesList &#8212; MatFlow 0.3.0a73 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/matflow.CommandFilesList';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.matflow.io/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.3.0a73';
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="matflow.DirectPosix" href="matflow.DirectPosix.html" />
+    <link rel="prev" title="matflow.Command" href="matflow.Command.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-50dpi.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-50dpi.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a73  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a73  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">Python API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="matflow.html">matflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matflow.app.html">matflow.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.cancel.html">matflow.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_OS_info.html">matflow.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_known_submissions.html">matflow.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_shell_info.html">matflow.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_demo_workflow.html">matflow.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_workflow.html">matflow.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_demo_workflow.html">matflow.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_workflow.html">matflow.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_hpcflow_tests.html">matflow.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_tests.html">matflow.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show.html">matflow.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show_legend.html">matflow.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.submit_workflow.html">matflow.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Action.html">matflow.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionEnvironment.html">matflow.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionRule.html">matflow.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScope.html">matflow.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScopeType.html">matflow.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Command.html">matflow.Command</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">matflow.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectPosix.html">matflow.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectWindows.html">matflow.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Element.html">matflow.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementAction.html">matflow.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementActionRun.html">matflow.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementFilter.html">matflow.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementGroup.html">matflow.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputFiles.html">matflow.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputs.html">matflow.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementIteration.html">matflow.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputFiles.html">matflow.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputs.html">matflow.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementParameter.html">matflow.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementPropagation.html">matflow.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementRepeats.html">matflow.ElementRepeats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementResources.html">matflow.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementSet.html">matflow.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Elements.html">matflow.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Environment.html">matflow.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.EnvironmentsList.html">matflow.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Executable.html">matflow.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutableInstance.html">matflow.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutablesList.html">matflow.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameExt.html">matflow.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameSpec.html">matflow.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameStem.html">matflow.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileSpec.html">matflow.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.GroupList.html">matflow.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFile.html">matflow.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGenerator.html">matflow.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGeneratorSource.html">matflow.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSource.html">matflow.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSourceType.html">matflow.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputValue.html">matflow.InputValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Jobscript.html">matflow.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Loop.html">matflow.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.NumCores.html">matflow.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParser.html">matflow.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParserSource.html">matflow.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputLabel.html">matflow.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameter.html">matflow.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPath.html">matflow.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPropagationMode.html">matflow.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterValue.html">matflow.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameters.html">matflow.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParametersList.html">matflow.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceList.html">matflow.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceSpec.html">matflow.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Rule.html">matflow.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SGEPosix.html">matflow.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaInput.html">matflow.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaOutput.html">matflow.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaParameter.html">matflow.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SlurmPosix.html">matflow.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SubParameter.html">matflow.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Submission.html">matflow.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Task.html">matflow.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskInputParameters.html">matflow.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskList.html">matflow.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskObjective.html">matflow.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskOutputParameters.html">matflow.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchema.html">matflow.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchemasList.html">matflow.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSourceType.html">matflow.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskTemplateList.html">matflow.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValuePerturbation.html">matflow.ValuePerturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValueSequence.html">matflow.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Workflow.html">matflow.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowBlueprint.html">matflow.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoop.html">matflow.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoopList.html">matflow.WorkflowLoopList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTask.html">matflow.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTaskList.html">matflow.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTemplate.html">matflow.WorkflowTemplate</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.cli.html">matflow.cli</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.param_classes.html">matflow.param_classes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.load.html">matflow.param_classes.load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.orientations.html">matflow.param_classes.orientations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.seeds.html">matflow.param_classes.seeds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.utils.html">matflow.param_classes.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.tests.html">matflow.tests</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.conftest.html">matflow.tests.conftest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_cli.html">matflow.tests.test_cli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="matflow.html" class="nav-link">matflow</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">matflow.CommandFilesList</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="matflow-commandfileslist">
+<h1>matflow.CommandFilesList<a class="headerlink" href="#matflow-commandfileslist" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="matflow.CommandFilesList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matflow.</span></span><span class="sig-name descname"><span class="pre">CommandFilesList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.object_list.CommandFilesList.html#hpcflow.sdk.core.object_list.CommandFilesList" title="(in hpcflow)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommandFilesList</span></code></a></p>
+<p>A list-like container for command files with dot-notation access by label.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.CommandFilesList.add_object" title="matflow.CommandFilesList.add_object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_object</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.CommandFilesList.add_objects" title="matflow.CommandFilesList.add_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_objects</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.CommandFilesList.from_json_like" title="matflow.CommandFilesList.from_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json_like</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param is_hashed<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If True, accept a dict whose keys are hashes of the dict values.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.CommandFilesList.get" title="matflow.CommandFilesList.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a></p></td>
+<td><p>Get a single object from the object list, by specifying the value of the access attribute, and optionally additional keyword-argument attribute values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.CommandFilesList.get_all" title="matflow.CommandFilesList.get_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all</span></code></a></p></td>
+<td><p>Get one or more objects from the object list, by specifying the value of the access attribute, and optionally additional keyword-argument attribute values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.CommandFilesList.list_attrs" title="matflow.CommandFilesList.list_attrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_attrs</span></code></a></p></td>
+<td><p>Get a tuple of the unique access-attribute values of the constituent objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.CommandFilesList.to_dict" title="matflow.CommandFilesList.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.CommandFilesList.to_json_like" title="matflow.CommandFilesList.to_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json_like</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.add_object">
+<span class="sig-name descname"><span class="pre">add_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_duplicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.add_object" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.add_objects">
+<span class="sig-name descname"><span class="pre">add_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_duplicates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.add_objects" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.from_json_like">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_like</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_hashed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.from_json_like" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>is_hashed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – If True, accept a dict whose keys are hashes of the dict values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">access_attribute_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.get" title="Permalink to this definition">#</a></dt>
+<dd><p>Get a single object from the object list, by specifying the value of the access
+attribute, and optionally additional keyword-argument attribute values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.get_all">
+<span class="sig-name descname"><span class="pre">get_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">access_attribute_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.get_all" title="Permalink to this definition">#</a></dt>
+<dd><p>Get one or more objects from the object list, by specifying the value of the
+access attribute, and optionally additional keyword-argument attribute values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.list_attrs">
+<span class="sig-name descname"><span class="pre">list_attrs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.list_attrs" title="Permalink to this definition">#</a></dt>
+<dd><p>Get a tuple of the unique access-attribute values of the constituent objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.to_dict" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.CommandFilesList.to_json_like">
+<span class="sig-name descname"><span class="pre">to_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.CommandFilesList.to_json_like" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="matflow.Command.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">matflow.Command</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="matflow.DirectPosix.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">matflow.DirectPosix</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList"><code class="docutils literal notranslate"><span class="pre">CommandFilesList</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.add_object"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.add_object()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.add_objects"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.add_objects()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.from_json_like"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.from_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.get"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.get_all"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.get_all()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.list_attrs"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.list_attrs()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.to_dict"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.to_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.CommandFilesList.to_json_like"><code class="docutils literal notranslate"><span class="pre">CommandFilesList.to_json_like()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/matflow-new/edit/develop/docs/source/reference/_autosummary/matflow.CommandFilesList.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/_autosummary/matflow.CommandFilesList.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, MatFlow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
