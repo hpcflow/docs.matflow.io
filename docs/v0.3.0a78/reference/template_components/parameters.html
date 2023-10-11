@@ -1,0 +1,922 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Parameters &#8212; MatFlow 0.3.0a78 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/template_components/parameters';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.matflow.io/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.3.0a78';
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Task schemas" href="environments.html" />
+    <link rel="prev" title="Template components" href="../template_components.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-50dpi.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-50dpi.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a78  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a78  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../template_components.html">Template components</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="task_schemas.html">Task schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../template_components.html" class="nav-link">Template components</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Parameters</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="parameters">
+<h1>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h1>
+<section id="ve-size">
+<h2>VE_size<a class="headerlink" href="#ve-size" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-VE_size"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: list, length: 2 or 3</span> <span class="valida-tree list-type-name">(of: float)</span><div class="valida-tree condition">Condition: <code>ConditionAnd(ValueDataType.equal_to(value=&lt;class &#x27;list&#x27;&gt;), ValueLength.in_(value=[2, 3]))</code></div></div><p class="valida-tree doc">Size of the simulation box in each of the x, y(, z) directions.</p><p class="valida-tree doc-example"><span class="valida-tree doc-example-name">Example: </span>For a simulation box that is twice as long (i.e. elongated) in the y-direction as in the x- and z-directions, use: <code>[1.0, 2.0, 1.0]</code>.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#generate-microstructure-seeds"><span class="std std-ref">generate_microstructure_seeds</span></a></p>
+</section>
+<section id="ve-grid-size">
+<h2>VE_grid_size<a class="headerlink" href="#ve-grid-size" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-VE_grid_size"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: list, length: 2 or 3</span> <span class="valida-tree list-type-name">(of: int)</span><div class="valida-tree condition">Condition: <code>ConditionAnd(ValueDataType.equal_to(value=&lt;class &#x27;list&#x27;&gt;), ValueLength.in_(value=[2, 3]))</code></div></div><p class="valida-tree doc">Number of simulation pixels (voxels) in each of the x, y(, z) directions.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#generate-volume-element"><span class="std std-ref">generate_volume_element</span></a></p>
+</section>
+<section id="my-name">
+<h2>my_name<a class="headerlink" href="#my-name" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-my_name"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: str</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;str&#x27;&gt;)</code></div></div><p class="valida-tree doc">Used in the <code>demo_hello_world</code> task schema, which is used for teaching and learning.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#print-hello"><span class="std std-ref">print_hello</span></a></p>
+</section>
+<section id="number-1">
+<h2>number_1<a class="headerlink" href="#number-1" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-number_1"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: int</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;int&#x27;&gt;)</code></div></div><p class="valida-tree doc">Used in the <code>demo_adder</code> task schema, which is used for teaching and learning.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#demo-adder"><span class="std std-ref">demo_adder</span></a></p>
+</section>
+<section id="number-2">
+<h2>number_2<a class="headerlink" href="#number-2" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-number_2"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: int</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;int&#x27;&gt;)</code></div></div><p class="valida-tree doc">Used in the <code>demo_adder</code> task schema, which is used for teaching and learning.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#demo-adder"><span class="std std-ref">demo_adder</span></a></p>
+</section>
+<section id="sum">
+<h2>sum<a class="headerlink" href="#sum" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-sum"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: int</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;int&#x27;&gt;)</code></div></div><p class="valida-tree doc">Used in the <code>demo_adder</code> task schema, which is used for teaching and learning.</p></div></section></div></div>
+<p>Output of: <a class="reference internal" href="task_schemas.html#demo-adder"><span class="std std-ref">demo_adder</span></a></p>
+</section>
+<section id="phase-label">
+<h2>phase_label<a class="headerlink" href="#phase-label" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-phase_label"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: str</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;str&#x27;&gt;)</code></div></div><p class="valida-tree doc">The string phase label to associated with e.g. the microstructure seed points.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#generate-microstructure-seeds"><span class="std std-ref">generate_microstructure_seeds</span></a></p>
+</section>
+<section id="num-grains">
+<h2>num_grains<a class="headerlink" href="#num-grains" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-num_grains"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: int</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;int&#x27;&gt;)</code></div></div><p class="valida-tree doc">The integer number of grains to include.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#generate-microstructure-seeds"><span class="std std-ref">generate_microstructure_seeds</span></a></p>
+</section>
+<section id="microstructure-seeds">
+<h2>microstructure_seeds<a class="headerlink" href="#microstructure-seeds" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#generate-volume-element"><span class="std std-ref">generate_volume_element</span></a></p>
+<p>Output of: <a class="reference internal" href="task_schemas.html#generate-microstructure-seeds"><span class="std std-ref">generate_microstructure_seeds</span></a></p>
+<p>Constructors:</p>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">MicrostructureSeeds</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">MicrostructureSeeds.from_JSON_like</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">MicrostructureSeeds.from_file</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">MicrostructureSeeds.from_random</span></code></p></li>
+</ul>
+</section>
+<section id="volume-element">
+<h2>volume_element<a class="headerlink" href="#volume-element" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-volume_element"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: dict</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;dict&#x27;&gt;)</code></div></div><p class="valida-tree doc">Voxelated volume element</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+<p>Output of: <a class="reference internal" href="task_schemas.html#generate-volume-element"><span class="std std-ref">generate_volume_element</span></a></p>
+</section>
+<section id="ctf-file-path">
+<h2>CTF_file_path<a class="headerlink" href="#ctf-file-path" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a></p>
+</section>
+<section id="odf-mat-file-path">
+<h2>ODF_mat_file_path<a class="headerlink" href="#odf-mat-file-path" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a></p>
+</section>
+<section id="specimen-symmetry">
+<h2>specimen_symmetry<a class="headerlink" href="#specimen-symmetry" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a></p>
+</section>
+<section id="ebsd-phase">
+<h2>EBSD_phase<a class="headerlink" href="#ebsd-phase" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a></p>
+</section>
+<section id="ebsd-reference-frame-transformation">
+<h2>EBSD_reference_frame_transformation<a class="headerlink" href="#ebsd-reference-frame-transformation" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a></p>
+</section>
+<section id="ebsd-rotation">
+<h2>EBSD_rotation<a class="headerlink" href="#ebsd-rotation" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a></p>
+</section>
+<section id="num-orientations">
+<h2>num_orientations<a class="headerlink" href="#num-orientations" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a>, <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a>, <a class="reference internal" href="task_schemas.html#generate-orientations"><span class="std std-ref">generate_orientations</span></a></p>
+</section>
+<section id="orientations">
+<h2>orientations<a class="headerlink" href="#orientations" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#generate-volume-element"><span class="std std-ref">generate_volume_element</span></a></p>
+<p>Output of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a>, <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a>, <a class="reference internal" href="task_schemas.html#generate-orientations"><span class="std std-ref">generate_orientations</span></a></p>
+<p>Constructors:</p>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">Orientations</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">Orientations.from_JSON_like</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">Orientations.from_file</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">Orientations.from_random</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">Orientations.save_from_HDF5_group</span></code></p></li>
+</ul>
+</section>
+<section id="homog-label">
+<h2>homog_label<a class="headerlink" href="#homog-label" title="Permalink to this heading">#</a></h2>
+<div class="valida-tree node top-level-node" data-node-path=""><div class="valida-tree node-child"><section class="valida-tree-section" id="vld-homog_label"><div class="valida-tree node-info"><div class="valida-tree node-metadata"><span class="valida-tree type-name">type: str</span><div class="valida-tree condition">Condition: <code>ValueDataType.equal_to(value=&lt;class &#x27;str&#x27;&gt;)</code></div></div><p class="valida-tree doc">This parameter associates a string label with each grain that determines which homogenization scheme should be used. The homogenization schemes to be employed by the crystal plasticity simulation are then defined according to these labels.</p><p class="valida-tree doc-example"><span class="valida-tree doc-example-name">Example: </span>For a full-field simulation, where there is no mechanical homogenization we typically use the label &#x27;SX&#x27;.</p></div></section></div></div>
+<p>Input of: <a class="reference internal" href="task_schemas.html#generate-volume-element"><span class="std std-ref">generate_volume_element</span></a></p>
+</section>
+<section id="ve-response">
+<h2>VE_response<a class="headerlink" href="#ve-response" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#dump-all-yield-stresses"><span class="std std-ref">dump_all_yield_stresses</span></a>, <a class="reference internal" href="task_schemas.html#fit-yield-function"><span class="std std-ref">fit_yield_function</span></a></p>
+<p>Output of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="ve-response-data">
+<h2>VE_response_data<a class="headerlink" href="#ve-response-data" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="load-case">
+<h2>load_case<a class="headerlink" href="#load-case" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#define-load-case"><span class="std std-ref">define_load_case</span></a>, <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+<p>Constructors:</p>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.biaxial</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.example_uniaxial</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.multistep</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.planar_2D</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.plane_strain</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.random_2D</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.random_3D</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.uniaxial</span></code></p></li>
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">LoadCase.uniaxial_cyclic</span></code></p></li>
+</ul>
+</section>
+<section id="homogenization">
+<h2>homogenization<a class="headerlink" href="#homogenization" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="damask-phases">
+<h2>damask_phases<a class="headerlink" href="#damask-phases" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="damask-log">
+<h2>damask_log<a class="headerlink" href="#damask-log" title="Permalink to this heading">#</a></h2>
+<p>Output of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="damask-post-processing">
+<h2>damask_post_processing<a class="headerlink" href="#damask-post-processing" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="damask-post-processing-result">
+<h2>damask_post_processing_result<a class="headerlink" href="#damask-post-processing-result" title="Permalink to this heading">#</a></h2>
+<p>Output of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="damask-viz">
+<h2>damask_viz<a class="headerlink" href="#damask-viz" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="damask-viz-result">
+<h2>damask_viz_result<a class="headerlink" href="#damask-viz-result" title="Permalink to this heading">#</a></h2>
+<p>Output of: <a class="reference internal" href="task_schemas.html#simulate-ve-loading"><span class="std std-ref">simulate_VE_loading</span></a></p>
+</section>
+<section id="p1">
+<h2>p1<a class="headerlink" href="#p1" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#test-t1-bash"><span class="std std-ref">test_t1_bash</span></a>, <a class="reference internal" href="task_schemas.html#test-t1-ps"><span class="std std-ref">test_t1_ps</span></a>, <a class="reference internal" href="task_schemas.html#define-p1"><span class="std std-ref">define_p1</span></a></p>
+</section>
+<section id="p2">
+<h2>p2<a class="headerlink" href="#p2" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#test-t2-bash"><span class="std std-ref">test_t2_bash</span></a>, <a class="reference internal" href="task_schemas.html#test-t2-ps"><span class="std std-ref">test_t2_ps</span></a></p>
+<p>Output of: <a class="reference internal" href="task_schemas.html#test-t1-bash"><span class="std std-ref">test_t1_bash</span></a>, <a class="reference internal" href="task_schemas.html#test-t1-ps"><span class="std std-ref">test_t1_ps</span></a></p>
+</section>
+<section id="p3">
+<h2>p3<a class="headerlink" href="#p3" title="Permalink to this heading">#</a></h2>
+<p>Output of: <a class="reference internal" href="task_schemas.html#test-t2-bash"><span class="std std-ref">test_t2_bash</span></a>, <a class="reference internal" href="task_schemas.html#test-t2-ps"><span class="std std-ref">test_t2_ps</span></a></p>
+</section>
+<section id="p4">
+<h2>p4<a class="headerlink" href="#p4" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="p5">
+<h2>p5<a class="headerlink" href="#p5" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="number-atoms">
+<h2>number_atoms<a class="headerlink" href="#number-atoms" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="box">
+<h2>box<a class="headerlink" href="#box" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="atoms">
+<h2>atoms<a class="headerlink" href="#atoms" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="empirical-potential">
+<h2>empirical_potential<a class="headerlink" href="#empirical-potential" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="optimised-atoms">
+<h2>optimised_atoms<a class="headerlink" href="#optimised-atoms" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="compile">
+<h2>compile<a class="headerlink" href="#compile" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a>, <a class="reference internal" href="task_schemas.html#id1"><span class="std std-ref">sample_texture</span></a></p>
+</section>
+<section id="dump-path">
+<h2>dump_path<a class="headerlink" href="#dump-path" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#dump-all-yield-stresses"><span class="std std-ref">dump_all_yield_stresses</span></a></p>
+</section>
+<section id="yield-point">
+<h2>yield_point<a class="headerlink" href="#yield-point" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#dump-all-yield-stresses"><span class="std std-ref">dump_all_yield_stresses</span></a></p>
+</section>
+<section id="yield-function-name">
+<h2>yield_function_name<a class="headerlink" href="#yield-function-name" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#fit-yield-function"><span class="std std-ref">fit_yield_function</span></a></p>
+</section>
+<section id="yield-point-criteria">
+<h2>yield_point_criteria<a class="headerlink" href="#yield-point-criteria" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#fit-yield-function"><span class="std std-ref">fit_yield_function</span></a></p>
+</section>
+<section id="fit-yield-fixed-parameters">
+<h2>fit_yield_fixed_parameters<a class="headerlink" href="#fit-yield-fixed-parameters" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#fit-yield-function"><span class="std std-ref">fit_yield_function</span></a></p>
+</section>
+<section id="fit-yield-initial-parameters">
+<h2>fit_yield_initial_parameters<a class="headerlink" href="#fit-yield-initial-parameters" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#fit-yield-function"><span class="std std-ref">fit_yield_function</span></a></p>
+</section>
+<section id="fit-yield-opt-parameters">
+<h2>fit_yield_opt_parameters<a class="headerlink" href="#fit-yield-opt-parameters" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#fit-yield-function"><span class="std std-ref">fit_yield_function</span></a></p>
+</section>
+<section id="fitted-yield-functions">
+<h2>fitted_yield_functions<a class="headerlink" href="#fitted-yield-functions" title="Permalink to this heading">#</a></h2>
+<p>Output of: <a class="reference internal" href="task_schemas.html#fit-yield-function"><span class="std std-ref">fit_yield_function</span></a></p>
+</section>
+<section id="max-sleep-time">
+<h2>max_sleep_time<a class="headerlink" href="#max-sleep-time" title="Permalink to this heading">#</a></h2>
+<p>Input of: <a class="reference internal" href="task_schemas.html#demo-sleep"><span class="std std-ref">demo_sleep</span></a></p>
+</section>
+<section id="sleep-time">
+<h2>sleep_time<a class="headerlink" href="#sleep-time" title="Permalink to this heading">#</a></h2>
+<p>Output of: <a class="reference internal" href="task_schemas.html#demo-sleep"><span class="std std-ref">demo_sleep</span></a></p>
+</section>
+<section id="a">
+<h2>a<a class="headerlink" href="#a" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="b">
+<h2>b<a class="headerlink" href="#b" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="c">
+<h2>c<a class="headerlink" href="#c" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="f-c">
+<h2>f_c<a class="headerlink" href="#f-c" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="mu">
+<h2>mu<a class="headerlink" href="#mu" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="sigma">
+<h2>sigma<a class="headerlink" href="#sigma" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="geom-file-path">
+<h2>geom_file_path<a class="headerlink" href="#geom-file-path" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="geom-data">
+<h2>geom_data<a class="headerlink" href="#geom-data" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="num-increments">
+<h2>num_increments<a class="headerlink" href="#num-increments" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="magnitude">
+<h2>magnitude<a class="headerlink" href="#magnitude" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../template_components.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Template components</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="environments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Task schemas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ve-size">VE_size</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ve-grid-size">VE_grid_size</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#my-name">my_name</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-1">number_1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-2">number_2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sum">sum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-label">phase_label</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#num-grains">num_grains</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microstructure-seeds">microstructure_seeds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-element">volume_element</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctf-file-path">CTF_file_path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odf-mat-file-path">ODF_mat_file_path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specimen-symmetry">specimen_symmetry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ebsd-phase">EBSD_phase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ebsd-reference-frame-transformation">EBSD_reference_frame_transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ebsd-rotation">EBSD_rotation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#num-orientations">num_orientations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientations">orientations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homog-label">homog_label</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ve-response">VE_response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ve-response-data">VE_response_data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-case">load_case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogenization">homogenization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damask-phases">damask_phases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damask-log">damask_log</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damask-post-processing">damask_post_processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damask-post-processing-result">damask_post_processing_result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damask-viz">damask_viz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damask-viz-result">damask_viz_result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p1">p1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p2">p2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p3">p3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p4">p4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#p5">p5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#number-atoms">number_atoms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#box">box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atoms">atoms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-potential">empirical_potential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optimised-atoms">optimised_atoms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compile">compile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dump-path">dump_path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield-point">yield_point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield-function-name">yield_function_name</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield-point-criteria">yield_point_criteria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-yield-fixed-parameters">fit_yield_fixed_parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-yield-initial-parameters">fit_yield_initial_parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-yield-opt-parameters">fit_yield_opt_parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitted-yield-functions">fitted_yield_functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#max-sleep-time">max_sleep_time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sleep-time">sleep_time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a">a</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b">b</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c">c</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-c">f_c</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mu">mu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sigma">sigma</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geom-file-path">geom_file_path</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geom-data">geom_data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#num-increments">num_increments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitude">magnitude</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/matflow-new/edit/develop/docs/source/reference/template_components/parameters.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/template_components/parameters.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, MatFlow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
