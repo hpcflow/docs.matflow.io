@@ -1,362 +1,367 @@
 [
     {
-        "name": "dev (v0.3.0a84)",
+        "name": "dev (v0.3.0a85)",
+        "version": "0.3.0a85",
+        "url": "/v0.3.0a85/"
+    },
+    {
+        "name": "v0.3.0a84",
         "version": "0.3.0a84",
-        "url": "/docs/v0.3.0a84/"
+        "url": "/v0.3.0a84/"
     },
     {
         "name": "v0.3.0a83",
         "version": "0.3.0a83",
-        "url": "/docs/v0.3.0a83/"
+        "url": "/v0.3.0a83/"
     },
     {
         "name": "v0.3.0a81",
         "version": "0.3.0a81",
-        "url": "/docs/v0.3.0a81/"
+        "url": "/v0.3.0a81/"
     },
     {
         "name": "v0.3.0a80",
         "version": "0.3.0a80",
-        "url": "/docs/v0.3.0a80/"
+        "url": "/v0.3.0a80/"
     },
     {
         "name": "v0.3.0a79",
         "version": "0.3.0a79",
-        "url": "/docs/v0.3.0a79/"
+        "url": "/v0.3.0a79/"
     },
     {
         "name": "v0.3.0a78",
         "version": "0.3.0a78",
-        "url": "/docs/v0.3.0a78/"
+        "url": "/v0.3.0a78/"
     },
     {
         "name": "v0.3.0a77",
         "version": "0.3.0a77",
-        "url": "/docs/v0.3.0a77/"
+        "url": "/v0.3.0a77/"
     },
     {
         "name": "v0.3.0a75",
         "version": "0.3.0a75",
-        "url": "/docs/v0.3.0a75/"
+        "url": "/v0.3.0a75/"
     },
     {
         "name": "v0.3.0a74",
         "version": "0.3.0a74",
-        "url": "/docs/v0.3.0a74/"
+        "url": "/v0.3.0a74/"
     },
     {
         "name": "v0.3.0a73",
         "version": "0.3.0a73",
-        "url": "/docs/v0.3.0a73/"
+        "url": "/v0.3.0a73/"
     },
     {
         "name": "v0.3.0a72",
         "version": "0.3.0a72",
-        "url": "/docs/v0.3.0a72/"
+        "url": "/v0.3.0a72/"
     },
     {
         "name": "v0.3.0a71",
         "version": "0.3.0a71",
-        "url": "/docs/v0.3.0a71/"
+        "url": "/v0.3.0a71/"
     },
     {
         "name": "v0.3.0a70",
         "version": "0.3.0a70",
-        "url": "/docs/v0.3.0a70/"
+        "url": "/v0.3.0a70/"
     },
     {
         "name": "v0.3.0a69",
         "version": "0.3.0a69",
-        "url": "/docs/v0.3.0a69/"
+        "url": "/v0.3.0a69/"
     },
     {
         "name": "v0.3.0a67",
         "version": "0.3.0a67",
-        "url": "/docs/v0.3.0a67/"
+        "url": "/v0.3.0a67/"
     },
     {
         "name": "v0.3.0a66",
         "version": "0.3.0a66",
-        "url": "/docs/v0.3.0a66/"
+        "url": "/v0.3.0a66/"
     },
     {
         "name": "v0.3.0a65",
         "version": "0.3.0a65",
-        "url": "/docs/v0.3.0a65/"
+        "url": "/v0.3.0a65/"
     },
     {
         "name": "v0.3.0a64",
         "version": "0.3.0a64",
-        "url": "/docs/v0.3.0a64/"
+        "url": "/v0.3.0a64/"
     },
     {
         "name": "v0.3.0a63",
         "version": "0.3.0a63",
-        "url": "/docs/v0.3.0a63/"
+        "url": "/v0.3.0a63/"
     },
     {
         "name": "v0.3.0a62",
         "version": "0.3.0a62",
-        "url": "/docs/v0.3.0a62/"
+        "url": "/v0.3.0a62/"
     },
     {
         "name": "v0.3.0a61",
         "version": "0.3.0a61",
-        "url": "/docs/v0.3.0a61/"
+        "url": "/v0.3.0a61/"
     },
     {
         "name": "v0.3.0a60",
         "version": "0.3.0a60",
-        "url": "/docs/v0.3.0a60/"
+        "url": "/v0.3.0a60/"
     },
     {
         "name": "v0.3.0a59",
         "version": "0.3.0a59",
-        "url": "/docs/v0.3.0a59/"
+        "url": "/v0.3.0a59/"
     },
     {
         "name": "v0.3.0a58",
         "version": "0.3.0a58",
-        "url": "/docs/v0.3.0a58/"
+        "url": "/v0.3.0a58/"
     },
     {
         "name": "v0.3.0a57",
         "version": "0.3.0a57",
-        "url": "/docs/v0.3.0a57/"
+        "url": "/v0.3.0a57/"
     },
     {
         "name": "v0.3.0a56",
         "version": "0.3.0a56",
-        "url": "/docs/v0.3.0a56/"
+        "url": "/v0.3.0a56/"
     },
     {
         "name": "v0.3.0a55",
         "version": "0.3.0a55",
-        "url": "/docs/v0.3.0a55/"
+        "url": "/v0.3.0a55/"
     },
     {
         "name": "v0.3.0a53",
         "version": "0.3.0a53",
-        "url": "/docs/v0.3.0a53/"
+        "url": "/v0.3.0a53/"
     },
     {
         "name": "v0.3.0a52",
         "version": "0.3.0a52",
-        "url": "/docs/v0.3.0a52/"
+        "url": "/v0.3.0a52/"
     },
     {
         "name": "v0.3.0a51",
         "version": "0.3.0a51",
-        "url": "/docs/v0.3.0a51/"
+        "url": "/v0.3.0a51/"
     },
     {
         "name": "v0.3.0a49",
         "version": "0.3.0a49",
-        "url": "/docs/v0.3.0a49/"
+        "url": "/v0.3.0a49/"
     },
     {
         "name": "v0.3.0a48",
         "version": "0.3.0a48",
-        "url": "/docs/v0.3.0a48/"
+        "url": "/v0.3.0a48/"
     },
     {
         "name": "v0.3.0a47",
         "version": "0.3.0a47",
-        "url": "/docs/v0.3.0a47/"
+        "url": "/v0.3.0a47/"
     },
     {
         "name": "v0.3.0a46",
         "version": "0.3.0a46",
-        "url": "/docs/v0.3.0a46/"
+        "url": "/v0.3.0a46/"
     },
     {
         "name": "v0.3.0a45",
         "version": "0.3.0a45",
-        "url": "/docs/v0.3.0a45/"
+        "url": "/v0.3.0a45/"
     },
     {
         "name": "v0.3.0a44",
         "version": "0.3.0a44",
-        "url": "/docs/v0.3.0a44/"
+        "url": "/v0.3.0a44/"
     },
     {
         "name": "v0.3.0a43",
         "version": "0.3.0a43",
-        "url": "/docs/v0.3.0a43/"
+        "url": "/v0.3.0a43/"
     },
     {
         "name": "v0.3.0a42",
         "version": "0.3.0a42",
-        "url": "/docs/v0.3.0a42/"
+        "url": "/v0.3.0a42/"
     },
     {
         "name": "v0.3.0a41",
         "version": "0.3.0a41",
-        "url": "/docs/v0.3.0a41/"
+        "url": "/v0.3.0a41/"
     },
     {
         "name": "v0.3.0a40",
         "version": "0.3.0a40",
-        "url": "/docs/v0.3.0a40/"
+        "url": "/v0.3.0a40/"
     },
     {
         "name": "v0.3.0a39",
         "version": "0.3.0a39",
-        "url": "/docs/v0.3.0a39/"
+        "url": "/v0.3.0a39/"
     },
     {
         "name": "v0.3.0a37",
         "version": "0.3.0a37",
-        "url": "/docs/v0.3.0a37/"
+        "url": "/v0.3.0a37/"
     },
     {
         "name": "v0.3.0a36",
         "version": "0.3.0a36",
-        "url": "/docs/v0.3.0a36/"
+        "url": "/v0.3.0a36/"
     },
     {
         "name": "v0.3.0a35",
         "version": "0.3.0a35",
-        "url": "/docs/v0.3.0a35/"
+        "url": "/v0.3.0a35/"
     },
     {
         "name": "v0.3.0a34",
         "version": "0.3.0a34",
-        "url": "/docs/v0.3.0a34/"
+        "url": "/v0.3.0a34/"
     },
     {
         "name": "v0.3.0a33",
         "version": "0.3.0a33",
-        "url": "/docs/v0.3.0a33/"
+        "url": "/v0.3.0a33/"
     },
     {
         "name": "v0.3.0a32",
         "version": "0.3.0a32",
-        "url": "/docs/v0.3.0a32/"
+        "url": "/v0.3.0a32/"
     },
     {
         "name": "v0.3.0a31",
         "version": "0.3.0a31",
-        "url": "/docs/v0.3.0a31/"
+        "url": "/v0.3.0a31/"
     },
     {
         "name": "v0.3.0a30",
         "version": "0.3.0a30",
-        "url": "/docs/v0.3.0a30/"
+        "url": "/v0.3.0a30/"
     },
     {
         "name": "v0.3.0a29",
         "version": "0.3.0a29",
-        "url": "/docs/v0.3.0a29/"
+        "url": "/v0.3.0a29/"
     },
     {
         "name": "v0.3.0a28",
         "version": "0.3.0a28",
-        "url": "/docs/v0.3.0a28/"
+        "url": "/v0.3.0a28/"
     },
     {
         "name": "v0.3.0a27",
         "version": "0.3.0a27",
-        "url": "/docs/v0.3.0a27/"
+        "url": "/v0.3.0a27/"
     },
     {
         "name": "v0.3.0a26",
         "version": "0.3.0a26",
-        "url": "/docs/v0.3.0a26/"
+        "url": "/v0.3.0a26/"
     },
     {
         "name": "v0.3.0a25",
         "version": "0.3.0a25",
-        "url": "/docs/v0.3.0a25/"
+        "url": "/v0.3.0a25/"
     },
     {
         "name": "v0.3.0a24",
         "version": "0.3.0a24",
-        "url": "/docs/v0.3.0a24/"
+        "url": "/v0.3.0a24/"
     },
     {
         "name": "v0.3.0a23",
         "version": "0.3.0a23",
-        "url": "/docs/v0.3.0a23/"
+        "url": "/v0.3.0a23/"
     },
     {
         "name": "v0.3.0a21",
         "version": "0.3.0a21",
-        "url": "/docs/v0.3.0a21/"
+        "url": "/v0.3.0a21/"
     },
     {
         "name": "v0.3.0a20",
         "version": "0.3.0a20",
-        "url": "/docs/v0.3.0a20/"
+        "url": "/v0.3.0a20/"
     },
     {
         "name": "v0.3.0a19",
         "version": "0.3.0a19",
-        "url": "/docs/v0.3.0a19/"
+        "url": "/v0.3.0a19/"
     },
     {
         "name": "v0.3.0a18",
         "version": "0.3.0a18",
-        "url": "/docs/v0.3.0a18/"
+        "url": "/v0.3.0a18/"
     },
     {
         "name": "v0.3.0a17",
         "version": "0.3.0a17",
-        "url": "/docs/v0.3.0a17/"
+        "url": "/v0.3.0a17/"
     },
     {
         "name": "v0.3.0a15",
         "version": "0.3.0a15",
-        "url": "/docs/v0.3.0a15/"
+        "url": "/v0.3.0a15/"
     },
     {
         "name": "v0.3.0a14",
         "version": "0.3.0a14",
-        "url": "/docs/v0.3.0a14/"
+        "url": "/v0.3.0a14/"
     },
     {
         "name": "v0.3.0a13",
         "version": "0.3.0a13",
-        "url": "/docs/v0.3.0a13/"
+        "url": "/v0.3.0a13/"
     },
     {
         "name": "v0.3.0a10",
         "version": "0.3.0a10",
-        "url": "/docs/v0.3.0a10/"
+        "url": "/v0.3.0a10/"
     },
     {
         "name": "v0.3.0a7",
         "version": "0.3.0a7",
-        "url": "/docs/v0.3.0a7/"
+        "url": "/v0.3.0a7/"
     },
     {
         "name": "v0.3.0a6",
         "version": "0.3.0a6",
-        "url": "/docs/v0.3.0a6/"
+        "url": "/v0.3.0a6/"
     },
     {
         "name": "v0.3.0a5",
         "version": "0.3.0a5",
-        "url": "/docs/v0.3.0a5/"
+        "url": "/v0.3.0a5/"
     },
     {
         "name": "v0.3.0a4",
         "version": "0.3.0a4",
-        "url": "/docs/v0.3.0a4/"
+        "url": "/v0.3.0a4/"
     },
     {
         "name": "v0.3.0a2",
         "version": "0.3.0a2",
-        "url": "/docs/v0.3.0a2/"
+        "url": "/v0.3.0a2/"
     },
     {
         "name": "v0.3.0a1",
         "version": "0.3.0a1",
-        "url": "/docs/v0.3.0a1/"
+        "url": "/v0.3.0a1/"
     },
     {
         "name": "v0.3.0a0",
         "version": "0.3.0a0",
-        "url": "/docs/v0.3.0a0/"
+        "url": "/v0.3.0a0/"
     }
 ]
