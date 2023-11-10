@@ -1,0 +1,29 @@
+matflow.ParameterValue
+======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ParameterValue
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ParameterValue.dump_to_HDF5_group
+      ~ParameterValue.prepare_JSON_dump
+      ~ParameterValue.save_from_HDF5_group
+      ~ParameterValue.save_from_JSON
+      ~ParameterValue.to_dict
+   
+   
+
+   
+   
+   
