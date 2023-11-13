@@ -1,0 +1,35 @@
+matflow.Executable
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Executable
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Executable.filter_instances
+      ~Executable.from_json_like
+      ~Executable.to_dict
+      ~Executable.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Executable.app
+      ~Executable.environment
+   
+   

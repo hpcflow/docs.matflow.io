@@ -1,0 +1,24 @@
+matflow.param_classes.orientations.EulerDefinition
+==================================================
+
+.. currentmodule:: matflow.param_classes.orientations
+
+.. autoclass:: EulerDefinition
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EulerDefinition.BUNGE
+   
+   
