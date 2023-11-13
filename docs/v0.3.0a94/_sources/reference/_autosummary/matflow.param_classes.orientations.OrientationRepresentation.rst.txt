@@ -1,0 +1,38 @@
+matflow.param_classes.orientations.OrientationRepresentation
+============================================================
+
+.. currentmodule:: matflow.param_classes.orientations
+
+.. autoclass:: OrientationRepresentation
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~OrientationRepresentation.dump_to_HDF5_group
+      ~OrientationRepresentation.prepare_JSON_dump
+      ~OrientationRepresentation.save_from_HDF5_group
+      ~OrientationRepresentation.save_from_JSON
+      ~OrientationRepresentation.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OrientationRepresentation.euler_definition
+      ~OrientationRepresentation.euler_is_degrees
+      ~OrientationRepresentation.quat_order
+      ~OrientationRepresentation.type
+   
+   
