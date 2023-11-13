@@ -1,0 +1,42 @@
+matflow.InputFile
+=================
+
+.. currentmodule:: matflow
+
+.. autoclass:: InputFile
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~InputFile.from_json_like
+      ~InputFile.make_persistent
+      ~InputFile.read_contents
+      ~InputFile.to_dict
+      ~InputFile.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InputFile.app
+      ~InputFile.contents
+      ~InputFile.extension
+      ~InputFile.normalised_files_path
+      ~InputFile.normalised_path
+      ~InputFile.path
+      ~InputFile.store_contents
+      ~InputFile.workflow
+   
+   

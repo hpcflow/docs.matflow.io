@@ -1,0 +1,26 @@
+matflow.TaskSourceType
+======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: TaskSourceType
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskSourceType.INPUT
+      ~TaskSourceType.OUTPUT
+      ~TaskSourceType.ANY
+   
+   
