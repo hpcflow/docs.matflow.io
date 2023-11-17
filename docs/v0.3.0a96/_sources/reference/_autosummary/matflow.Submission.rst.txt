@@ -1,0 +1,60 @@
+matflow.Submission
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Submission
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Submission.cancel
+      ~Submission.from_json_like
+      ~Submission.get_active_jobscripts
+      ~Submission.get_end_time
+      ~Submission.get_start_time
+      ~Submission.get_unique_schedulers
+      ~Submission.get_unique_schedulers_of_jobscripts
+      ~Submission.get_unique_shells
+      ~Submission.submit
+      ~Submission.to_dict
+      ~Submission.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Submission.EARs_by_elements
+      ~Submission.JS_parallelism
+      ~Submission.abort_EARs_file_name
+      ~Submission.abort_EARs_file_path
+      ~Submission.all_EAR_IDs
+      ~Submission.all_EARs
+      ~Submission.app
+      ~Submission.end_time
+      ~Submission.environments
+      ~Submission.index
+      ~Submission.jobscript_indices
+      ~Submission.jobscripts
+      ~Submission.needs_submit
+      ~Submission.outstanding_jobscripts
+      ~Submission.path
+      ~Submission.start_time
+      ~Submission.status
+      ~Submission.submission_parts
+      ~Submission.submitted_jobscripts
+      ~Submission.workflow
+   
+   
