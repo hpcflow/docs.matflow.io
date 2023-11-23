@@ -1,0 +1,35 @@
+matflow.SchemaParameter
+=======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: SchemaParameter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SchemaParameter.from_json_like
+      ~SchemaParameter.to_dict
+      ~SchemaParameter.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SchemaParameter.app
+      ~SchemaParameter.name
+      ~SchemaParameter.typ
+   
+   
