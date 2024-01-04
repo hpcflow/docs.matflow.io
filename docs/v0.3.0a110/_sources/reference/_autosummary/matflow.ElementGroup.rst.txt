@@ -1,0 +1,36 @@
+matflow.ElementGroup
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementGroup
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementGroup.from_json_like
+      ~ElementGroup.to_dict
+      ~ElementGroup.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementGroup.app
+      ~ElementGroup.group_by_distinct
+      ~ElementGroup.where
+      ~ElementGroup.name
+   
+   
