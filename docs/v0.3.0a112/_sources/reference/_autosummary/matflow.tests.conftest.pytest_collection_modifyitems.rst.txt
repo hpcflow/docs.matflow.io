@@ -1,0 +1,6 @@
+matflow.tests.conftest.pytest\_collection\_modifyitems
+======================================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: pytest_collection_modifyitems
