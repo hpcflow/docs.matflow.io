@@ -1,0 +1,45 @@
+matflow.WorkflowLoop
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: WorkflowLoop
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowLoop.add_iteration
+      ~WorkflowLoop.get_child_loops
+      ~WorkflowLoop.get_parent_loops
+      ~WorkflowLoop.new_empty_loop
+      ~WorkflowLoop.test_termination
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowLoop.app
+      ~WorkflowLoop.index
+      ~WorkflowLoop.iterable_parameters
+      ~WorkflowLoop.name
+      ~WorkflowLoop.num_added_iterations
+      ~WorkflowLoop.num_iterations
+      ~WorkflowLoop.task_indices
+      ~WorkflowLoop.task_insert_IDs
+      ~WorkflowLoop.task_objects
+      ~WorkflowLoop.template
+      ~WorkflowLoop.workflow
+   
+   
