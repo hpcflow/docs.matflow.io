@@ -1,0 +1,88 @@
+matflow.Jobscript
+=================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Jobscript
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Jobscript.cancel
+      ~Jobscript.compose_jobscript
+      ~Jobscript.from_json_like
+      ~Jobscript.get_active_states
+      ~Jobscript.get_commands_file_name
+      ~Jobscript.get_task_loop_idx_array
+      ~Jobscript.make_artifact_dirs
+      ~Jobscript.submit
+      ~Jobscript.to_dict
+      ~Jobscript.to_json_like
+      ~Jobscript.write_EAR_ID_file
+      ~Jobscript.write_element_run_dir_file
+      ~Jobscript.write_jobscript
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Jobscript.EAR_ID
+      ~Jobscript.EAR_ID_file_name
+      ~Jobscript.EAR_ID_file_path
+      ~Jobscript.all_EAR_IDs
+      ~Jobscript.all_EARs
+      ~Jobscript.app
+      ~Jobscript.dependencies
+      ~Jobscript.direct_stderr_file_name
+      ~Jobscript.direct_stderr_path
+      ~Jobscript.direct_stdout_file_name
+      ~Jobscript.direct_stdout_path
+      ~Jobscript.direct_win_pid_file_name
+      ~Jobscript.direct_win_pid_file_path
+      ~Jobscript.element_run_dir_file_name
+      ~Jobscript.element_run_dir_file_path
+      ~Jobscript.end_time
+      ~Jobscript.index
+      ~Jobscript.is_array
+      ~Jobscript.is_submitted
+      ~Jobscript.jobscript_name
+      ~Jobscript.jobscript_path
+      ~Jobscript.num_actions
+      ~Jobscript.num_elements
+      ~Jobscript.os_name
+      ~Jobscript.process_ID
+      ~Jobscript.resources
+      ~Jobscript.scheduler
+      ~Jobscript.scheduler_job_ID
+      ~Jobscript.scheduler_js_ref
+      ~Jobscript.scheduler_name
+      ~Jobscript.scheduler_ref
+      ~Jobscript.shell
+      ~Jobscript.shell_name
+      ~Jobscript.start_time
+      ~Jobscript.submission
+      ~Jobscript.submit_cmdline
+      ~Jobscript.submit_hostname
+      ~Jobscript.submit_machine
+      ~Jobscript.submit_time
+      ~Jobscript.task_actions
+      ~Jobscript.task_elements
+      ~Jobscript.task_insert_IDs
+      ~Jobscript.task_loop_idx
+      ~Jobscript.version_info
+      ~Jobscript.workflow
+      ~Jobscript.workflow_app_alias
+   
+   
