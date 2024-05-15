@@ -1,0 +1,35 @@
+matflow.ElementFilter
+=====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementFilter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementFilter.filter
+      ~ElementFilter.from_json_like
+      ~ElementFilter.to_dict
+      ~ElementFilter.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementFilter.app
+      ~ElementFilter.rules
+   
+   
