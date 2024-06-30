@@ -1,0 +1,34 @@
+matflow.TaskObjective
+=====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: TaskObjective
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TaskObjective.from_json_like
+      ~TaskObjective.to_dict
+      ~TaskObjective.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskObjective.app
+      ~TaskObjective.name
+   
+   

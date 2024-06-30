@@ -1,0 +1,50 @@
+matflow.WorkflowTemplate
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: WorkflowTemplate
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowTemplate.from_JSON_file
+      ~WorkflowTemplate.from_JSON_string
+      ~WorkflowTemplate.from_YAML_file
+      ~WorkflowTemplate.from_YAML_string
+      ~WorkflowTemplate.from_file
+      ~WorkflowTemplate.from_json_like
+      ~WorkflowTemplate.to_dict
+      ~WorkflowTemplate.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowTemplate.app
+      ~WorkflowTemplate.doc
+      ~WorkflowTemplate.env_presets
+      ~WorkflowTemplate.environments
+      ~WorkflowTemplate.merge_envs
+      ~WorkflowTemplate.merge_resources
+      ~WorkflowTemplate.resources
+      ~WorkflowTemplate.source_file
+      ~WorkflowTemplate.workflow
+      ~WorkflowTemplate.name
+      ~WorkflowTemplate.tasks
+      ~WorkflowTemplate.loops
+      ~WorkflowTemplate.store_kwargs
+   
+   

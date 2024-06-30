@@ -1,0 +1,41 @@
+matflow.InputSource
+===================
+
+.. currentmodule:: matflow
+
+.. autoclass:: InputSource
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~InputSource.default
+      ~InputSource.from_json_like
+      ~InputSource.from_string
+      ~InputSource.get_task
+      ~InputSource.import_
+      ~InputSource.is_in
+      ~InputSource.local
+      ~InputSource.task
+      ~InputSource.to_dict
+      ~InputSource.to_json_like
+      ~InputSource.to_string
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InputSource.app
+   
+   
