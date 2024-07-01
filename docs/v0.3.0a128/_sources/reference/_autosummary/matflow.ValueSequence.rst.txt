@@ -1,0 +1,53 @@
+matflow.ValueSequence
+=====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ValueSequence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ValueSequence.from_file
+      ~ValueSequence.from_geometric_space
+      ~ValueSequence.from_json_like
+      ~ValueSequence.from_linear_space
+      ~ValueSequence.from_log_space
+      ~ValueSequence.from_random_uniform
+      ~ValueSequence.from_range
+      ~ValueSequence.from_rectangle
+      ~ValueSequence.make_persistent
+      ~ValueSequence.to_dict
+      ~ValueSequence.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ValueSequence.app
+      ~ValueSequence.input_path
+      ~ValueSequence.input_type
+      ~ValueSequence.is_sub_value
+      ~ValueSequence.labelled_type
+      ~ValueSequence.normalised_inputs_path
+      ~ValueSequence.normalised_path
+      ~ValueSequence.parameter
+      ~ValueSequence.path_split
+      ~ValueSequence.path_type
+      ~ValueSequence.resource_scope
+      ~ValueSequence.values
+      ~ValueSequence.workflow
+   
+   

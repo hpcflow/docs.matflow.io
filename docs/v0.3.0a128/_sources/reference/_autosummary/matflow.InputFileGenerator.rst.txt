@@ -1,0 +1,43 @@
+matflow.InputFileGenerator
+==========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: InputFileGenerator
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~InputFileGenerator.compose_source
+      ~InputFileGenerator.from_json_like
+      ~InputFileGenerator.get_action_rules
+      ~InputFileGenerator.to_dict
+      ~InputFileGenerator.to_json_like
+      ~InputFileGenerator.write_source
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InputFileGenerator.abortable
+      ~InputFileGenerator.app
+      ~InputFileGenerator.environment
+      ~InputFileGenerator.rules
+      ~InputFileGenerator.script
+      ~InputFileGenerator.script_pass_env_spec
+      ~InputFileGenerator.input_file
+      ~InputFileGenerator.inputs
+   
+   
