@@ -1,0 +1,26 @@
+matflow.param_classes.load.StrainRateMode
+=========================================
+
+.. currentmodule:: matflow.param_classes.load
+
+.. autoclass:: StrainRateMode
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StrainRateMode.DEF_GRAD_RATE
+      ~StrainRateMode.VEL_GRAD
+      ~StrainRateMode.VEL_GRAD_APPROX
+   
+   

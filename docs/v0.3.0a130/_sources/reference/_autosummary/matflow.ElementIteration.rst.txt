@@ -1,0 +1,64 @@
+matflow.ElementIteration
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementIteration
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementIteration.get
+      ~ElementIteration.get_EAR_dependencies
+      ~ElementIteration.get_data_idx
+      ~ElementIteration.get_dependent_EARs
+      ~ElementIteration.get_dependent_element_iterations
+      ~ElementIteration.get_dependent_elements
+      ~ElementIteration.get_dependent_tasks
+      ~ElementIteration.get_element_dependencies
+      ~ElementIteration.get_element_iteration_dependencies
+      ~ElementIteration.get_input_dependencies
+      ~ElementIteration.get_parameter_names
+      ~ElementIteration.get_parameter_sources
+      ~ElementIteration.get_resources
+      ~ElementIteration.get_resources_obj
+      ~ElementIteration.get_task_dependencies
+      ~ElementIteration.get_template_resources
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementIteration.EAR_IDs
+      ~ElementIteration.EAR_IDs_flat
+      ~ElementIteration.EARs_initialised
+      ~ElementIteration.action_runs
+      ~ElementIteration.actions
+      ~ElementIteration.app
+      ~ElementIteration.data_idx
+      ~ElementIteration.element
+      ~ElementIteration.id_
+      ~ElementIteration.index
+      ~ElementIteration.input_files
+      ~ElementIteration.inputs
+      ~ElementIteration.is_pending
+      ~ElementIteration.loop_idx
+      ~ElementIteration.output_files
+      ~ElementIteration.outputs
+      ~ElementIteration.schema_parameters
+      ~ElementIteration.task
+      ~ElementIteration.workflow
+   
+   
