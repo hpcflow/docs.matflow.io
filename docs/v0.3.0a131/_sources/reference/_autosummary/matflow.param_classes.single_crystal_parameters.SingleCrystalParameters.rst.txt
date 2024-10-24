@@ -1,0 +1,38 @@
+matflow.param_classes.single_crystal_parameters.SingleCrystalParameters
+=======================================================================
+
+.. currentmodule:: matflow.param_classes.single_crystal_parameters
+
+.. autoclass:: SingleCrystalParameters
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SingleCrystalParameters.as_base
+      ~SingleCrystalParameters.dump_to_HDF5_group
+      ~SingleCrystalParameters.prepare_JSON_dump
+      ~SingleCrystalParameters.save_from_HDF5_group
+      ~SingleCrystalParameters.save_from_JSON
+      ~SingleCrystalParameters.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SingleCrystalParameters.base
+      ~SingleCrystalParameters.perturbations
+      ~SingleCrystalParameters.phases
+   
+   

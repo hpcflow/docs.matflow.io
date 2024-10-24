@@ -1,0 +1,48 @@
+matflow.OutputFileParser
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: OutputFileParser
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~OutputFileParser.compose_source
+      ~OutputFileParser.from_json_like
+      ~OutputFileParser.get_action_rules
+      ~OutputFileParser.to_dict
+      ~OutputFileParser.to_json_like
+      ~OutputFileParser.write_source
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OutputFileParser.abortable
+      ~OutputFileParser.app
+      ~OutputFileParser.clean_up
+      ~OutputFileParser.environment
+      ~OutputFileParser.inputs
+      ~OutputFileParser.options
+      ~OutputFileParser.output
+      ~OutputFileParser.outputs
+      ~OutputFileParser.rules
+      ~OutputFileParser.save_files
+      ~OutputFileParser.script
+      ~OutputFileParser.script_pass_env_spec
+      ~OutputFileParser.output_files
+   
+   
