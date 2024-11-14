@@ -1,0 +1,6 @@
+matflow.tests.test\_cli.test\_version
+=====================================
+
+.. currentmodule:: matflow.tests.test_cli
+
+.. autofunction:: test_version

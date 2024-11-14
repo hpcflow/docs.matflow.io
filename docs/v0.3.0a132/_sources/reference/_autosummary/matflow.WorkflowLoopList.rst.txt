@@ -1,0 +1,38 @@
+matflow.WorkflowLoopList
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: WorkflowLoopList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowLoopList.add_object
+      ~WorkflowLoopList.add_objects
+      ~WorkflowLoopList.from_json_like
+      ~WorkflowLoopList.get
+      ~WorkflowLoopList.get_all
+      ~WorkflowLoopList.list_attrs
+      ~WorkflowLoopList.to_dict
+      ~WorkflowLoopList.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowLoopList.app
+   
+   

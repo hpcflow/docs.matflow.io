@@ -1,0 +1,39 @@
+matflow.FileNameSpec
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: FileNameSpec
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~FileNameSpec.from_json_like
+      ~FileNameSpec.to_dict
+      ~FileNameSpec.to_json_like
+      ~FileNameSpec.value
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FileNameSpec.app
+      ~FileNameSpec.ext
+      ~FileNameSpec.stem
+      ~FileNameSpec.name
+      ~FileNameSpec.args
+      ~FileNameSpec.is_regex
+   
+   
