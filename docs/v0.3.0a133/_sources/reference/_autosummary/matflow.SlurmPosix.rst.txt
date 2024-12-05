@@ -1,0 +1,54 @@
+matflow.SlurmPosix
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: SlurmPosix
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SlurmPosix.cancel_jobs
+      ~SlurmPosix.format_options
+      ~SlurmPosix.format_switch
+      ~SlurmPosix.get_job_state_info
+      ~SlurmPosix.get_submit_command
+      ~SlurmPosix.get_version_info
+      ~SlurmPosix.is_jobscript_active
+      ~SlurmPosix.is_num_cores_supported
+      ~SlurmPosix.parse_submission_output
+      ~SlurmPosix.process_resources
+      ~SlurmPosix.wait_for_jobscripts
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SlurmPosix.DEFAULT_ARRAY_ITEM_VAR
+      ~SlurmPosix.DEFAULT_ARRAY_SWITCH
+      ~SlurmPosix.DEFAULT_DEL_CMD
+      ~SlurmPosix.DEFAULT_JS_CMD
+      ~SlurmPosix.DEFAULT_LOGIN_NODES_CMD
+      ~SlurmPosix.DEFAULT_LOGIN_NODE_MATCH
+      ~SlurmPosix.DEFAULT_SHEBANG_ARGS
+      ~SlurmPosix.DEFAULT_SHELL_ARGS
+      ~SlurmPosix.DEFAULT_SHELL_EXECUTABLE
+      ~SlurmPosix.DEFAULT_SHOW_CMD
+      ~SlurmPosix.DEFAULT_SUBMIT_CMD
+      ~SlurmPosix.app
+      ~SlurmPosix.state_lookup
+      ~SlurmPosix.unique_properties
+   
+   
