@@ -1,0 +1,35 @@
+matflow.FileNameExt
+===================
+
+.. currentmodule:: matflow
+
+.. autoclass:: FileNameExt
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~FileNameExt.from_json_like
+      ~FileNameExt.to_dict
+      ~FileNameExt.to_json_like
+      ~FileNameExt.value
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FileNameExt.app
+      ~FileNameExt.file_name
+   
+   
