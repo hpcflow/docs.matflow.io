@@ -1,0 +1,63 @@
+matflow.ResourceSpec
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ResourceSpec
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ResourceSpec.copy_non_persistent
+      ~ResourceSpec.from_json_like
+      ~ResourceSpec.make_persistent
+      ~ResourceSpec.to_dict
+      ~ResourceSpec.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ResourceSpec.ALLOWED_PARAMETERS
+      ~ResourceSpec.SGE_parallel_env
+      ~ResourceSpec.SLURM_num_cpus_per_task
+      ~ResourceSpec.SLURM_num_nodes
+      ~ResourceSpec.SLURM_num_tasks
+      ~ResourceSpec.SLURM_num_tasks_per_node
+      ~ResourceSpec.SLURM_partition
+      ~ResourceSpec.app
+      ~ResourceSpec.element_set
+      ~ResourceSpec.environments
+      ~ResourceSpec.max_array_items
+      ~ResourceSpec.normalised_path
+      ~ResourceSpec.normalised_resources_path
+      ~ResourceSpec.num_cores
+      ~ResourceSpec.num_cores_per_node
+      ~ResourceSpec.num_nodes
+      ~ResourceSpec.num_threads
+      ~ResourceSpec.os_name
+      ~ResourceSpec.parallel_mode
+      ~ResourceSpec.scheduler
+      ~ResourceSpec.scheduler_args
+      ~ResourceSpec.scratch
+      ~ResourceSpec.shell
+      ~ResourceSpec.shell_args
+      ~ResourceSpec.time_limit
+      ~ResourceSpec.use_job_array
+      ~ResourceSpec.workflow
+      ~ResourceSpec.workflow_template
+      ~ResourceSpec.scope
+   
+   
