@@ -1,0 +1,36 @@
+matflow.OutputLabel
+===================
+
+.. currentmodule:: matflow
+
+.. autoclass:: OutputLabel
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~OutputLabel.from_json_like
+      ~OutputLabel.to_dict
+      ~OutputLabel.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OutputLabel.app
+      ~OutputLabel.parameter
+      ~OutputLabel.label
+      ~OutputLabel.where
+   
+   
