@@ -1,0 +1,41 @@
+matflow.Loop
+============
+
+.. currentmodule:: matflow
+
+.. autoclass:: Loop
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Loop.from_json_like
+      ~Loop.to_dict
+      ~Loop.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Loop.name
+      ~Loop.non_iterable_parameters
+      ~Loop.num_iterations
+      ~Loop.task_insert_IDs
+      ~Loop.task_objects
+      ~Loop.termination
+      ~Loop.termination_task
+      ~Loop.termination_task_insert_ID
+      ~Loop.workflow_template
+   
+   
