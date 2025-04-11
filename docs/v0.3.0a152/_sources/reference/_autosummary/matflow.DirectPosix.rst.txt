@@ -1,0 +1,45 @@
+matflow.DirectPosix
+===================
+
+.. currentmodule:: matflow
+
+.. autoclass:: DirectPosix
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~DirectPosix.cancel_jobs
+      ~DirectPosix.get_job_state_info
+      ~DirectPosix.get_std_out_err_filename
+      ~DirectPosix.get_stderr_filename
+      ~DirectPosix.get_stdout_filename
+      ~DirectPosix.get_submit_command
+      ~DirectPosix.get_version_info
+      ~DirectPosix.is_jobscript_active
+      ~DirectPosix.is_num_cores_supported
+      ~DirectPosix.parse_submission_output
+      ~DirectPosix.process_resources
+      ~DirectPosix.wait_for_jobscripts
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DirectPosix.DEFAULT_SHEBANG_ARGS
+      ~DirectPosix.DEFAULT_SHELL_ARGS
+      ~DirectPosix.DEFAULT_SHELL_EXECUTABLE
+      ~DirectPosix.unique_properties
+   
+   

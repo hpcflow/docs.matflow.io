@@ -1,0 +1,1202 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>matflow.WorkflowTask &#8212; MatFlow 0.3.0a152 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/matflow.WorkflowTask';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.matflow.io/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.3.0a152';
+        </script>
+    <script src="../../_static/js/custom.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="matflow.WorkflowTaskList" href="matflow.WorkflowTaskList.html" />
+    <link rel="prev" title="matflow.WorkflowLoopList" href="matflow.WorkflowLoopList.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-50dpi.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-50dpi.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a152  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a152  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">Python API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="matflow.html">matflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matflow.app.html">matflow.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.cancel.html">matflow.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_OS_info.html">matflow.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_known_submissions.html">matflow.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_shell_info.html">matflow.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_demo_workflow.html">matflow.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_workflow.html">matflow.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_demo_workflow.html">matflow.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_workflow.html">matflow.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_hpcflow_tests.html">matflow.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_tests.html">matflow.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show.html">matflow.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show_legend.html">matflow.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.submit_workflow.html">matflow.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Action.html">matflow.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionEnvironment.html">matflow.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionRule.html">matflow.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScope.html">matflow.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScopeType.html">matflow.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Command.html">matflow.Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.CommandFilesList.html">matflow.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectPosix.html">matflow.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectWindows.html">matflow.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Element.html">matflow.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementAction.html">matflow.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementActionRun.html">matflow.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementFilter.html">matflow.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementGroup.html">matflow.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputFiles.html">matflow.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputs.html">matflow.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementIteration.html">matflow.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputFiles.html">matflow.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputs.html">matflow.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementParameter.html">matflow.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementPropagation.html">matflow.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementRepeats.html">matflow.ElementRepeats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementResources.html">matflow.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementSet.html">matflow.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Elements.html">matflow.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Environment.html">matflow.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.EnvironmentsList.html">matflow.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Executable.html">matflow.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutableInstance.html">matflow.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutablesList.html">matflow.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Executor.html">matflow.Executor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameExt.html">matflow.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameSpec.html">matflow.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameStem.html">matflow.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileSpec.html">matflow.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.GroupList.html">matflow.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFile.html">matflow.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGenerator.html">matflow.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGeneratorSource.html">matflow.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSource.html">matflow.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSourceType.html">matflow.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputValue.html">matflow.InputValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Jobscript.html">matflow.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.JobscriptBlock.html">matflow.JobscriptBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Loop.html">matflow.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MetaTask.html">matflow.MetaTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MetaTaskSchema.html">matflow.MetaTaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MultiPathSequence.html">matflow.MultiPathSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.NumCores.html">matflow.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParser.html">matflow.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParserSource.html">matflow.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputLabel.html">matflow.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameter.html">matflow.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPath.html">matflow.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPropagationMode.html">matflow.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterValue.html">matflow.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameters.html">matflow.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParametersList.html">matflow.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.QueuedScheduler.html">matflow.QueuedScheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceList.html">matflow.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceSpec.html">matflow.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Rule.html">matflow.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.RunDirAppFiles.html">matflow.RunDirAppFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SGEPosix.html">matflow.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaInput.html">matflow.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaOutput.html">matflow.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaParameter.html">matflow.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SlurmPosix.html">matflow.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SubParameter.html">matflow.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Submission.html">matflow.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Task.html">matflow.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskInputParameters.html">matflow.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskList.html">matflow.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskObjective.html">matflow.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskOutputParameters.html">matflow.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchema.html">matflow.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchemasList.html">matflow.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSourceType.html">matflow.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskTemplateList.html">matflow.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValuePerturbation.html">matflow.ValuePerturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValueSequence.html">matflow.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Workflow.html">matflow.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowBlueprint.html">matflow.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoop.html">matflow.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoopList.html">matflow.WorkflowLoopList</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">matflow.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTaskList.html">matflow.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTemplate.html">matflow.WorkflowTemplate</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.cli.html">matflow.cli</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.param_classes.html">matflow.param_classes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.load.html">matflow.param_classes.load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.orientations.html">matflow.param_classes.orientations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.seeds.html">matflow.param_classes.seeds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.single_crystal_parameters.html">matflow.param_classes.single_crystal_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.utils.html">matflow.param_classes.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.tests.html">matflow.tests</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.conftest.html">matflow.tests.conftest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.data.html">matflow.tests.data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_cli.html">matflow.tests.test_cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_utils.html">matflow.tests.test_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.utils.html">matflow.tests.utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="matflow.html" class="nav-link">matflow</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">matflow.WorkflowTask</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="matflow-workflowtask">
+<h1>matflow.WorkflowTask<a class="headerlink" href="#matflow-workflowtask" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="matflow.WorkflowTask">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matflow.</span></span><span class="sig-name descname"><span class="pre">WorkflowTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_IDs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.task.WorkflowTask.html#hpcflow.sdk.core.task.WorkflowTask" title="(in hpcflow)"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkflowTask</span></code></a></p>
+<p>Represents a <a class="reference internal" href="matflow.Task.html#matflow.Task" title="matflow.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> that is bound to a <a class="reference internal" href="matflow.Workflow.html#matflow.Workflow" title="matflow.Workflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workflow</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workflow</strong> (<a class="reference internal" href="matflow.Workflow.html#matflow.Workflow" title="matflow.Workflow"><em>Workflow</em></a>) – The workflow that the task is bound to.</p></li>
+<li><p><strong>template</strong> (<a class="reference internal" href="matflow.Task.html#matflow.Task" title="matflow.Task"><em>Task</em></a>) – The task template that this binds.</p></li>
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Where in the workflow’s list of tasks is this one.</p></li>
+<li><p><strong>element_IDs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em>) – The IDs of the elements of this task.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.add_elements" title="matflow.WorkflowTask.add_elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_elements</span></code></a></p></td>
+<td><p>Add elements to this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.ensure_input_sources" title="matflow.WorkflowTask.ensure_input_sources"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ensure_input_sources</span></code></a></p></td>
+<td><p>Check valid input sources are specified for a new task to be added to the workflow in a given position.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.generate_new_elements" title="matflow.WorkflowTask.generate_new_elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_new_elements</span></code></a></p></td>
+<td><p>Create information about new elements in this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.get" title="matflow.WorkflowTask.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a></p></td>
+<td><p>Get a parameter known to this task by its path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.get_all_element_iterations" title="matflow.WorkflowTask.get_all_element_iterations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_element_iterations</span></code></a></p></td>
+<td><p>Get the iterations known by the task's elements.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.get_dependent_elements" title="matflow.WorkflowTask.get_dependent_elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dependent_elements</span></code></a></p></td>
+<td><p>Get elements from downstream tasks that depend on this task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.get_dependent_tasks" title="matflow.WorkflowTask.get_dependent_tasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dependent_tasks</span></code></a></p></td>
+<td><p>Get tasks (insert ID or WorkflowTask objects) that depends on this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.get_dir_name" title="matflow.WorkflowTask.get_dir_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dir_name</span></code></a></p></td>
+<td><p>Get the directory name for a particular iteration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.get_element_dependencies" title="matflow.WorkflowTask.get_element_dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_element_dependencies</span></code></a></p></td>
+<td><p>Get elements from upstream tasks that this task depends on.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.get_task_dependencies" title="matflow.WorkflowTask.get_task_dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_task_dependencies</span></code></a></p></td>
+<td><p>Get tasks (insert ID or WorkflowTask objects) that this task depends on.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.initialise_EARs" title="matflow.WorkflowTask.initialise_EARs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialise_EARs</span></code></a></p></td>
+<td><p>Try to initialise any uninitialised EARs of this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.new_empty_task" title="matflow.WorkflowTask.new_empty_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_empty_task</span></code></a></p></td>
+<td><p>Make a new instance without any elements set up yet.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.resolve_element_data_indices" title="matflow.WorkflowTask.resolve_element_data_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_element_data_indices</span></code></a></p></td>
+<td><p>Find the index of the parameter group index list corresponding to each input data for all elements.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.dir_name" title="matflow.WorkflowTask.dir_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dir_name</span></code></a></p></td>
+<td><p>The name of the directory for the task's temporary files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.downstream_tasks" title="matflow.WorkflowTask.downstream_tasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">downstream_tasks</span></code></a></p></td>
+<td><p>All workflow tasks that are downstream from this task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.element_IDs" title="matflow.WorkflowTask.element_IDs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">element_IDs</span></code></a></p></td>
+<td><p>The IDs of elements associated with this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.elements" title="matflow.WorkflowTask.elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">elements</span></code></a></p></td>
+<td><p>The elements associated with this task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.index" title="matflow.WorkflowTask.index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index</span></code></a></p></td>
+<td><p>The index of this task within its workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.inputs" title="matflow.WorkflowTask.inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputs</span></code></a></p></td>
+<td><p>Inputs to this task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.insert_ID" title="matflow.WorkflowTask.insert_ID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_ID</span></code></a></p></td>
+<td><p>The insertion ID of the template task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.name" title="matflow.WorkflowTask.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p>The name of this task based on its template.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.num_actions" title="matflow.WorkflowTask.num_actions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_actions</span></code></a></p></td>
+<td><p>The number of actions in this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.num_element_sets" title="matflow.WorkflowTask.num_element_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_element_sets</span></code></a></p></td>
+<td><p>The number of element sets associated with this task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.num_elements" title="matflow.WorkflowTask.num_elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_elements</span></code></a></p></td>
+<td><p>The number of elements associated with this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.outputs" title="matflow.WorkflowTask.outputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outputs</span></code></a></p></td>
+<td><p>Outputs from this task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.template" title="matflow.WorkflowTask.template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">template</span></code></a></p></td>
+<td><p>The template for this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.unique_name" title="matflow.WorkflowTask.unique_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unique_name</span></code></a></p></td>
+<td><p>The unique name for this task specifically.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.WorkflowTask.upstream_tasks" title="matflow.WorkflowTask.upstream_tasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upstream_tasks</span></code></a></p></td>
+<td><p>All workflow tasks that are upstream from this task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.WorkflowTask.workflow" title="matflow.WorkflowTask.workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflow</span></code></a></p></td>
+<td><p>The workflow this task is bound to.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.add_elements">
+<span class="sig-name descname"><span class="pre">add_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_element</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_sources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_sets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sourceable_elem_iters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propagate_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_indices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.add_elements" title="Permalink to this definition">#</a></dt>
+<dd><p>Add elements to this task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourceable_elem_iters</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em> of </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>optional</em>) – If specified, a list of global element iteration indices from which inputs
+may be sourced. If not specified, all workflow element iterations are
+considered sourceable.</p></li>
+<li><p><strong>propagate_to</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference internal" href="matflow.ElementPropagation.html#matflow.ElementPropagation" title="matflow.ElementPropagation"><em>ElementPropagation</em></a><em>]</em>) – Propagate the new elements downstream to the specified tasks.</p></li>
+<li><p><strong>return_indices</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If True, return the list of indices of the newly added elements. False by
+default.</p></li>
+<li><p><strong>base_element</strong> (<a class="reference internal" href="matflow.Element.html#matflow.Element" title="matflow.Element"><em>Element</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>inputs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference internal" href="matflow.InputValue.html#matflow.InputValue" title="matflow.InputValue"><em>InputValue</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Any</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>input_files</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference internal" href="matflow.InputFile.html#matflow.InputFile" title="matflow.InputFile"><em>InputFile</em></a><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>sequences</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference internal" href="matflow.ValueSequence.html#matflow.ValueSequence" title="matflow.ValueSequence"><em>ValueSequence</em></a><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>resources</strong> (<em>Resources</em>) – </p></li>
+<li><p><strong>repeats</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><em>RepeatsDescriptor</em><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>input_sources</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference internal" href="matflow.InputSource.html#matflow.InputSource" title="matflow.InputSource"><em>InputSource</em></a><em>]</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>element_sets</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference internal" href="matflow.ElementSet.html#matflow.ElementSet" title="matflow.ElementSet"><em>ElementSet</em></a><em>] </em><em>| </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>] | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.dir_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dir_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.dir_name" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the directory for the task’s temporary files.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.downstream_tasks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">downstream_tasks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#matflow.WorkflowTask" title="matflow.WorkflowTask"><span class="pre">WorkflowTask</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.WorkflowTask.downstream_tasks" title="Permalink to this definition">#</a></dt>
+<dd><p>All workflow tasks that are downstream from this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.element_IDs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">element_IDs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.WorkflowTask.element_IDs" title="Permalink to this definition">#</a></dt>
+<dd><p>The IDs of elements associated with this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.elements">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">elements</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.task.Elements.html#hpcflow.sdk.core.task.Elements" title="(in hpcflow)"><span class="pre">Elements</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.elements" title="Permalink to this definition">#</a></dt>
+<dd><p>The elements associated with this task.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.ensure_input_sources">
+<span class="sig-name descname"><span class="pre">ensure_input_sources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.ensure_input_sources" title="Permalink to this definition">#</a></dt>
+<dd><p>Check valid input sources are specified for a new task to be added to the
+workflow in a given position. If none are specified, set them according to the
+default behaviour.</p>
+<p>This method mutates <cite>element_set.input_sources</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>element_set</strong> (<a class="reference internal" href="matflow.ElementSet.html#matflow.ElementSet" title="matflow.ElementSet"><em>ElementSet</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mapping[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, Sequence[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.generate_new_elements">
+<span class="sig-name descname"><span class="pre">generate_new_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_data_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_data_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_data_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.generate_new_elements" title="Permalink to this definition">#</a></dt>
+<dd><p>Create information about new elements in this task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_data_indices</strong> (<em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>output_data_indices</strong> (<em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>element_data_indices</strong> (<em>Sequence</em><em>[</em><em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>sequence_indices</strong> (<em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>source_indices</strong> (<em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>]</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)">tuple</a>[Sequence[DataIndex], Mapping[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, Sequence[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]], Mapping[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, Sequence[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_on_missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.get" title="Permalink to this definition">#</a></dt>
+<dd><p>Get a parameter known to this task by its path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>default</strong> (<em>Any</em><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="matflow.Parameters.html#matflow.Parameters" title="matflow.Parameters">Parameters</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.get_all_element_iterations">
+<span class="sig-name descname"><span class="pre">get_all_element_iterations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.get_all_element_iterations" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the iterations known by the task’s elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Mapping[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>, <a class="reference internal" href="matflow.ElementIteration.html#matflow.ElementIteration" title="matflow.ElementIteration">ElementIteration</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.get_dependent_elements">
+<span class="sig-name descname"><span class="pre">get_dependent_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.get_dependent_elements" title="Permalink to this definition">#</a></dt>
+<dd><p>Get elements from downstream tasks that depend on this task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>as_objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.13)">set</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>] | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference internal" href="matflow.Element.html#matflow.Element" title="matflow.Element">Element</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.get_dependent_tasks">
+<span class="sig-name descname"><span class="pre">get_dependent_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.get_dependent_tasks" title="Permalink to this definition">#</a></dt>
+<dd><p>Get tasks (insert ID or WorkflowTask objects) that depends on this task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>as_objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.13)">set</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>] | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.task.WorkflowTask.html#hpcflow.sdk.core.task.WorkflowTask" title="(in hpcflow)">hpcflow.sdk.core.task.WorkflowTask</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.get_dir_name">
+<span class="sig-name descname"><span class="pre">get_dir_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loop_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.get_dir_name" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the directory name for a particular iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>loop_idx</strong> (<em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>] </em><em>| </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.get_element_dependencies">
+<span class="sig-name descname"><span class="pre">get_element_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.get_element_dependencies" title="Permalink to this definition">#</a></dt>
+<dd><p>Get elements from upstream tasks that this task depends on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>as_objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.13)">set</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>] | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference internal" href="matflow.Element.html#matflow.Element" title="matflow.Element">Element</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.get_task_dependencies">
+<span class="sig-name descname"><span class="pre">get_task_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.get_task_dependencies" title="Permalink to this definition">#</a></dt>
+<dd><p>Get tasks (insert ID or WorkflowTask objects) that this task depends on.</p>
+<p>Dependencies may come from either elements from upstream tasks, or from locally
+defined inputs/sequences/defaults from upstream tasks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>as_objects</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.13)">set</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>] | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.task.WorkflowTask.html#hpcflow.sdk.core.task.WorkflowTask" title="(in hpcflow)">hpcflow.sdk.core.task.WorkflowTask</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.index" title="Permalink to this definition">#</a></dt>
+<dd><p>The index of this task within its workflow.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.initialise_EARs">
+<span class="sig-name descname"><span class="pre">initialise_EARs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iter_IDs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.initialise_EARs" title="Permalink to this definition">#</a></dt>
+<dd><p>Try to initialise any uninitialised EARs of this task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>iter_IDs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>] </em><em>| </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sequence[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.inputs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inputs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.task.TaskInputParameters.html#hpcflow.sdk.core.task.TaskInputParameters" title="(in hpcflow)"><span class="pre">TaskInputParameters</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.inputs" title="Permalink to this definition">#</a></dt>
+<dd><p>Inputs to this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.insert_ID">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">insert_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.insert_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>The insertion ID of the template task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.name" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of this task based on its template.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.new_empty_task">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_empty_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.new_empty_task" title="Permalink to this definition">#</a></dt>
+<dd><p>Make a new instance without any elements set up yet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workflow</strong> (<a class="reference internal" href="matflow.Workflow.html#matflow.Workflow" title="matflow.Workflow"><em>Workflow</em></a>) – The workflow that the task is bound to.</p></li>
+<li><p><strong>template</strong> (<a class="reference internal" href="matflow.Task.html#matflow.Task" title="matflow.Task"><em>Task</em></a>) – The task template that this binds.</p></li>
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Where in the workflow’s list of tasks is this one.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.num_actions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_actions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.num_actions" title="Permalink to this definition">#</a></dt>
+<dd><p>The number of actions in this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.num_element_sets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_element_sets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.num_element_sets" title="Permalink to this definition">#</a></dt>
+<dd><p>The number of element sets associated with this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.num_elements">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_elements</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.num_elements" title="Permalink to this definition">#</a></dt>
+<dd><p>The number of elements associated with this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.outputs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">outputs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.task.TaskOutputParameters.html#hpcflow.sdk.core.task.TaskOutputParameters" title="(in hpcflow)"><span class="pre">TaskOutputParameters</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.outputs" title="Permalink to this definition">#</a></dt>
+<dd><p>Outputs from this task.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.resolve_element_data_indices">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolve_element_data_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multiplicities</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.WorkflowTask.resolve_element_data_indices" title="Permalink to this definition">#</a></dt>
+<dd><p>Find the index of the parameter group index list corresponding to each
+input data for all elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>multiplicities</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em> of </em><em>MultiplicityDescriptor</em>) – <dl class="simple">
+<dt>Each list item represents a sequence of values with keys:</dt><dd><p>multiplicity: int
+nesting_order: float
+path : str</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>element_dat_idx</strong> – Each list item is a dict representing a single task element and whose keys are
+input data paths and whose values are indices that index the values of the
+dict returned by the <cite>task.make_persistent</cite> method.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a> of <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)">dict</a></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Non-integer nesting orders result in doing the dot product of that sequence with
+all the current sequences instead of just with the other sequences at the same
+nesting order (or as a cross product for other nesting orders entire).</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.template">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">template</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.core.task.Task.html#hpcflow.sdk.core.task.Task" title="(in hpcflow)"><span class="pre">Task</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.template" title="Permalink to this definition">#</a></dt>
+<dd><p>The template for this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.unique_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unique_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.unique_name" title="Permalink to this definition">#</a></dt>
+<dd><p>The unique name for this task specifically.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.upstream_tasks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">upstream_tasks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#matflow.WorkflowTask" title="matflow.WorkflowTask"><span class="pre">WorkflowTask</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.WorkflowTask.upstream_tasks" title="Permalink to this definition">#</a></dt>
+<dd><p>All workflow tasks that are upstream from this task.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.WorkflowTask.workflow">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">workflow</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="matflow.Workflow.html#matflow.Workflow" title="matflow.Workflow"><span class="pre">Workflow</span></a></em><a class="headerlink" href="#matflow.WorkflowTask.workflow" title="Permalink to this definition">#</a></dt>
+<dd><p>The workflow this task is bound to.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="matflow.WorkflowLoopList.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">matflow.WorkflowLoopList</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="matflow.WorkflowTaskList.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">matflow.WorkflowTaskList</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask"><code class="docutils literal notranslate"><span class="pre">WorkflowTask</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.add_elements"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.add_elements()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.dir_name"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.dir_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.downstream_tasks"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.downstream_tasks</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.element_IDs"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.element_IDs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.elements"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.elements</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.ensure_input_sources"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.ensure_input_sources()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.generate_new_elements"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.generate_new_elements()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.get"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.get_all_element_iterations"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.get_all_element_iterations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.get_dependent_elements"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.get_dependent_elements()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.get_dependent_tasks"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.get_dependent_tasks()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.get_dir_name"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.get_dir_name()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.get_element_dependencies"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.get_element_dependencies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.get_task_dependencies"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.get_task_dependencies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.index"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.index</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.initialise_EARs"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.initialise_EARs()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.inputs"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.inputs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.insert_ID"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.insert_ID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.name"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.new_empty_task"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.new_empty_task()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.num_actions"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.num_actions</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.num_element_sets"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.num_element_sets</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.num_elements"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.num_elements</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.outputs"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.outputs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.resolve_element_data_indices"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.resolve_element_data_indices()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.template"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.template</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.unique_name"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.unique_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.upstream_tasks"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.upstream_tasks</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.WorkflowTask.workflow"><code class="docutils literal notranslate"><span class="pre">WorkflowTask.workflow</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/matflow-new/edit/develop/docs/source/reference/_autosummary/matflow.WorkflowTask.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/_autosummary/matflow.WorkflowTask.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, MatFlow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
