@@ -1,0 +1,39 @@
+matflow.Rule
+============
+
+.. currentmodule:: matflow
+
+.. autoclass:: Rule
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Rule.from_json_like
+      ~Rule.test
+      ~Rule.to_dict
+      ~Rule.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Rule.condition
+      ~Rule.check_exists
+      ~Rule.check_missing
+      ~Rule.path
+      ~Rule.cast
+      ~Rule.doc
+   
+   
