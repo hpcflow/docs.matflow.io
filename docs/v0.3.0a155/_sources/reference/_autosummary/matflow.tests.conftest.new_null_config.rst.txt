@@ -1,0 +1,6 @@
+matflow.tests.conftest.new\_null\_config
+========================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: new_null_config
