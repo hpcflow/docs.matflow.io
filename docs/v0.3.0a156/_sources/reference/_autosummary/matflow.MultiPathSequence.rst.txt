@@ -1,0 +1,36 @@
+matflow.MultiPathSequence
+=========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: MultiPathSequence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MultiPathSequence.from_json_like
+      ~MultiPathSequence.from_latin_hypercube
+      ~MultiPathSequence.to_dict
+      ~MultiPathSequence.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MultiPathSequence.sequence_indices
+      ~MultiPathSequence.sequences
+      ~MultiPathSequence.values
+   
+   

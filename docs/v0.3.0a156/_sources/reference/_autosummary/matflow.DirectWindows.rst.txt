@@ -1,0 +1,45 @@
+matflow.DirectWindows
+=====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: DirectWindows
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~DirectWindows.cancel_jobs
+      ~DirectWindows.get_job_state_info
+      ~DirectWindows.get_std_out_err_filename
+      ~DirectWindows.get_stderr_filename
+      ~DirectWindows.get_stdout_filename
+      ~DirectWindows.get_submit_command
+      ~DirectWindows.get_version_info
+      ~DirectWindows.is_jobscript_active
+      ~DirectWindows.is_num_cores_supported
+      ~DirectWindows.parse_submission_output
+      ~DirectWindows.process_resources
+      ~DirectWindows.wait_for_jobscripts
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DirectWindows.DEFAULT_SHEBANG_ARGS
+      ~DirectWindows.DEFAULT_SHELL_ARGS
+      ~DirectWindows.DEFAULT_SHELL_EXECUTABLE
+      ~DirectWindows.unique_properties
+   
+   

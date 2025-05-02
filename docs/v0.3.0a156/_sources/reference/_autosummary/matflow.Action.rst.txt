@@ -1,0 +1,100 @@
+matflow.Action
+==============
+
+.. currentmodule:: matflow
+
+.. autoclass:: Action
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Action.compose_source
+      ~Action.env_spec_from_hashable
+      ~Action.env_spec_to_hashable
+      ~Action.expand
+      ~Action.from_json_like
+      ~Action.generate_data_index
+      ~Action.get_block_act_idx_shell_vars
+      ~Action.get_command_file_labels
+      ~Action.get_command_input_types
+      ~Action.get_command_output_types
+      ~Action.get_command_parameter_types
+      ~Action.get_commands_action_env
+      ~Action.get_commands_file_hash
+      ~Action.get_environment
+      ~Action.get_environment_name
+      ~Action.get_environment_spec
+      ~Action.get_input_file_generator_action_env
+      ~Action.get_input_file_labels
+      ~Action.get_input_types
+      ~Action.get_output_file_labels
+      ~Action.get_output_file_parser_action_env
+      ~Action.get_output_types
+      ~Action.get_param_dump_file_path_HDF5
+      ~Action.get_param_dump_file_path_JSON
+      ~Action.get_param_load_file_path_HDF5
+      ~Action.get_param_load_file_path_JSON
+      ~Action.get_parameter_dependence
+      ~Action.get_parameter_names
+      ~Action.get_possible_scopes
+      ~Action.get_precise_scope
+      ~Action.get_required_executables
+      ~Action.get_script_artifact_name
+      ~Action.get_script_determinant_hash
+      ~Action.get_script_determinants
+      ~Action.get_script_input_output_file_command_args
+      ~Action.get_script_input_output_file_paths
+      ~Action.get_script_name
+      ~Action.get_snippet_script_path
+      ~Action.get_snippet_script_str
+      ~Action.is_input_type_required
+      ~Action.is_snippet_script
+      ~Action.process_script_data_formats
+      ~Action.test_rules
+      ~Action.to_dict
+      ~Action.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Action.is_IFG
+      ~Action.is_OFP
+      ~Action.script_data_in_grouped
+      ~Action.script_data_in_has_direct
+      ~Action.script_data_in_has_files
+      ~Action.script_data_out_grouped
+      ~Action.script_data_out_has_direct
+      ~Action.script_data_out_has_files
+      ~Action.script_is_python_snippet
+      ~Action.task_schema
+      ~Action.commands
+      ~Action.script
+      ~Action.script_data_in
+      ~Action.script_data_out
+      ~Action.script_data_files_use_opt
+      ~Action.script_exe
+      ~Action.script_pass_env_spec
+      ~Action.environments
+      ~Action.abortable
+      ~Action.input_file_generators
+      ~Action.output_file_parsers
+      ~Action.input_files
+      ~Action.output_files
+      ~Action.rules
+      ~Action.save_files
+      ~Action.clean_up
+   
+   
