@@ -1,0 +1,54 @@
+matflow.QueuedScheduler
+=======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: QueuedScheduler
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~QueuedScheduler.cancel_jobs
+      ~QueuedScheduler.format_options
+      ~QueuedScheduler.format_switch
+      ~QueuedScheduler.get_job_state_info
+      ~QueuedScheduler.get_std_out_err_filename
+      ~QueuedScheduler.get_stderr_filename
+      ~QueuedScheduler.get_stdout_filename
+      ~QueuedScheduler.get_submit_command
+      ~QueuedScheduler.get_version_info
+      ~QueuedScheduler.is_jobscript_active
+      ~QueuedScheduler.is_num_cores_supported
+      ~QueuedScheduler.parse_submission_output
+      ~QueuedScheduler.process_resources
+      ~QueuedScheduler.wait_for_jobscripts
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~QueuedScheduler.DEFAULT_LOGIN_NODES_CMD
+      ~QueuedScheduler.DEFAULT_LOGIN_NODE_MATCH
+      ~QueuedScheduler.DEFAULT_SHEBANG_ARGS
+      ~QueuedScheduler.DEFAULT_SHELL_ARGS
+      ~QueuedScheduler.unique_properties
+      ~QueuedScheduler.DEFAULT_SUBMIT_CMD
+      ~QueuedScheduler.DEFAULT_SHOW_CMD
+      ~QueuedScheduler.DEFAULT_DEL_CMD
+      ~QueuedScheduler.DEFAULT_JS_CMD
+      ~QueuedScheduler.DEFAULT_ARRAY_SWITCH
+      ~QueuedScheduler.DEFAULT_ARRAY_ITEM_VAR
+   
+   
