@@ -1,0 +1,49 @@
+matflow.param_classes.load.LoadCase
+===================================
+
+.. currentmodule:: matflow.param_classes.load
+
+.. autoclass:: LoadCase
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~LoadCase.biaxial
+      ~LoadCase.create_damask_loading_plan
+      ~LoadCase.dump_element_group_to_HDF5_group
+      ~LoadCase.dump_to_HDF5_group
+      ~LoadCase.example_uniaxial
+      ~LoadCase.multistep
+      ~LoadCase.planar_2D
+      ~LoadCase.plane_strain
+      ~LoadCase.prepare_JSON_dump
+      ~LoadCase.random_2D
+      ~LoadCase.random_3D
+      ~LoadCase.save_from_HDF5_group
+      ~LoadCase.save_from_JSON
+      ~LoadCase.to_dict
+      ~LoadCase.uniaxial
+      ~LoadCase.uniaxial_cyclic
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LoadCase.num_steps
+      ~LoadCase.type
+      ~LoadCase.types
+      ~LoadCase.steps
+   
+   
