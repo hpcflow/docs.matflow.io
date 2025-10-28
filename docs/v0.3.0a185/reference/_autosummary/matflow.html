@@ -1,0 +1,1051 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>matflow &#8212; MatFlow 0.3.0a185 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/matflow';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.matflow.io/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.3.0a185';
+        </script>
+    <script src="../../_static/js/custom.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="matflow.app" href="matflow.app.html" />
+    <link rel="prev" title="Python API" href="../api.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-50dpi.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-50dpi.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a185  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow-new" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a185  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">Python API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">matflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="matflow.app.html">matflow.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.cancel.html">matflow.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_OS_info.html">matflow.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_known_submissions.html">matflow.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_shell_info.html">matflow.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_demo_workflow.html">matflow.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_workflow.html">matflow.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_demo_workflow.html">matflow.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_workflow.html">matflow.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_hpcflow_tests.html">matflow.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_tests.html">matflow.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show.html">matflow.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show_legend.html">matflow.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.submit_workflow.html">matflow.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Action.html">matflow.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionEnvironment.html">matflow.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionRule.html">matflow.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScope.html">matflow.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScopeType.html">matflow.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Command.html">matflow.Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.CommandFilesList.html">matflow.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectPosix.html">matflow.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectWindows.html">matflow.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Element.html">matflow.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementAction.html">matflow.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementActionRun.html">matflow.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementFilter.html">matflow.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementGroup.html">matflow.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputFiles.html">matflow.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputs.html">matflow.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementIteration.html">matflow.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputFiles.html">matflow.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputs.html">matflow.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementParameter.html">matflow.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementPropagation.html">matflow.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementRepeats.html">matflow.ElementRepeats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementResources.html">matflow.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementSet.html">matflow.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Elements.html">matflow.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Environment.html">matflow.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.EnvironmentsList.html">matflow.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Executable.html">matflow.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutableInstance.html">matflow.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutablesList.html">matflow.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Executor.html">matflow.Executor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameExt.html">matflow.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameSpec.html">matflow.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameStem.html">matflow.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileSpec.html">matflow.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.GroupList.html">matflow.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFile.html">matflow.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGenerator.html">matflow.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGeneratorSource.html">matflow.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSource.html">matflow.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSourceType.html">matflow.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputValue.html">matflow.InputValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Jobscript.html">matflow.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.JobscriptBlock.html">matflow.JobscriptBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Loop.html">matflow.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MetaTask.html">matflow.MetaTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MetaTaskSchema.html">matflow.MetaTaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MultiPathSequence.html">matflow.MultiPathSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.NumCores.html">matflow.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParser.html">matflow.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParserSource.html">matflow.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputLabel.html">matflow.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameter.html">matflow.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPath.html">matflow.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPropagationMode.html">matflow.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterValue.html">matflow.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameters.html">matflow.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParametersList.html">matflow.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.QueuedScheduler.html">matflow.QueuedScheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceList.html">matflow.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceSpec.html">matflow.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Rule.html">matflow.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.RunDirAppFiles.html">matflow.RunDirAppFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SGEPosix.html">matflow.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaInput.html">matflow.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaOutput.html">matflow.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaParameter.html">matflow.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SlurmPosix.html">matflow.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SubParameter.html">matflow.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Submission.html">matflow.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Task.html">matflow.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskInputParameters.html">matflow.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskList.html">matflow.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskObjective.html">matflow.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskOutputParameters.html">matflow.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchema.html">matflow.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchemasList.html">matflow.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSourceType.html">matflow.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskTemplateList.html">matflow.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValuePerturbation.html">matflow.ValuePerturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValueSequence.html">matflow.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Workflow.html">matflow.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowBlueprint.html">matflow.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoop.html">matflow.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoopList.html">matflow.WorkflowLoopList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTask.html">matflow.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTaskList.html">matflow.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTemplate.html">matflow.WorkflowTemplate</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.cli.html">matflow.cli</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.param_classes.html">matflow.param_classes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.load.html">matflow.param_classes.load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.orientations.html">matflow.param_classes.orientations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.seeds.html">matflow.param_classes.seeds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.single_crystal_parameters.html">matflow.param_classes.single_crystal_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.utils.html">matflow.param_classes.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.tests.html">matflow.tests</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.conftest.html">matflow.tests.conftest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.data.html">matflow.tests.data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_cli.html">matflow.tests.test_cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_utils.html">matflow.tests.test_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.utils.html">matflow.tests.utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../api.html" class="nav-link">Python API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">matflow</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="matflow">
+<h1>matflow<a class="headerlink" href="#matflow" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-matflow"></span><p class="rubric">Module attributes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.app.html#matflow.app" title="matflow.app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">app</span></code></a></p></td>
+<td><p>&lt;module 'matflow' from '/home/runner/work/matflow-new/matflow-new/matflow/__init__.py'&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.cancel.html#matflow.cancel" title="matflow.cancel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cancel</span></code></a></p></td>
+<td><p>Cancel the execution of a workflow submission.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.get_OS_info.html#matflow.get_OS_info" title="matflow.get_OS_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_OS_info</span></code></a></p></td>
+<td><p>Get information about the operating system.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.get_known_submissions.html#matflow.get_known_submissions" title="matflow.get_known_submissions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_known_submissions</span></code></a></p></td>
+<td><p>Retrieve information about active and recently inactive finished MatFlow workflows.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.get_shell_info.html#matflow.get_shell_info" title="matflow.get_shell_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shell_info</span></code></a></p></td>
+<td><p>Get information about a given shell and the operating system.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.make_and_submit_demo_workflow.html#matflow.make_and_submit_demo_workflow" title="matflow.make_and_submit_demo_workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_and_submit_demo_workflow</span></code></a></p></td>
+<td><p>Generate and submit a new MatFlow workflow from a file or string containing a workflow template parametrisation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.make_and_submit_workflow.html#matflow.make_and_submit_workflow" title="matflow.make_and_submit_workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_and_submit_workflow</span></code></a></p></td>
+<td><p>Generate and submit a new MatFlow workflow from a file or string containing a workflow template parametrisation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.make_demo_workflow.html#matflow.make_demo_workflow" title="matflow.make_demo_workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_demo_workflow</span></code></a></p></td>
+<td><p>Generate a new MatFlow workflow from a builtin demo workflow template.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.make_workflow.html#matflow.make_workflow" title="matflow.make_workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_workflow</span></code></a></p></td>
+<td><p>Generate a new MatFlow workflow from a file or string containing a workflow template parametrisation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.run_hpcflow_tests.html#matflow.run_hpcflow_tests" title="matflow.run_hpcflow_tests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_hpcflow_tests</span></code></a></p></td>
+<td><p>Run hpcflow test suite.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.run_tests.html#matflow.run_tests" title="matflow.run_tests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_tests</span></code></a></p></td>
+<td><p>Run MatFlow test suite.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.show.html#matflow.show" title="matflow.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a></p></td>
+<td><p>Show information about running MatFlow workflows.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.show_legend.html#matflow.show_legend" title="matflow.show_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_legend</span></code></a></p></td>
+<td><p>Output a legend for the jobscript-element and EAR states that are displayed by the <cite>show</cite> command.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.submit_workflow.html#matflow.submit_workflow" title="matflow.submit_workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_workflow</span></code></a></p></td>
+<td><p>Submit an existing MatFlow workflow.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Action.html#matflow.Action" title="matflow.Action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Action</span></code></a></p></td>
+<td><p>An atomic component of a workflow that will be enacted within an iteration structure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ActionEnvironment.html#matflow.ActionEnvironment" title="matflow.ActionEnvironment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionEnvironment</span></code></a></p></td>
+<td><p>The environment that an action is enacted within.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ActionRule.html#matflow.ActionRule" title="matflow.ActionRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionRule</span></code></a></p></td>
+<td><p>Class to represent a rule/condition that must be True if an action is to be included.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ActionScope.html#matflow.ActionScope" title="matflow.ActionScope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionScope</span></code></a></p></td>
+<td><p>Class to represent the identification of a subset of task schema actions by a filtering process.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ActionScopeType.html#matflow.ActionScopeType" title="matflow.ActionScopeType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionScopeType</span></code></a></p></td>
+<td><p>Types of action scope.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.Command.html#matflow.Command" title="matflow.Command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Command</span></code></a></p></td>
+<td><p>A command that may be run within a workflow action.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.CommandFilesList.html#matflow.CommandFilesList" title="matflow.CommandFilesList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CommandFilesList</span></code></a></p></td>
+<td><p>A list-like container for command files with dot-notation access by label.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.DirectPosix.html#matflow.DirectPosix" title="matflow.DirectPosix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DirectPosix</span></code></a></p></td>
+<td><p>A direct scheduler for POSIX systems.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.DirectWindows.html#matflow.DirectWindows" title="matflow.DirectWindows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DirectWindows</span></code></a></p></td>
+<td><p>A direct scheduler for Windows.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.Element.html#matflow.Element" title="matflow.Element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Element</span></code></a></p></td>
+<td><p>A basic component of a workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ElementAction.html#matflow.ElementAction" title="matflow.ElementAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementAction</span></code></a></p></td>
+<td><p>An abstract representation of an element's action at a particular iteration and the runs that enact that element iteration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ElementActionRun.html#matflow.ElementActionRun" title="matflow.ElementActionRun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementActionRun</span></code></a></p></td>
+<td><p>The Element Action Run (EAR) is an atomic unit of an enacted workflow, representing one unit of work (e.g., particular submitted job to run a program) within that overall workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ElementFilter.html#matflow.ElementFilter" title="matflow.ElementFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementFilter</span></code></a></p></td>
+<td><p>A filter for iterations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ElementGroup.html#matflow.ElementGroup" title="matflow.ElementGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementGroup</span></code></a></p></td>
+<td><p>A grouping rule for element iterations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ElementInputFiles.html#matflow.ElementInputFiles" title="matflow.ElementInputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementInputFiles</span></code></a></p></td>
+<td><p>The input files to an element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ElementInputs.html#matflow.ElementInputs" title="matflow.ElementInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementInputs</span></code></a></p></td>
+<td><p>The inputs to an element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ElementIteration.html#matflow.ElementIteration" title="matflow.ElementIteration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementIteration</span></code></a></p></td>
+<td><p>A particular iteration of an element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ElementOutputFiles.html#matflow.ElementOutputFiles" title="matflow.ElementOutputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementOutputFiles</span></code></a></p></td>
+<td><p>The output files from an element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ElementOutputs.html#matflow.ElementOutputs" title="matflow.ElementOutputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementOutputs</span></code></a></p></td>
+<td><p>The outputs from an element.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ElementParameter.html#matflow.ElementParameter" title="matflow.ElementParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementParameter</span></code></a></p></td>
+<td><p>A parameter to an <a class="reference internal" href="matflow.Element.html#matflow.Element" title="matflow.Element"><code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ElementPropagation.html#matflow.ElementPropagation" title="matflow.ElementPropagation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementPropagation</span></code></a></p></td>
+<td><p>Class to represent how a newly added element set should propagate to a given downstream task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ElementRepeats.html#matflow.ElementRepeats" title="matflow.ElementRepeats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementRepeats</span></code></a></p></td>
+<td><p>A repetition rule.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ElementResources.html#matflow.ElementResources" title="matflow.ElementResources"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementResources</span></code></a></p></td>
+<td><p>The resources an element requires.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ElementSet.html#matflow.ElementSet" title="matflow.ElementSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementSet</span></code></a></p></td>
+<td><p>Class to represent a parameterisation of a new set of elements.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Elements.html#matflow.Elements" title="matflow.Elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Elements</span></code></a></p></td>
+<td><p>The elements of a task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.Environment.html#matflow.Environment" title="matflow.Environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Environment</span></code></a></p></td>
+<td><p>An execution environment that contains a number of executables.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.EnvironmentsList.html#matflow.EnvironmentsList" title="matflow.EnvironmentsList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EnvironmentsList</span></code></a></p></td>
+<td><p>A list-like container for environments with dot-notation access by name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.Executable.html#matflow.Executable" title="matflow.Executable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Executable</span></code></a></p></td>
+<td><p>A program managed by the environment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ExecutableInstance.html#matflow.ExecutableInstance" title="matflow.ExecutableInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExecutableInstance</span></code></a></p></td>
+<td><p>A particular instance of an executable that can support some mode of operation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ExecutablesList.html#matflow.ExecutablesList" title="matflow.ExecutablesList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExecutablesList</span></code></a></p></td>
+<td><p>A list-like container for environment executables with dot-notation access by executable label.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Executor.html#matflow.Executor" title="matflow.Executor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Executor</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.FileNameExt.html#matflow.FileNameExt" title="matflow.FileNameExt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileNameExt</span></code></a></p></td>
+<td><p>The extension of a file name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.FileNameSpec.html#matflow.FileNameSpec" title="matflow.FileNameSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileNameSpec</span></code></a></p></td>
+<td><p>The name of a file handled by a workflow, or a pattern that matches multiple files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.FileNameStem.html#matflow.FileNameStem" title="matflow.FileNameStem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileNameStem</span></code></a></p></td>
+<td><p>The stem of a file name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.FileSpec.html#matflow.FileSpec" title="matflow.FileSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileSpec</span></code></a></p></td>
+<td><p>A specification of a file handled by a workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.GroupList.html#matflow.GroupList" title="matflow.GroupList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GroupList</span></code></a></p></td>
+<td><p>A list-like container for the task schema group list with dot-notation access by group name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.InputFile.html#matflow.InputFile" title="matflow.InputFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputFile</span></code></a></p></td>
+<td><p>An input file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.InputFileGenerator.html#matflow.InputFileGenerator" title="matflow.InputFileGenerator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputFileGenerator</span></code></a></p></td>
+<td><p>Represents a script that is run to generate input files for an action.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.InputFileGeneratorSource.html#matflow.InputFileGeneratorSource" title="matflow.InputFileGeneratorSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputFileGeneratorSource</span></code></a></p></td>
+<td><p>The source of code for use in an input file generator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.InputSource.html#matflow.InputSource" title="matflow.InputSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputSource</span></code></a></p></td>
+<td><p>An input source to a workflow task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.InputSourceType.html#matflow.InputSourceType" title="matflow.InputSourceType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputSourceType</span></code></a></p></td>
+<td><p>The types of input sources.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.InputValue.html#matflow.InputValue" title="matflow.InputValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputValue</span></code></a></p></td>
+<td><p>An input value to a task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Jobscript.html#matflow.Jobscript" title="matflow.Jobscript"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Jobscript</span></code></a></p></td>
+<td><p>A group of actions that are submitted together to be executed by the underlying job management system as a single unit.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.JobscriptBlock.html#matflow.JobscriptBlock" title="matflow.JobscriptBlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JobscriptBlock</span></code></a></p></td>
+<td><p>A rectangular block of element-actions to run within a jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Loop.html#matflow.Loop" title="matflow.Loop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Loop</span></code></a></p></td>
+<td><p>A loop in a workflow template.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.MetaTask.html#matflow.MetaTask" title="matflow.MetaTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaTask</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.MetaTaskSchema.html#matflow.MetaTaskSchema" title="matflow.MetaTaskSchema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaTaskSchema</span></code></a></p></td>
+<td><p>Class to represent a task schema with no actions, that can be used to represent the effect of multiple task schemas.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.MultiPathSequence.html#matflow.MultiPathSequence" title="matflow.MultiPathSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiPathSequence</span></code></a></p></td>
+<td><p>A sequence of values to be distributed across one or more paths.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.NumCores.html#matflow.NumCores" title="matflow.NumCores"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumCores</span></code></a></p></td>
+<td><p>A range of cores supported by an executable instance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.OutputFileParser.html#matflow.OutputFileParser" title="matflow.OutputFileParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OutputFileParser</span></code></a></p></td>
+<td><p>Represents a script that is run to parse output files from an action and create outputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.OutputFileParserSource.html#matflow.OutputFileParserSource" title="matflow.OutputFileParserSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OutputFileParserSource</span></code></a></p></td>
+<td><p>The source of code for use in an output file parser.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.OutputLabel.html#matflow.OutputLabel" title="matflow.OutputLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OutputLabel</span></code></a></p></td>
+<td><p>Schema input labels that should be applied to a subset of task outputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Parameter.html#matflow.Parameter" title="matflow.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameter</span></code></a></p></td>
+<td><p>A general parameter to a workflow task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ParameterPath.html#matflow.ParameterPath" title="matflow.ParameterPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterPath</span></code></a></p></td>
+<td><p>Path to a parameter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ParameterPropagationMode.html#matflow.ParameterPropagationMode" title="matflow.ParameterPropagationMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterPropagationMode</span></code></a></p></td>
+<td><p>How a parameter is propagated.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ParameterValue.html#matflow.ParameterValue" title="matflow.ParameterValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterValue</span></code></a></p></td>
+<td><p>The value handler for a parameter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Parameters.html#matflow.Parameters" title="matflow.Parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameters</span></code></a></p></td>
+<td><p>The parameters of a (workflow-bound) task.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ParametersList.html#matflow.ParametersList" title="matflow.ParametersList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParametersList</span></code></a></p></td>
+<td><p>A list-like container for parameters with dot-notation access by parameter type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.QueuedScheduler.html#matflow.QueuedScheduler" title="matflow.QueuedScheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QueuedScheduler</span></code></a></p></td>
+<td><p>Base class for schedulers that use a job submission system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ResourceList.html#matflow.ResourceList" title="matflow.ResourceList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResourceList</span></code></a></p></td>
+<td><p>A list-like container for resources.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ResourceSpec.html#matflow.ResourceSpec" title="matflow.ResourceSpec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ResourceSpec</span></code></a></p></td>
+<td><p>Class to represent specification of resource requirements for a (set of) actions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.Rule.html#matflow.Rule" title="matflow.Rule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></a></p></td>
+<td><p>Class to represent a testable condition on an element iteration or run.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.RunDirAppFiles.html#matflow.RunDirAppFiles" title="matflow.RunDirAppFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunDirAppFiles</span></code></a></p></td>
+<td><p>A class to encapsulate the naming/recognition of app-created files within run directories.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.SGEPosix.html#matflow.SGEPosix" title="matflow.SGEPosix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SGEPosix</span></code></a></p></td>
+<td><p>A scheduler that uses SGE.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.SchemaInput.html#matflow.SchemaInput" title="matflow.SchemaInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SchemaInput</span></code></a></p></td>
+<td><p>A Parameter as used within a particular schema, for which a default value may be applied.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.SchemaOutput.html#matflow.SchemaOutput" title="matflow.SchemaOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SchemaOutput</span></code></a></p></td>
+<td><p>A Parameter as outputted from particular task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.SchemaParameter.html#matflow.SchemaParameter" title="matflow.SchemaParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SchemaParameter</span></code></a></p></td>
+<td><p>A parameter bound in a schema.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.SlurmPosix.html#matflow.SlurmPosix" title="matflow.SlurmPosix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SlurmPosix</span></code></a></p></td>
+<td><p>A scheduler that uses SLURM.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.SubParameter.html#matflow.SubParameter" title="matflow.SubParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SubParameter</span></code></a></p></td>
+<td><p>A parameter that is a component of another parameter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.Submission.html#matflow.Submission" title="matflow.Submission"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Submission</span></code></a></p></td>
+<td><p>A collection of jobscripts to be submitted to a scheduler.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.Task.html#matflow.Task" title="matflow.Task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Task</span></code></a></p></td>
+<td><p>Parametrisation of an isolated task for which a subset of input values are given &quot;locally&quot;.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.TaskInputParameters.html#matflow.TaskInputParameters" title="matflow.TaskInputParameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskInputParameters</span></code></a></p></td>
+<td><p>For retrieving schema input parameters across all elements.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.TaskList.html#matflow.TaskList" title="matflow.TaskList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskList</span></code></a></p></td>
+<td><p>A list-like container for a task-like list with dot-notation access by task unique-name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.TaskObjective.html#matflow.TaskObjective" title="matflow.TaskObjective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskObjective</span></code></a></p></td>
+<td><p>A thing that a task is attempting to achieve.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.TaskOutputParameters.html#matflow.TaskOutputParameters" title="matflow.TaskOutputParameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskOutputParameters</span></code></a></p></td>
+<td><p>For retrieving schema output parameters across all elements.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.TaskSchema.html#matflow.TaskSchema" title="matflow.TaskSchema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskSchema</span></code></a></p></td>
+<td><p>Class to represent the inputs, outputs and implementation mechanism of a given task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.TaskSchemasList.html#matflow.TaskSchemasList" title="matflow.TaskSchemasList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskSchemasList</span></code></a></p></td>
+<td><p>A list-like container for a task schema list with dot-notation access by task schema unique-name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.TaskSourceType.html#matflow.TaskSourceType" title="matflow.TaskSourceType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskSourceType</span></code></a></p></td>
+<td><p>The types of task-based input sources.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.TaskTemplateList.html#matflow.TaskTemplateList" title="matflow.TaskTemplateList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskTemplateList</span></code></a></p></td>
+<td><p>A list-like container for a task-like list with dot-notation access by task unique-name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.ValuePerturbation.html#matflow.ValuePerturbation" title="matflow.ValuePerturbation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValuePerturbation</span></code></a></p></td>
+<td><p>A perturbation applied to a value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.ValueSequence.html#matflow.ValueSequence" title="matflow.ValueSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueSequence</span></code></a></p></td>
+<td><p>A sequence of values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.Workflow.html#matflow.Workflow" title="matflow.Workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Workflow</span></code></a></p></td>
+<td><p>A concrete workflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.WorkflowBlueprint.html#matflow.WorkflowBlueprint" title="matflow.WorkflowBlueprint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkflowBlueprint</span></code></a></p></td>
+<td><p>Pre-built workflow templates that are simpler to parameterise.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.WorkflowLoop.html#matflow.WorkflowLoop" title="matflow.WorkflowLoop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkflowLoop</span></code></a></p></td>
+<td><p>Class to represent a <a class="reference internal" href="matflow.Loop.html#matflow.Loop" title="matflow.Loop"><code class="xref py py-class docutils literal notranslate"><span class="pre">Loop</span></code></a> that is bound to a <a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.app.Workflow.html#hpcflow.app.Workflow" title="(in hpcflow)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workflow</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.WorkflowLoopList.html#matflow.WorkflowLoopList" title="matflow.WorkflowLoopList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkflowLoopList</span></code></a></p></td>
+<td><p>A list-like container for workflow loops with dot-notation access by name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.WorkflowTask.html#matflow.WorkflowTask" title="matflow.WorkflowTask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkflowTask</span></code></a></p></td>
+<td><p>Represents a <a class="reference internal" href="matflow.Task.html#matflow.Task" title="matflow.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a> that is bound to a <a class="reference internal" href="matflow.Workflow.html#matflow.Workflow" title="matflow.Workflow"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workflow</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.WorkflowTaskList.html#matflow.WorkflowTaskList" title="matflow.WorkflowTaskList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkflowTaskList</span></code></a></p></td>
+<td><p>A list-like container for workflow tasks with dot-notation access by unique name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.WorkflowTemplate.html#matflow.WorkflowTemplate" title="matflow.WorkflowTemplate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkflowTemplate</span></code></a></p></td>
+<td><p>Class to represent initial parametrisation of a MatFlow workflow, with limited validation logic.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.cli.html#module-matflow.cli" title="matflow.cli"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matflow.cli</span></code></a></p></td>
+<td><p>Runs the command line interface.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="matflow.param_classes.html#module-matflow.param_classes" title="matflow.param_classes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matflow.param_classes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="matflow.tests.html#module-matflow.tests" title="matflow.tests"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matflow.tests</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../api.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python API</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="matflow.app.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">matflow.app</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/matflow-new/edit/develop/docs/source/reference/_autosummary/matflow.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/_autosummary/matflow.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, MatFlow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
