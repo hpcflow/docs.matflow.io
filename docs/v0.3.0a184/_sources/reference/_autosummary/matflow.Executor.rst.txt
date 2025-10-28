@@ -1,0 +1,35 @@
+matflow.Executor
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Executor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Executor.run
+      ~Executor.send_abort
+      ~Executor.start_zmq_server
+      ~Executor.stop_zmq_server
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Executor.q
+      ~Executor.zmq_context
+   
+   
