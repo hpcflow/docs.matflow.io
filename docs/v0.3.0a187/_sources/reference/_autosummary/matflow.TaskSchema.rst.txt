@@ -1,0 +1,58 @@
+matflow.TaskSchema
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: TaskSchema
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TaskSchema.basic_info
+      ~TaskSchema.from_json_like
+      ~TaskSchema.get_by_key
+      ~TaskSchema.get_info_html
+      ~TaskSchema.get_key
+      ~TaskSchema.get_parameter_dependence
+      ~TaskSchema.ignore_invalid_actions
+      ~TaskSchema.info
+      ~TaskSchema.make_persistent
+      ~TaskSchema.to_dict
+      ~TaskSchema.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskSchema.input_type_labels_map
+      ~TaskSchema.input_types
+      ~TaskSchema.multi_input_types
+      ~TaskSchema.name
+      ~TaskSchema.output_types
+      ~TaskSchema.provides_parameters
+      ~TaskSchema.task_template
+      ~TaskSchema.objective
+      ~TaskSchema.actions
+      ~TaskSchema.method
+      ~TaskSchema.implementation
+      ~TaskSchema.inputs
+      ~TaskSchema.outputs
+      ~TaskSchema.parameter_class_modules
+      ~TaskSchema.web_doc
+      ~TaskSchema.environment_presets
+      ~TaskSchema.doc
+      ~TaskSchema.version
+   
+   
