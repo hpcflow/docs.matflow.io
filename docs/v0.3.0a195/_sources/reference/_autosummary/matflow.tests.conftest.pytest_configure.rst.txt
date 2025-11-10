@@ -1,0 +1,6 @@
+matflow.tests.conftest.pytest\_configure
+========================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: pytest_configure
