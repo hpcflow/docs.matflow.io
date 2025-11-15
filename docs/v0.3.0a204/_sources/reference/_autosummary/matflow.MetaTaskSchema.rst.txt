@@ -1,0 +1,58 @@
+matflow.MetaTaskSchema
+======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: MetaTaskSchema
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MetaTaskSchema.basic_info
+      ~MetaTaskSchema.from_json_like
+      ~MetaTaskSchema.get_by_key
+      ~MetaTaskSchema.get_info_html
+      ~MetaTaskSchema.get_key
+      ~MetaTaskSchema.get_parameter_dependence
+      ~MetaTaskSchema.ignore_invalid_actions
+      ~MetaTaskSchema.info
+      ~MetaTaskSchema.make_persistent
+      ~MetaTaskSchema.to_dict
+      ~MetaTaskSchema.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MetaTaskSchema.input_type_labels_map
+      ~MetaTaskSchema.input_types
+      ~MetaTaskSchema.multi_input_types
+      ~MetaTaskSchema.name
+      ~MetaTaskSchema.output_types
+      ~MetaTaskSchema.provides_parameters
+      ~MetaTaskSchema.task_template
+      ~MetaTaskSchema.objective
+      ~MetaTaskSchema.actions
+      ~MetaTaskSchema.method
+      ~MetaTaskSchema.implementation
+      ~MetaTaskSchema.inputs
+      ~MetaTaskSchema.outputs
+      ~MetaTaskSchema.parameter_class_modules
+      ~MetaTaskSchema.web_doc
+      ~MetaTaskSchema.environment_presets
+      ~MetaTaskSchema.doc
+      ~MetaTaskSchema.version
+   
+   
