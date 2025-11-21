@@ -1,0 +1,60 @@
+matflow.param_classes.load.LoadStep
+===================================
+
+.. currentmodule:: matflow.param_classes.load
+
+.. autoclass:: LoadStep
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~LoadStep.biaxial
+      ~LoadStep.dump_element_group_to_HDF5_group
+      ~LoadStep.dump_to_HDF5_group
+      ~LoadStep.example_uniaxial
+      ~LoadStep.from_npz_file
+      ~LoadStep.planar_2D
+      ~LoadStep.plane_strain
+      ~LoadStep.prepare_JSON_dump
+      ~LoadStep.random_2D
+      ~LoadStep.random_3D
+      ~LoadStep.random_inc
+      ~LoadStep.save_from_HDF5_group
+      ~LoadStep.save_from_JSON
+      ~LoadStep.to_dict
+      ~LoadStep.uniaxial
+      ~LoadStep.uniaxial_cyclic
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LoadStep.method_args
+      ~LoadStep.method_name
+      ~LoadStep.strain
+      ~LoadStep.strain_like_tensor
+      ~LoadStep.strain_rate
+      ~LoadStep.type
+      ~LoadStep.total_time
+      ~LoadStep.num_increments
+      ~LoadStep.direction
+      ~LoadStep.normal_direction
+      ~LoadStep.target_def_grad
+      ~LoadStep.target_def_grad_rate
+      ~LoadStep.target_vel_grad
+      ~LoadStep.stress
+      ~LoadStep.dump_frequency
+   
+   
