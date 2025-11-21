@@ -1,0 +1,46 @@
+matflow.JobscriptBlock
+======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: JobscriptBlock
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~JobscriptBlock.from_json_like
+      ~JobscriptBlock.get_task_loop_idx_array
+      ~JobscriptBlock.to_dict
+      ~JobscriptBlock.to_json_like
+      ~JobscriptBlock.write_EAR_ID_file
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobscriptBlock.EAR_ID
+      ~JobscriptBlock.all_EARs
+      ~JobscriptBlock.dependencies
+      ~JobscriptBlock.index
+      ~JobscriptBlock.num_actions
+      ~JobscriptBlock.num_elements
+      ~JobscriptBlock.submission
+      ~JobscriptBlock.task_actions
+      ~JobscriptBlock.task_elements
+      ~JobscriptBlock.task_insert_IDs
+      ~JobscriptBlock.task_loop_idx
+      ~JobscriptBlock.workflow
+   
+   
