@@ -1,0 +1,1618 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>matflow.Jobscript &#8212; MatFlow 0.3.0a221 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/matflow.Jobscript';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.matflow.io/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.3.0a221';
+        </script>
+    <script src="../../_static/js/custom.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="matflow.JobscriptBlock" href="matflow.JobscriptBlock.html" />
+    <link rel="prev" title="matflow.InputValue" href="matflow.InputValue.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-50dpi.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-50dpi.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a221  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a221  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">Python API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="matflow.html">matflow</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matflow.app.html">matflow.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.cancel.html">matflow.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_OS_info.html">matflow.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_known_submissions.html">matflow.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.get_shell_info.html">matflow.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_demo_workflow.html">matflow.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_and_submit_workflow.html">matflow.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_demo_workflow.html">matflow.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.make_workflow.html">matflow.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_hpcflow_tests.html">matflow.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.run_tests.html">matflow.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show.html">matflow.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.show_legend.html">matflow.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.submit_workflow.html">matflow.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Action.html">matflow.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionEnvironment.html">matflow.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionRule.html">matflow.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScope.html">matflow.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ActionScopeType.html">matflow.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Command.html">matflow.Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.CommandFilesList.html">matflow.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.CompactProblemFormatter.html">matflow.CompactProblemFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectPosix.html">matflow.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.DirectWindows.html">matflow.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Element.html">matflow.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementAction.html">matflow.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementActionRun.html">matflow.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementFilter.html">matflow.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementGroup.html">matflow.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputFiles.html">matflow.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementInputs.html">matflow.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementIteration.html">matflow.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputFiles.html">matflow.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementOutputs.html">matflow.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementParameter.html">matflow.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementPropagation.html">matflow.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementRepeats.html">matflow.ElementRepeats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementResources.html">matflow.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ElementSet.html">matflow.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Elements.html">matflow.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Environment.html">matflow.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.EnvironmentsList.html">matflow.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Executable.html">matflow.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutableInstance.html">matflow.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ExecutablesList.html">matflow.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Executor.html">matflow.Executor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameExt.html">matflow.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameSpec.html">matflow.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileNameStem.html">matflow.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.FileSpec.html">matflow.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.GroupList.html">matflow.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Import.html">matflow.Import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ImportParameter.html">matflow.ImportParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFile.html">matflow.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGenerator.html">matflow.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputFileGeneratorSource.html">matflow.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSource.html">matflow.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputSourceType.html">matflow.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.InputValue.html">matflow.InputValue</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">matflow.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.JobscriptBlock.html">matflow.JobscriptBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Loop.html">matflow.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MetaTask.html">matflow.MetaTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MetaTaskSchema.html">matflow.MetaTaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.MultiPathSequence.html">matflow.MultiPathSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.NumCores.html">matflow.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParser.html">matflow.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputFileParserSource.html">matflow.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.OutputLabel.html">matflow.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameter.html">matflow.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPath.html">matflow.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterPropagationMode.html">matflow.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParameterValue.html">matflow.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Parameters.html">matflow.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ParametersList.html">matflow.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.QueuedScheduler.html">matflow.QueuedScheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceList.html">matflow.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ResourceSpec.html">matflow.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Rule.html">matflow.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.RunDirAppFiles.html">matflow.RunDirAppFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SGEPosix.html">matflow.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaInput.html">matflow.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaOutput.html">matflow.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SchemaParameter.html">matflow.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SlurmPosix.html">matflow.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.SubParameter.html">matflow.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Submission.html">matflow.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Task.html">matflow.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskInputParameters.html">matflow.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskList.html">matflow.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskObjective.html">matflow.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskOutputParameters.html">matflow.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchema.html">matflow.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSchemasList.html">matflow.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskSourceType.html">matflow.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.TaskTemplateList.html">matflow.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValuePerturbation.html">matflow.ValuePerturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.ValueSequence.html">matflow.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.Workflow.html">matflow.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowBlueprint.html">matflow.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoop.html">matflow.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowLoopList.html">matflow.WorkflowLoopList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTask.html">matflow.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTaskList.html">matflow.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matflow.WorkflowTemplate.html">matflow.WorkflowTemplate</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.cli.html">matflow.cli</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.cli.add_to_env_setup_CLI.html">matflow.cli.add_to_env_setup_CLI</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.encoders.html">matflow.encoders</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.encoders.get_decoders.html">matflow.encoders.get_decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.encoders.get_encoders.html">matflow.encoders.get_encoders</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.environments.html">matflow.environments</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.environments.env_configure_damask.html">matflow.environments.env_configure_damask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.environments.env_configure_dream3d.html">matflow.environments.env_configure_dream3d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.environments.env_configure_matlab.html">matflow.environments.env_configure_matlab</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.environments.env_configure_moose.html">matflow.environments.env_configure_moose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.environments.env_configure_python_all.html">matflow.environments.env_configure_python_all</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.param_classes.html">matflow.param_classes</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.load.html">matflow.param_classes.load</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.moose.html">matflow.param_classes.moose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.orientations.html">matflow.param_classes.orientations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.seeds.html">matflow.param_classes.seeds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.single_crystal_parameters.html">matflow.param_classes.single_crystal_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.surrogate.html">matflow.param_classes.surrogate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.param_classes.utils.html">matflow.param_classes.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.pytest_plugin.html">matflow.pytest_plugin</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.pytest_plugin.pytest_addoption.html">matflow.pytest_plugin.pytest_addoption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.pytest_plugin.pytest_configure.html">matflow.pytest_plugin.pytest_configure</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="matflow.tests.html">matflow.tests</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.conftest.html">matflow.tests.conftest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.data.html">matflow.tests.data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_cli.html">matflow.tests.test_cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_encoders_decoders.html">matflow.tests.test_encoders_decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.test_utils.html">matflow.tests.test_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matflow.tests.utils.html">matflow.tests.utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="matflow.html" class="nav-link">matflow</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">matflow.Jobscript</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="matflow-jobscript">
+<h1>matflow.Jobscript<a class="headerlink" href="#matflow-jobscript" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="matflow.Jobscript">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">matflow.</span></span><span class="sig-name descname"><span class="pre">Jobscript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blocks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at_submit_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submit_hostname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submit_machine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_hash</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.sdk.submission.jobscript.Jobscript.html#hpcflow.sdk.submission.jobscript.Jobscript" title="(in hpcflow)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Jobscript</span></code></a></p>
+<p>A group of actions that are submitted together to be executed by the underlying job
+management system as a single unit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_insert_IDs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em>) – The task insertion IDs.</p></li>
+<li><p><strong>task_actions</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>]</em>) – The actions of the tasks.
+<code class="docutils literal notranslate"><span class="pre">task</span> <span class="pre">insert</span> <span class="pre">ID,</span> <span class="pre">action_idx,</span> <span class="pre">index</span> <span class="pre">into</span> <span class="pre">task_loop_idx</span></code> for each <code class="docutils literal notranslate"><span class="pre">JS_ACTION_IDX</span></code></p></li>
+<li><p><strong>task_elements</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em><em>]</em>) – The elements of the tasks.
+Maps <code class="docutils literal notranslate"><span class="pre">JS_ELEMENT_IDX</span></code> to list of <code class="docutils literal notranslate"><span class="pre">TASK_ELEMENT_IDX</span></code> for each <code class="docutils literal notranslate"><span class="pre">TASK_INSERT_ID</span></code></p></li>
+<li><p><strong>EAR_ID</strong> – Element action run information.</p></li>
+<li><p><strong>resources</strong> (<a class="reference external" href="https://hpcflow.github.io/docs/stable/reference/_autosummary/hpcflow.app.ElementResources.html#hpcflow.app.ElementResources" title="(in hpcflow)"><em>ElementResources</em></a>) – Resources to use</p></li>
+<li><p><strong>task_loop_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>]</em>) – Description of what loops are in play.</p></li>
+<li><p><strong>dependencies</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>]</em>) – Description of dependencies.</p></li>
+<li><p><strong>submit_time</strong> (<em>datetime</em>) – When the jobscript was submitted, if known.</p></li>
+<li><p><strong>submit_hostname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Where the jobscript was submitted, if known.</p></li>
+<li><p><strong>submit_machine</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Description of what the jobscript was submitted to, if known.</p></li>
+<li><p><strong>submit_cmdline</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The command line used to do the commit, if known.</p></li>
+<li><p><strong>scheduler_job_ID</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The job ID from the scheduler, if known.</p></li>
+<li><p><strong>process_ID</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – The process ID of the subprocess, if known.</p></li>
+<li><p><strong>version_info</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>...</em><em>]</em>) – Version info about the target system.</p></li>
+<li><p><strong>os_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The name of the OS.</p></li>
+<li><p><strong>shell_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The name of the shell.</p></li>
+<li><p><strong>scheduler_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The scheduler used.</p></li>
+<li><p><strong>running</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether the jobscript is currently running.</p></li>
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – </p></li>
+<li><p><strong>is_array</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – </p></li>
+<li><p><strong>blocks</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference internal" href="matflow.JobscriptBlock.html#matflow.JobscriptBlock" title="matflow.JobscriptBlock"><em>JobscriptBlock</em></a><em>]</em>) – </p></li>
+<li><p><strong>at_submit_metadata</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Any</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>shell_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>resource_hash</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>elements</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.compose_combined_script" title="matflow.Jobscript.compose_combined_script"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compose_combined_script</span></code></a></p></td>
+<td><p>Prepare the combined-script file string, if applicable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.compose_jobscript" title="matflow.Jobscript.compose_jobscript"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compose_jobscript</span></code></a></p></td>
+<td><p>Prepare the jobscript file contents as a string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.from_json_like" title="matflow.Jobscript.from_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json_like</span></code></a></p></td>
+<td><p>Make an instance of this class from JSON (or YAML) data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.get_active_states" title="matflow.Jobscript.get_active_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_active_states</span></code></a></p></td>
+<td><p>If this jobscript is active on this machine, return the state information from the scheduler.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.get_app_std_path" title="matflow.Jobscript.get_app_std_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_app_std_path</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.get_commands_file_name" title="matflow.Jobscript.get_commands_file_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_commands_file_name</span></code></a></p></td>
+<td><p>Get the name of a file containing commands for a particular jobscript action.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.get_std_out_err_path" title="matflow.Jobscript.get_std_out_err_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_std_out_err_path</span></code></a></p></td>
+<td><p>File path of combined standard output and error streams.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.get_stderr" title="matflow.Jobscript.get_stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_stderr</span></code></a></p></td>
+<td><p>Retrieve the contents of the standard error stream file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.get_stderr_path" title="matflow.Jobscript.get_stderr_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_stderr_path</span></code></a></p></td>
+<td><p>File path to which the jobscript's standard error is saved.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.get_stdout" title="matflow.Jobscript.get_stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_stdout</span></code></a></p></td>
+<td><p>Retrieve the contents of the standard output stream file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.get_stdout_path" title="matflow.Jobscript.get_stdout_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_stdout_path</span></code></a></p></td>
+<td><p>File path to which the jobscript's standard output is saved.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.print_stderr" title="matflow.Jobscript.print_stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_stderr</span></code></a></p></td>
+<td><p>Print the contents of the standard error stream file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.print_stdout" title="matflow.Jobscript.print_stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_stdout</span></code></a></p></td>
+<td><p>Print the contents of the standard output stream file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.submit" title="matflow.Jobscript.submit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit</span></code></a></p></td>
+<td><p>Submit the jobscript to the scheduler.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.to_dict" title="matflow.Jobscript.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code></a></p></td>
+<td><p>Serialize this object as a dictionary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.to_json_like" title="matflow.Jobscript.to_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json_like</span></code></a></p></td>
+<td><p>Serialize this object as an object structure that can be trivially converted to JSON.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.write_jobscript" title="matflow.Jobscript.write_jobscript"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_jobscript</span></code></a></p></td>
+<td><p>Write the jobscript to its file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.write_script_indices_file" title="matflow.Jobscript.write_script_indices_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_script_indices_file</span></code></a></p></td>
+<td><p>Write a text file containing the action script index for each block and action in a <cite>combined_scripts</cite> script.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.EAR_ID_file_name" title="matflow.Jobscript.EAR_ID_file_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EAR_ID_file_name</span></code></a></p></td>
+<td><p>The name of a file containing EAR IDs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.EAR_ID_file_path" title="matflow.Jobscript.EAR_ID_file_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EAR_ID_file_path</span></code></a></p></td>
+<td><p>The path to the file containing EAR IDs for this jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.all_EAR_IDs" title="matflow.Jobscript.all_EAR_IDs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_EAR_IDs</span></code></a></p></td>
+<td><p>Return all run IDs of this jobscripts (across all blocks), removing missing run IDs (i.e.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.all_EARs" title="matflow.Jobscript.all_EARs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_EARs</span></code></a></p></td>
+<td><p>Description of EAR information for this jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.at_submit_metadata" title="matflow.Jobscript.at_submit_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">at_submit_metadata</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.blocks" title="matflow.Jobscript.blocks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blocks</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.combined_script_indices_file_name" title="matflow.Jobscript.combined_script_indices_file_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combined_script_indices_file_name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.combined_script_indices_file_path" title="matflow.Jobscript.combined_script_indices_file_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combined_script_indices_file_path</span></code></a></p></td>
+<td><p>The path to the file containing script indices, in the case this is a <code class="docutils literal notranslate"><span class="pre">combine_scripts=True</span></code> jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.dependencies" title="matflow.Jobscript.dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dependencies</span></code></a></p></td>
+<td><p>The dependency descriptor, accounting for all blocks within this jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.direct_std_out_err_path" title="matflow.Jobscript.direct_std_out_err_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">direct_std_out_err_path</span></code></a></p></td>
+<td><p>File path of combined standard output and error streams.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.direct_stderr_path" title="matflow.Jobscript.direct_stderr_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">direct_stderr_path</span></code></a></p></td>
+<td><p>File path to which the jobscript's standard error is saved, for direct execution only.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.direct_stdout_path" title="matflow.Jobscript.direct_stdout_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">direct_stdout_path</span></code></a></p></td>
+<td><p>File path to which the jobscript's standard output is saved, for direct execution only.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.direct_win_pid_file_name" title="matflow.Jobscript.direct_win_pid_file_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">direct_win_pid_file_name</span></code></a></p></td>
+<td><p>File for holding the direct execution PID.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.direct_win_pid_file_path" title="matflow.Jobscript.direct_win_pid_file_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">direct_win_pid_file_path</span></code></a></p></td>
+<td><p>The path to the file containing PIDs for directly executed commands for this jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.end_time" title="matflow.Jobscript.end_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">end_time</span></code></a></p></td>
+<td><p>The last known end time of any EAR in this jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.index" title="matflow.Jobscript.index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index</span></code></a></p></td>
+<td><p>The index of this jobscript within its parent <a class="reference internal" href="matflow.Submission.html#matflow.Submission" title="matflow.Submission"><code class="xref py py-class docutils literal notranslate"><span class="pre">Submission</span></code></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.is_array" title="matflow.Jobscript.is_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_array</span></code></a></p></td>
+<td><p>Whether to generate an array job.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.is_scheduled" title="matflow.Jobscript.is_scheduled"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_scheduled</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.is_submitted" title="matflow.Jobscript.is_submitted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_submitted</span></code></a></p></td>
+<td><p>Whether this jobscript has been submitted.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.jobscript_functions_name" title="matflow.Jobscript.jobscript_functions_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jobscript_functions_name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.jobscript_functions_path" title="matflow.Jobscript.jobscript_functions_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jobscript_functions_path</span></code></a></p></td>
+<td><p>The path to the file containing the supporting shell functions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.jobscript_name" title="matflow.Jobscript.jobscript_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jobscript_name</span></code></a></p></td>
+<td><p>The name of the jobscript file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.jobscript_path" title="matflow.Jobscript.jobscript_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jobscript_path</span></code></a></p></td>
+<td><p>The path to the file containing the jobscript file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.os_name" title="matflow.Jobscript.os_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">os_name</span></code></a></p></td>
+<td><p>The name of the OS to use.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.process_ID" title="matflow.Jobscript.process_ID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">process_ID</span></code></a></p></td>
+<td><p>The process ID from direct execution, if known.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.resources" title="matflow.Jobscript.resources"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resources</span></code></a></p></td>
+<td><p>The common resources that this jobscript requires.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.scheduler" title="matflow.Jobscript.scheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler</span></code></a></p></td>
+<td><p>The scheduler that submissions go to from this jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.scheduler_job_ID" title="matflow.Jobscript.scheduler_job_ID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler_job_ID</span></code></a></p></td>
+<td><p>The job ID from the scheduler, if known.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.scheduler_js_ref" title="matflow.Jobscript.scheduler_js_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler_js_ref</span></code></a></p></td>
+<td><p>The reference to the submitted job for the jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.scheduler_name" title="matflow.Jobscript.scheduler_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler_name</span></code></a></p></td>
+<td><p>The name of the scheduler to use.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.shell" title="matflow.Jobscript.shell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shell</span></code></a></p></td>
+<td><p>The shell for composing submission scripts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.shell_idx" title="matflow.Jobscript.shell_idx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shell_idx</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.shell_name" title="matflow.Jobscript.shell_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shell_name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.start_time" title="matflow.Jobscript.start_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_time</span></code></a></p></td>
+<td><p>The first known start time of any EAR in this jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.std_path" title="matflow.Jobscript.std_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">std_path</span></code></a></p></td>
+<td><p>Directory in which to store jobscript standard out and error stream files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.submission" title="matflow.Jobscript.submission"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submission</span></code></a></p></td>
+<td><p>The parent submission.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.submit_cmdline" title="matflow.Jobscript.submit_cmdline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_cmdline</span></code></a></p></td>
+<td><p>The command line used to submit the jobscript, if known.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.submit_hostname" title="matflow.Jobscript.submit_hostname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_hostname</span></code></a></p></td>
+<td><p>Where the jobscript was submitted, if known.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.submit_machine" title="matflow.Jobscript.submit_machine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_machine</span></code></a></p></td>
+<td><p>Description of what the jobscript was submitted to, if known.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.submit_time" title="matflow.Jobscript.submit_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_time</span></code></a></p></td>
+<td><p>When the jobscript was submitted, if known.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.version_info" title="matflow.Jobscript.version_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version_info</span></code></a></p></td>
+<td><p>Version information about the execution environment (OS, etc).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#matflow.Jobscript.workflow" title="matflow.Jobscript.workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflow</span></code></a></p></td>
+<td><p>The workflow this is all on behalf of.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#matflow.Jobscript.workflow_app_alias" title="matflow.Jobscript.workflow_app_alias"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflow_app_alias</span></code></a></p></td>
+<td><p>Alias for the workflow app in job scripts.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.EAR_ID_file_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EAR_ID_file_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.EAR_ID_file_name" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of a file containing EAR IDs.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.EAR_ID_file_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EAR_ID_file_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.EAR_ID_file_path" title="Permalink to this definition">#</a></dt>
+<dd><p>The path to the file containing EAR IDs for this jobscript.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.all_EAR_IDs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_EAR_IDs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">NDArray</span></em><a class="headerlink" href="#matflow.Jobscript.all_EAR_IDs" title="Permalink to this definition">#</a></dt>
+<dd><p>Return all run IDs of this jobscripts (across all blocks), removing missing
+run IDs (i.e. -1 values)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.all_EARs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_EARs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="matflow.ElementActionRun.html#matflow.ElementActionRun" title="matflow.ElementActionRun"><span class="pre">ElementActionRun</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.Jobscript.all_EARs" title="Permalink to this definition">#</a></dt>
+<dd><p>Description of EAR information for this jobscript.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.at_submit_metadata">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">at_submit_metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.Jobscript.at_submit_metadata" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.blocks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">blocks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="matflow.JobscriptBlock.html#matflow.JobscriptBlock" title="matflow.JobscriptBlock"><span class="pre">JobscriptBlock</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.Jobscript.blocks" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.combined_script_indices_file_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">combined_script_indices_file_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.combined_script_indices_file_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.combined_script_indices_file_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">combined_script_indices_file_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.combined_script_indices_file_path" title="Permalink to this definition">#</a></dt>
+<dd><p>The path to the file containing script indices, in the case this is a
+<code class="docutils literal notranslate"><span class="pre">combine_scripts=True</span></code> jobscript.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.compose_combined_script">
+<span class="sig-name descname"><span class="pre">compose_combined_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action_scripts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.compose_combined_script" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepare the combined-script file string, if applicable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>action_scripts</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Path</em><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>]</em><em>]</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>]], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>], <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.compose_jobscript">
+<span class="sig-name descname"><span class="pre">compose_jobscript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">os_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.compose_jobscript" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepare the jobscript file contents as a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deps</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>]</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>os_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>scheduler_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>scheduler_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Any</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.dependencies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.Jobscript.dependencies" title="Permalink to this definition">#</a></dt>
+<dd><p>The dependency descriptor, accounting for all blocks within this jobscript.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.direct_std_out_err_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direct_std_out_err_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.direct_std_out_err_path" title="Permalink to this definition">#</a></dt>
+<dd><p>File path of combined standard output and error streams.</p>
+<p class="rubric">Notes</p>
+<p>This path will only exist if <cite>resources.combine_jobscript_std</cite> is True. Otherwise,
+see <cite>direct_stdout_path</cite> and <cite>direct_stderr_path</cite> for the separate stream paths.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.direct_stderr_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direct_stderr_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.direct_stderr_path" title="Permalink to this definition">#</a></dt>
+<dd><p>File path to which the jobscript’s standard error is saved, for direct
+execution only.</p>
+<p class="rubric">Notes</p>
+<p>This returned path be the same as that from <cite>get_stdout_path</cite> if
+<cite>resources.combine_jobscript_std</cite> is True.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.direct_stdout_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direct_stdout_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.direct_stdout_path" title="Permalink to this definition">#</a></dt>
+<dd><p>File path to which the jobscript’s standard output is saved, for direct
+execution only.</p>
+<p class="rubric">Notes</p>
+<p>This returned path be the same as that from <cite>get_stderr_path</cite> if
+<cite>resources.combine_jobscript_std</cite> is True.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.direct_win_pid_file_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direct_win_pid_file_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.direct_win_pid_file_name" title="Permalink to this definition">#</a></dt>
+<dd><p>File for holding the direct execution PID.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.direct_win_pid_file_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direct_win_pid_file_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.direct_win_pid_file_path" title="Permalink to this definition">#</a></dt>
+<dd><p>The path to the file containing PIDs for directly executed commands for this
+jobscript. Windows only.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.end_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">end_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#matflow.Jobscript.end_time" title="Permalink to this definition">#</a></dt>
+<dd><p>The last known end time of any EAR in this jobscript.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.from_json_like">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_like</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.from_json_like" title="Permalink to this definition">#</a></dt>
+<dd><p>Make an instance of this class from JSON (or YAML) data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_like</strong> – The data to deserialise.</p></li>
+<li><p><strong>shared_data</strong> – Shared context data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialised object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_active_states">
+<span class="sig-name descname"><span class="pre">get_active_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_active_states" title="Permalink to this definition">#</a></dt>
+<dd><p>If this jobscript is active on this machine, return the state information from
+the scheduler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>as_json</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mapping[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>, Mapping[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>, JobscriptElementState | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_app_std_path">
+<span class="sig-name descname"><span class="pre">get_app_std_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_app_std_path" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_commands_file_name">
+<span class="sig-name descname"><span class="pre">get_commands_file_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block_act_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_commands_file_name" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the name of a file containing commands for a particular jobscript action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>block_act_key</strong> (<em>BlockActionKey</em>) – </p></li>
+<li><p><strong>shell</strong> (<em>Shell</em><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_std_out_err_path">
+<span class="sig-name descname"><span class="pre">get_std_out_err_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_std_out_err_path" title="Permalink to this definition">#</a></dt>
+<dd><p>File path of combined standard output and error streams.</p>
+<p class="rubric">Notes</p>
+<p>This path will only exist if <cite>resources.combine_jobscript_std</cite> is True. Otherwise,
+see <cite>get_stdout_path</cite> and <cite>get_stderr_path</cite> for the separate stream paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_stderr">
+<span class="sig-name descname"><span class="pre">get_stderr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_stderr" title="Permalink to this definition">#</a></dt>
+<dd><p>Retrieve the contents of the standard error stream file.</p>
+<p class="rubric">Notes</p>
+<p>In the case of non-array jobscripts, this will return the whole standard error,
+even if that includes multiple elements/actions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_stderr_path">
+<span class="sig-name descname"><span class="pre">get_stderr_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_stderr_path" title="Permalink to this definition">#</a></dt>
+<dd><p>File path to which the jobscript’s standard error is saved.</p>
+<p class="rubric">Notes</p>
+<p>This returned path be the same as that from <cite>get_stdout_path</cite> if
+<cite>resources.combine_jobscript_std</cite> is True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_stdout">
+<span class="sig-name descname"><span class="pre">get_stdout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_stdout" title="Permalink to this definition">#</a></dt>
+<dd><p>Retrieve the contents of the standard output stream file.</p>
+<p class="rubric">Notes</p>
+<p>In the case of non-array jobscripts, this will return the whole standard output,
+even if that includes multiple elements/actions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.get_stdout_path">
+<span class="sig-name descname"><span class="pre">get_stdout_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.get_stdout_path" title="Permalink to this definition">#</a></dt>
+<dd><p>File path to which the jobscript’s standard output is saved.</p>
+<p class="rubric">Notes</p>
+<p>This returned path be the same as that from <cite>get_stderr_path</cite> if
+<cite>resources.combine_jobscript_std</cite> is True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#matflow.Jobscript.index" title="Permalink to this definition">#</a></dt>
+<dd><p>The index of this jobscript within its parent <a class="reference internal" href="matflow.Submission.html#matflow.Submission" title="matflow.Submission"><code class="xref py py-class docutils literal notranslate"><span class="pre">Submission</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.is_array">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_array</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#matflow.Jobscript.is_array" title="Permalink to this definition">#</a></dt>
+<dd><p>Whether to generate an array job.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.is_scheduled">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_scheduled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#matflow.Jobscript.is_scheduled" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.is_submitted">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_submitted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#matflow.Jobscript.is_submitted" title="Permalink to this definition">#</a></dt>
+<dd><p>Whether this jobscript has been submitted.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.jobscript_functions_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jobscript_functions_name</span></span><a class="headerlink" href="#matflow.Jobscript.jobscript_functions_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.jobscript_functions_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jobscript_functions_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.jobscript_functions_path" title="Permalink to this definition">#</a></dt>
+<dd><p>The path to the file containing the supporting shell functions.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.jobscript_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jobscript_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.jobscript_name" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the jobscript file.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.jobscript_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jobscript_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.jobscript_path" title="Permalink to this definition">#</a></dt>
+<dd><p>The path to the file containing the jobscript file.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.os_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">os_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.os_name" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the OS to use.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.print_stderr">
+<span class="sig-name descname"><span class="pre">print_stderr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.print_stderr" title="Permalink to this definition">#</a></dt>
+<dd><p>Print the contents of the standard error stream file.</p>
+<p class="rubric">Notes</p>
+<p>In the case of non-array jobscripts, this will print the whole standard error,
+even if that includes multiple elements/actions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.print_stdout">
+<span class="sig-name descname"><span class="pre">print_stdout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.print_stdout" title="Permalink to this definition">#</a></dt>
+<dd><p>Print the contents of the standard output stream file.</p>
+<p class="rubric">Notes</p>
+<p>In the case of non-array jobscripts, this will print the whole standard output,
+even if that includes multiple elements/actions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.process_ID">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#matflow.Jobscript.process_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>The process ID from direct execution, if known.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.resources">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resources</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="matflow.ElementResources.html#matflow.ElementResources" title="matflow.ElementResources"><span class="pre">ElementResources</span></a></em><a class="headerlink" href="#matflow.Jobscript.resources" title="Permalink to this definition">#</a></dt>
+<dd><p>The common resources that this jobscript requires.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.scheduler">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scheduler</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Scheduler</span></em><a class="headerlink" href="#matflow.Jobscript.scheduler" title="Permalink to this definition">#</a></dt>
+<dd><p>The scheduler that submissions go to from this jobscript.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.scheduler_job_ID">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scheduler_job_ID</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#matflow.Jobscript.scheduler_job_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>The job ID from the scheduler, if known.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.scheduler_js_ref">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scheduler_js_ref</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#matflow.Jobscript.scheduler_js_ref" title="Permalink to this definition">#</a></dt>
+<dd><p>The reference to the submitted job for the jobscript.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.scheduler_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scheduler_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.scheduler_name" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the scheduler to use.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.shell">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shell</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Shell</span></em><a class="headerlink" href="#matflow.Jobscript.shell" title="Permalink to this definition">#</a></dt>
+<dd><p>The shell for composing submission scripts.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.shell_idx">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shell_idx</span></span><a class="headerlink" href="#matflow.Jobscript.shell_idx" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.shell_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shell_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.shell_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.start_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#matflow.Jobscript.start_time" title="Permalink to this definition">#</a></dt>
+<dd><p>The first known start time of any EAR in this jobscript.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.std_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">std_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#matflow.Jobscript.std_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Directory in which to store jobscript standard out and error stream files.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.submission">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">submission</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="matflow.Submission.html#matflow.Submission" title="matflow.Submission"><span class="pre">Submission</span></a></em><a class="headerlink" href="#matflow.Jobscript.submission" title="Permalink to this definition">#</a></dt>
+<dd><p>The parent submission.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.submit">
+<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheduler_refs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.submit" title="Permalink to this definition">#</a></dt>
+<dd><p>Submit the jobscript to the scheduler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scheduler_refs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>print_stdout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.submit_cmdline">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">submit_cmdline</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#matflow.Jobscript.submit_cmdline" title="Permalink to this definition">#</a></dt>
+<dd><p>The command line used to submit the jobscript, if known.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.submit_hostname">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">submit_hostname</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#matflow.Jobscript.submit_hostname" title="Permalink to this definition">#</a></dt>
+<dd><p>Where the jobscript was submitted, if known.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.submit_machine">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">submit_machine</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#matflow.Jobscript.submit_machine" title="Permalink to this definition">#</a></dt>
+<dd><p>Description of what the jobscript was submitted to, if known.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.submit_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">submit_time</span></span><a class="headerlink" href="#matflow.Jobscript.submit_time" title="Permalink to this definition">#</a></dt>
+<dd><p>When the jobscript was submitted, if known.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.to_dict" title="Permalink to this definition">#</a></dt>
+<dd><p>Serialize this object as a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.to_json_like">
+<span class="sig-name descname"><span class="pre">to_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.to_json_like" title="Permalink to this definition">#</a></dt>
+<dd><p>Serialize this object as an object structure that can be trivially converted
+to JSON. Note that YAML can also be produced from the result of this method;
+it just requires a different final serialization step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dct</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>JSONable</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>shared_data</strong> (<em>_JSONDeserState</em>) – </p></li>
+<li><p><strong>exclude</strong> (<em>Container</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em><em>]</em>) – </p></li>
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)">tuple</a>[JSONDocument, _JSONDeserState]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.version_info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">VersionInfo</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#matflow.Jobscript.version_info" title="Permalink to this definition">#</a></dt>
+<dd><p>Version information about the execution environment (OS, etc).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.workflow">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">workflow</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="matflow.Workflow.html#matflow.Workflow" title="matflow.Workflow"><span class="pre">Workflow</span></a></em><a class="headerlink" href="#matflow.Jobscript.workflow" title="Permalink to this definition">#</a></dt>
+<dd><p>The workflow this is all on behalf of.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="matflow.Jobscript.workflow_app_alias">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">workflow_app_alias</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#matflow.Jobscript.workflow_app_alias" title="Permalink to this definition">#</a></dt>
+<dd><p>Alias for the workflow app in job scripts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.write_jobscript">
+<span class="sig-name descname"><span class="pre">write_jobscript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">os_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">os_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.write_jobscript" title="Permalink to this definition">#</a></dt>
+<dd><p>Write the jobscript to its file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>shell_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>deps</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><em>tuple</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>]</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>os_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Any</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>shell_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Any</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>scheduler_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>scheduler_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Any</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="matflow.Jobscript.write_script_indices_file">
+<span class="sig-name descname"><span class="pre">write_script_indices_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_elems</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_acts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matflow.Jobscript.write_script_indices_file" title="Permalink to this definition">#</a></dt>
+<dd><p>Write a text file containing the action script index for each block and action
+in a <cite>combined_scripts</cite> script.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>indices</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>num_elems</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em>) – </p></li>
+<li><p><strong>num_acts</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="matflow.InputValue.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">matflow.InputValue</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="matflow.JobscriptBlock.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">matflow.JobscriptBlock</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript"><code class="docutils literal notranslate"><span class="pre">Jobscript</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.EAR_ID_file_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.EAR_ID_file_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.EAR_ID_file_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.EAR_ID_file_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.all_EAR_IDs"><code class="docutils literal notranslate"><span class="pre">Jobscript.all_EAR_IDs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.all_EARs"><code class="docutils literal notranslate"><span class="pre">Jobscript.all_EARs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.at_submit_metadata"><code class="docutils literal notranslate"><span class="pre">Jobscript.at_submit_metadata</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.blocks"><code class="docutils literal notranslate"><span class="pre">Jobscript.blocks</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.combined_script_indices_file_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.combined_script_indices_file_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.combined_script_indices_file_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.combined_script_indices_file_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.compose_combined_script"><code class="docutils literal notranslate"><span class="pre">Jobscript.compose_combined_script()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.compose_jobscript"><code class="docutils literal notranslate"><span class="pre">Jobscript.compose_jobscript()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.dependencies"><code class="docutils literal notranslate"><span class="pre">Jobscript.dependencies</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.direct_std_out_err_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.direct_std_out_err_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.direct_stderr_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.direct_stderr_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.direct_stdout_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.direct_stdout_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.direct_win_pid_file_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.direct_win_pid_file_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.direct_win_pid_file_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.direct_win_pid_file_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.end_time"><code class="docutils literal notranslate"><span class="pre">Jobscript.end_time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.from_json_like"><code class="docutils literal notranslate"><span class="pre">Jobscript.from_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_active_states"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_active_states()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_app_std_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_app_std_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_commands_file_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_commands_file_name()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_std_out_err_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_std_out_err_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_stderr"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_stderr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_stderr_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_stderr_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_stdout"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_stdout()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.get_stdout_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.get_stdout_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.index"><code class="docutils literal notranslate"><span class="pre">Jobscript.index</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.is_array"><code class="docutils literal notranslate"><span class="pre">Jobscript.is_array</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.is_scheduled"><code class="docutils literal notranslate"><span class="pre">Jobscript.is_scheduled</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.is_submitted"><code class="docutils literal notranslate"><span class="pre">Jobscript.is_submitted</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.jobscript_functions_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.jobscript_functions_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.jobscript_functions_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.jobscript_functions_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.jobscript_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.jobscript_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.jobscript_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.jobscript_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.os_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.os_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.print_stderr"><code class="docutils literal notranslate"><span class="pre">Jobscript.print_stderr()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.print_stdout"><code class="docutils literal notranslate"><span class="pre">Jobscript.print_stdout()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.process_ID"><code class="docutils literal notranslate"><span class="pre">Jobscript.process_ID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.resources"><code class="docutils literal notranslate"><span class="pre">Jobscript.resources</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.scheduler"><code class="docutils literal notranslate"><span class="pre">Jobscript.scheduler</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.scheduler_job_ID"><code class="docutils literal notranslate"><span class="pre">Jobscript.scheduler_job_ID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.scheduler_js_ref"><code class="docutils literal notranslate"><span class="pre">Jobscript.scheduler_js_ref</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.scheduler_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.scheduler_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.shell"><code class="docutils literal notranslate"><span class="pre">Jobscript.shell</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.shell_idx"><code class="docutils literal notranslate"><span class="pre">Jobscript.shell_idx</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.shell_name"><code class="docutils literal notranslate"><span class="pre">Jobscript.shell_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.start_time"><code class="docutils literal notranslate"><span class="pre">Jobscript.start_time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.std_path"><code class="docutils literal notranslate"><span class="pre">Jobscript.std_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.submission"><code class="docutils literal notranslate"><span class="pre">Jobscript.submission</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.submit"><code class="docutils literal notranslate"><span class="pre">Jobscript.submit()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.submit_cmdline"><code class="docutils literal notranslate"><span class="pre">Jobscript.submit_cmdline</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.submit_hostname"><code class="docutils literal notranslate"><span class="pre">Jobscript.submit_hostname</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.submit_machine"><code class="docutils literal notranslate"><span class="pre">Jobscript.submit_machine</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.submit_time"><code class="docutils literal notranslate"><span class="pre">Jobscript.submit_time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.to_dict"><code class="docutils literal notranslate"><span class="pre">Jobscript.to_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.to_json_like"><code class="docutils literal notranslate"><span class="pre">Jobscript.to_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.version_info"><code class="docutils literal notranslate"><span class="pre">Jobscript.version_info</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.workflow"><code class="docutils literal notranslate"><span class="pre">Jobscript.workflow</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.workflow_app_alias"><code class="docutils literal notranslate"><span class="pre">Jobscript.workflow_app_alias</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.write_jobscript"><code class="docutils literal notranslate"><span class="pre">Jobscript.write_jobscript()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matflow.Jobscript.write_script_indices_file"><code class="docutils literal notranslate"><span class="pre">Jobscript.write_script_indices_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/matflow/edit/develop/docs/source/reference/_autosummary/matflow.Jobscript.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/_autosummary/matflow.Jobscript.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, MatFlow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
