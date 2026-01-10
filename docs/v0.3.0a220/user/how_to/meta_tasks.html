@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Meta-tasks &#8212; MatFlow 0.3.0a220 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user/how_to/meta_tasks';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.matflow.io/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.3.0a220';
+        </script>
+    <script src="../../_static/js/custom.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Loops" href="loops.html" />
+    <link rel="prev" title="Environment how-tos" href="environments.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-50dpi.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-50dpi.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a220  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../reference/index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/matflow" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/matflow" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.3.0a220  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/index.html">Getting started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/running_workflows.html">Run a demo workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/custom_task_schemas_and_workflows.html">Write your own task schema and workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advanced_workflow_concepts.html">Advanced workflow concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/errors.html">Common errors</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">How-to guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="task_schemas.html">Task Schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template_components.html">Template Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_templates.html">Workflow Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Environments</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Meta-tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loops.html">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/install-locally.html">Beginner: Install MatFlow on your local machine</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../tutorials/notebooks/index.html">Jupyter notebooks</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/notebooks/simulate_yield_surface_2D.html">Simulating yield surfaces with DAMASK simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/notebooks/fit_single_crystal_parameters.html">Fitting single crystal parameters with DAMASK simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/notebooks/tension_DAMASK_Al.html">Simulating stress-strain curves with DAMASK</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">How-To Guides</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Meta-tasks</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="meta-tasks">
+<h1>Meta-tasks<a class="headerlink" href="#meta-tasks" title="Permalink to this heading">#</a></h1>
+<p>Meta-tasks allow us to group multiple tasks together so they can be referenced as a whole. Within a YAML workflow template, for example, this allows us to invoke a group of tasks multiple times without having to write out the task parametrisations multiple times. There are three parts to using a meta-task:</p>
+<ol class="arabic simple">
+<li><p>A <em>meta-task schema</em> must be defined in the template components (this could be built in to matflow, or could be included in a separate template components file, or could be included within a <code class="docutils literal notranslate"><span class="pre">template_components</span></code> block of the YAML workflow template file). A meta-task schema is like a normal task schema, in that is has an objective (indicating what it aims to do), and a list of input and output parameters. However, unlike a normal task schema, a meta-task schema does not need an implementation, since this will be provided by the constitutive tasks of the meta-task.</p></li>
+<li><p>A <em>meta-task</em> must be defined in the workflow template, which maps a meta-task objective to a list of tasks that should be invoked, in order, when the meta-task is called within the task list of the workflow template.</p></li>
+<li><p>The meta-task is included in the workflow template task list (potentially multiple times).</p></li>
+</ol>
+<section id="simple-example">
+<h2>Simple example<a class="headerlink" href="#simple-example" title="Permalink to this heading">#</a></h2>
+<p>Below is a complete workflow template (in the YAML format) that includes a meta-task schema called <code class="docutils literal notranslate"><span class="pre">system_analysis</span></code>. This meta-task has a single input, <code class="docutils literal notranslate"><span class="pre">p2</span></code>, and a single output <code class="docutils literal notranslate"><span class="pre">p4</span></code>, and is comprised of two tasks <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>. Note that these task schemas must provide inputs and outputs that are compatible with the meta-task. In this case, the parameter <code class="docutils literal notranslate"><span class="pre">p2</span></code> of the meta task is also an input of the task <code class="docutils literal notranslate"><span class="pre">s1</span></code>, and the task <code class="docutils literal notranslate"><span class="pre">s2</span></code> has an output <code class="docutils literal notranslate"><span class="pre">p4</span></code>, which is an output parameter of the meta task. Also note that the meta task is referenced by its objective in the <code class="docutils literal notranslate"><span class="pre">tasks</span></code> list of the workflow template, in the same way that normal tasks are referenced. In this case, the first and third items in the <code class="docutils literal notranslate"><span class="pre">tasks</span></code> list are normal tasks, but the second item is a reference to the <code class="docutils literal notranslate"><span class="pre">system_analysis</span></code> meta task. All tasks in this example are implemented using simple shell commands that sum two numbers together. Finally, note that the meta task is parametrised via the constitutive tasks within the <code class="docutils literal notranslate"><span class="pre">meta_tasks</span></code> block.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">template_components</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">task_schemas</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">objective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s0</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p1</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p2</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">commands</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;$((&lt;&lt;parameter:p1&gt;&gt; + 1))&quot;</span>
+<span class="w">            </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;int(parameter:p2)&gt;&gt;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">objective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s1</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p2</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p2b</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p3</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">commands</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;$((&lt;&lt;parameter:p2&gt;&gt; + &lt;&lt;parameter:p2b&gt;&gt;))&quot;</span>
+<span class="w">            </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;int(parameter:p3)&gt;&gt;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">objective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s2</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p3</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p4</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">commands</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;$((&lt;&lt;parameter:p3&gt;&gt; + 1))&quot;</span>
+<span class="w">            </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;int(parameter:p4)&gt;&gt;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">objective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s3</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p4</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p5</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">commands</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;$((&lt;&lt;parameter:p4&gt;&gt; + 1))&quot;</span>
+<span class="w">            </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;int(parameter:p5)&gt;&gt;</span>
+
+<span class="w">  </span><span class="nt">meta_task_schemas</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">objective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">system_analysis</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p2</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p4</span>
+
+<span class="nt">meta_tasks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">system_analysis</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s1</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">p2b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">220</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s2</span>
+
+<span class="nt">tasks</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s0</span>
+<span class="w">    </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">p1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">system_analysis</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s3</span>
+</pre></div>
+</div>
+<section id="meta-tasks-using-the-python-api">
+<h3>Meta-tasks using the Python API<a class="headerlink" href="#meta-tasks-using-the-python-api" title="Permalink to this heading">#</a></h3>
+<p>Meta-tasks are most useful when defining workflow templates via YAML or JSON files or strings, because they allow us to repeat a task parametrisation without requiring us to write out that parametrisation multiple times. When using the Python API, we can use Python variables to the same effect, so meta-tasks are not as useful. However, for the sake of completeness, the above example could be written using the Python API like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># normal task schemas:</span>
+<span class="n">s0</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">TaskSchema</span><span class="p">(</span>
+    <span class="n">objective</span><span class="o">=</span><span class="s2">&quot;s0&quot;</span><span class="p">,</span>
+    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaInput</span><span class="p">(</span><span class="s2">&quot;p1&quot;</span><span class="p">)],</span>
+    <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaOutput</span><span class="p">(</span><span class="s2">&quot;p2&quot;</span><span class="p">)],</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Action</span><span class="p">(</span>
+            <span class="n">commands</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">hf</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span>
+                    <span class="n">command</span><span class="o">=</span><span class="s1">&#39;echo &quot;$((&lt;&lt;parameter:p1&gt;&gt; + 1))&quot;&#39;</span><span class="p">,</span>
+                    <span class="n">stdout</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;int(parameter:p2)&gt;&gt;&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">TaskSchema</span><span class="p">(</span>
+    <span class="n">objective</span><span class="o">=</span><span class="s2">&quot;s1&quot;</span><span class="p">,</span>
+    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaInput</span><span class="p">(</span><span class="s2">&quot;p2&quot;</span><span class="p">)],</span>
+    <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaOutput</span><span class="p">(</span><span class="s2">&quot;p3&quot;</span><span class="p">)],</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Action</span><span class="p">(</span>
+            <span class="n">commands</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">hf</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span>
+                    <span class="n">command</span><span class="o">=</span><span class="s1">&#39;echo &quot;$((&lt;&lt;parameter:p2&gt;&gt; + 1))&quot;&#39;</span><span class="p">,</span>
+                    <span class="n">stdout</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;int(parameter:p3)&gt;&gt;&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">TaskSchema</span><span class="p">(</span>
+    <span class="n">objective</span><span class="o">=</span><span class="s2">&quot;s2&quot;</span><span class="p">,</span>
+    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaInput</span><span class="p">(</span><span class="s2">&quot;p3&quot;</span><span class="p">)],</span>
+    <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaOutput</span><span class="p">(</span><span class="s2">&quot;p4&quot;</span><span class="p">)],</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Action</span><span class="p">(</span>
+            <span class="n">commands</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">hf</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span>
+                    <span class="n">command</span><span class="o">=</span><span class="s1">&#39;echo &quot;$((&lt;&lt;parameter:p3&gt;&gt; + 1))&quot;&#39;</span><span class="p">,</span>
+                    <span class="n">stdout</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;int(parameter:p4)&gt;&gt;&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">TaskSchema</span><span class="p">(</span>
+    <span class="n">objective</span><span class="o">=</span><span class="s2">&quot;s3&quot;</span><span class="p">,</span>
+    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaInput</span><span class="p">(</span><span class="s2">&quot;p4&quot;</span><span class="p">)],</span>
+    <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaOutput</span><span class="p">(</span><span class="s2">&quot;p5&quot;</span><span class="p">)],</span>
+    <span class="n">actions</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Action</span><span class="p">(</span>
+            <span class="n">commands</span><span class="o">=</span><span class="p">[</span>
+                <span class="n">hf</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span>
+                    <span class="n">command</span><span class="o">=</span><span class="s1">&#39;echo &quot;$((&lt;&lt;parameter:p4&gt;&gt; + 1))&quot;&#39;</span><span class="p">,</span>
+                    <span class="n">stdout</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;int(parameter:p5)&gt;&gt;&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># meta-task schema:</span>
+<span class="n">ms</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">MetaTaskSchema</span><span class="p">(</span>
+    <span class="n">objective</span><span class="o">=</span><span class="s2">&quot;system_analysis&quot;</span><span class="p">,</span>
+    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaInput</span><span class="p">(</span><span class="s2">&quot;p2&quot;</span><span class="p">)],</span>
+    <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">hf</span><span class="o">.</span><span class="n">SchemaOutput</span><span class="p">(</span><span class="s2">&quot;p4&quot;</span><span class="p">)],</span>
+<span class="p">)</span>
+
+<span class="c1"># meta-task:</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">MetaTask</span><span class="p">(</span>
+    <span class="n">schema</span><span class="o">=</span><span class="n">ms</span><span class="p">,</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Task</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">s1</span><span class="p">),</span>
+        <span class="n">hf</span><span class="o">.</span><span class="n">Task</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">s2</span><span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># workflow template tasks list, include the meta-task above:</span>
+<span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">hf</span><span class="o">.</span><span class="n">Task</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">s0</span><span class="p">,</span> <span class="n">inputs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;p1&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}),</span>
+    <span class="n">m1</span><span class="p">,</span>
+    <span class="n">hf</span><span class="o">.</span><span class="n">Task</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">s3</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># persistent workflow object:</span>
+<span class="n">wk</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">Workflow</span><span class="o">.</span><span class="n">from_template_data</span><span class="p">(</span>
+    <span class="n">template_name</span><span class="o">=</span><span class="s2">&quot;meta_task_workflow&quot;</span><span class="p">,</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="n">tasks</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="customising-task-parametrisation">
+<h2>Customising task parametrisation<a class="headerlink" href="#customising-task-parametrisation" title="Permalink to this heading">#</a></h2>
+<p>Sometimes it can be useful to modify the parametrisation of a meta-task’s constitutive tasks each time the meta-task is used within a workflow’s task list. To do this, all available task parametrisation keys can be specified under a mapping key corresponding to the individual task schemas within the meta-task. For example, in the below workflow template, the <code class="docutils literal notranslate"><span class="pre">system_analysis</span></code> meta-task has one constitutive task, named <code class="docutils literal notranslate"><span class="pre">s1</span></code>. To apply customised <code class="docutils literal notranslate"><span class="pre">inputs</span></code>, <code class="docutils literal notranslate"><span class="pre">resources</span></code> and <code class="docutils literal notranslate"><span class="pre">sequences</span></code> (i.e. different from any specified under the <code class="docutils literal notranslate"><span class="pre">meta_tasks</span></code> block), we can use these keys as normal within the <code class="docutils literal notranslate"><span class="pre">tasks</span></code> list item keys, but their values must be specified under an <code class="docutils literal notranslate"><span class="pre">s1</span></code> key. Any inputs specified will <em>update</em> those specified in the <code class="docutils literal notranslate"><span class="pre">meta_tasks</span></code> list. In other words, inputs values for other inputs types that are provided in the <code class="docutils literal notranslate"><span class="pre">meta_tasks</span></code> block will remain. However, for all other keys (e.g. <code class="docutils literal notranslate"><span class="pre">resources</span></code> and <code class="docutils literal notranslate"><span class="pre">sequences`</span></code>), data written in the <code class="docutils literal notranslate"><span class="pre">task</span> <span class="pre">list</span></code> will overwrite any specified in the <code class="docutils literal notranslate"><span class="pre">meta_tasks</span></code> list.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test_metatask_multi_element_sets_custom_parametrisation</span>
+<span class="nt">template_components</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">task_schemas</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">objective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s1</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p1</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p2</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p3</span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">commands</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;$((&lt;&lt;parameter:p1&gt;&gt; + &lt;&lt;parameter:p2&gt;&gt;))&quot;</span>
+<span class="w">            </span><span class="nt">stdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;int(parameter:p3)&gt;&gt;</span>
+
+<span class="w">  </span><span class="nt">meta_task_schemas</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">objective</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">system_analysis</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p1</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p2</span>
+<span class="w">      </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">parameter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">p3</span>
+
+<span class="nt">meta_tasks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">system_analysis</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s1</span>
+<span class="w">      </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">p1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">        </span><span class="nt">p2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">200</span>
+
+<span class="nt">tasks</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">system_analysis</span>
+<span class="w">    </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">s1</span><span class="p">:</span><span class="w"> </span><span class="c1"># applies to the schema `s1`</span>
+<span class="w">        </span><span class="nt">any</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">num_cores</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">s1</span><span class="p">:</span><span class="w"> </span><span class="c1"># applies to the schema `s1`</span>
+<span class="w">        </span><span class="nt">p1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">102</span>
+<span class="w">    </span><span class="nt">sequences</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">s1</span><span class="p">:</span><span class="w"> </span><span class="c1"># applies to the schema `s1`</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inputs.p2</span>
+<span class="w">          </span><span class="nt">values</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">300</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">301</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="environments.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Environment how-tos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="loops.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Loops</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-example">Simple example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-tasks-using-the-python-api">Meta-tasks using the Python API</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customising-task-parametrisation">Customising task parametrisation</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/matflow/edit/develop/docs/source/user/how_to/meta_tasks.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/user/how_to/meta_tasks.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, MatFlow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
