@@ -1,0 +1,6 @@
+matflow.tests.conftest.modifiable\_config
+=========================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: modifiable_config
