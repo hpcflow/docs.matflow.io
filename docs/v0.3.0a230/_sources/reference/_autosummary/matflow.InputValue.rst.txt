@@ -1,0 +1,54 @@
+matflow.InputValue
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: InputValue
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~InputValue.from_file
+      ~InputValue.from_geometric_space
+      ~InputValue.from_json_like
+      ~InputValue.from_linear_space
+      ~InputValue.from_load_txt
+      ~InputValue.from_log_normal
+      ~InputValue.from_log_space
+      ~InputValue.from_normal
+      ~InputValue.from_random_uniform
+      ~InputValue.from_range
+      ~InputValue.from_rectangle
+      ~InputValue.from_uniform
+      ~InputValue.make_persistent
+      ~InputValue.to_dict
+      ~InputValue.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InputValue.is_sub_value
+      ~InputValue.labelled_type
+      ~InputValue.normalised_inputs_path
+      ~InputValue.normalised_path
+      ~InputValue.value
+      ~InputValue.workflow
+      ~InputValue.parameter
+      ~InputValue.label
+      ~InputValue.path
+      ~InputValue.value_class_method
+   
+   
