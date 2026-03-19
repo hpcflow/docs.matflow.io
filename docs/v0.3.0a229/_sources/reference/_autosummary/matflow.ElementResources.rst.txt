@@ -1,0 +1,74 @@
+matflow.ElementResources
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementResources
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementResources.from_json_like
+      ~ElementResources.get_default_CPU_arch
+      ~ElementResources.get_default_executable_extension
+      ~ElementResources.get_default_os_name
+      ~ElementResources.get_default_platform
+      ~ElementResources.get_default_scheduler
+      ~ElementResources.get_default_shell
+      ~ElementResources.get_env_instance_filterable_attributes
+      ~ElementResources.get_jobscript_hash
+      ~ElementResources.set_defaults
+      ~ElementResources.to_dict
+      ~ElementResources.to_json_like
+      ~ElementResources.validate_against_machine
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementResources.CPU_arch
+      ~ElementResources.SGE_parallel_env
+      ~ElementResources.SLURM_is_parallel
+      ~ElementResources.SLURM_num_cpus_per_task
+      ~ElementResources.SLURM_num_nodes
+      ~ElementResources.SLURM_num_tasks
+      ~ElementResources.SLURM_num_tasks_per_node
+      ~ElementResources.SLURM_partition
+      ~ElementResources.allow_failed_dependencies
+      ~ElementResources.combine_scripts
+      ~ElementResources.environments
+      ~ElementResources.executable_extension
+      ~ElementResources.is_parallel
+      ~ElementResources.max_array_items
+      ~ElementResources.num_cores
+      ~ElementResources.num_cores_per_node
+      ~ElementResources.num_nodes
+      ~ElementResources.num_threads
+      ~ElementResources.os_name
+      ~ElementResources.parallel_mode
+      ~ElementResources.platform
+      ~ElementResources.resources_id
+      ~ElementResources.scheduler
+      ~ElementResources.scratch
+      ~ElementResources.shell
+      ~ElementResources.skip_downstream_on_failure
+      ~ElementResources.time_limit
+      ~ElementResources.use_job_array
+      ~ElementResources.write_app_logs
+      ~ElementResources.combine_jobscript_std
+      ~ElementResources.scheduler_args
+      ~ElementResources.shell_args
+   
+   
