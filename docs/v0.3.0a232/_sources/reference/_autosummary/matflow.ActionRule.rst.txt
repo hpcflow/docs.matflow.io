@@ -1,0 +1,38 @@
+matflow.ActionRule
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ActionRule
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ActionRule.check_exists
+      ~ActionRule.check_missing
+      ~ActionRule.from_json_like
+      ~ActionRule.test
+      ~ActionRule.to_dict
+      ~ActionRule.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ActionRule.rule
+      ~ActionRule.action
+      ~ActionRule.command
+   
+   
