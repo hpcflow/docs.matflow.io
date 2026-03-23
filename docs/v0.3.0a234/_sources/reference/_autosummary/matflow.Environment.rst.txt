@@ -1,0 +1,47 @@
+matflow.Environment
+===================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Environment
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Environment.copy
+      ~Environment.from_json_like
+      ~Environment.get_id
+      ~Environment.get_specs_fmt
+      ~Environment.to_dict
+      ~Environment.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Environment.BUILTIN_ENV_SOURCE
+      ~Environment.DEFAULT_CONFIGURED_ENVS_FILE
+      ~Environment.documentation
+      ~Environment.id
+      ~Environment.source_file
+      ~Environment.specs_fmt
+      ~Environment.name
+      ~Environment.doc
+      ~Environment.specifiers
+      ~Environment.executables
+      ~Environment.setup
+      ~Environment.setup_label
+   
+   
