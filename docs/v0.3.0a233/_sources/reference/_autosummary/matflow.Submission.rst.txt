@@ -1,0 +1,109 @@
+matflow.Submission
+==================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Submission
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Submission.cancel
+      ~Submission.from_json_like
+      ~Submission.get_active_jobscripts
+      ~Submission.get_app_log_file_name
+      ~Submission.get_app_log_file_path
+      ~Submission.get_app_log_path
+      ~Submission.get_app_std_path
+      ~Submission.get_commands_path
+      ~Submission.get_end_time
+      ~Submission.get_jobscript_functions_name
+      ~Submission.get_jobscript_functions_path
+      ~Submission.get_js_funcs_path
+      ~Submission.get_js_path
+      ~Submission.get_js_run_ids_path
+      ~Submission.get_js_script_indices_path
+      ~Submission.get_js_std_path
+      ~Submission.get_js_win_pids_path
+      ~Submission.get_path
+      ~Submission.get_process_IDs
+      ~Submission.get_scheduler_job_IDs
+      ~Submission.get_scripts_path
+      ~Submission.get_start_time
+      ~Submission.get_tmp_path
+      ~Submission.get_unique_schedulers
+      ~Submission.get_unique_schedulers_of_jobscripts
+      ~Submission.get_unique_shells
+      ~Submission.list_jobscripts
+      ~Submission.list_task_jobscripts
+      ~Submission.submit
+      ~Submission.to_dict
+      ~Submission.to_json_like
+      ~Submission.using_EARs_cache
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Submission.APP_STD_DIR_NAME
+      ~Submission.COMMANDS_DIR_NAME
+      ~Submission.EARs_by_elements
+      ~Submission.JS_DIR_NAME
+      ~Submission.JS_FUNCS_DIR_NAME
+      ~Submission.JS_RUN_IDS_DIR_NAME
+      ~Submission.JS_SCRIPT_INDICES_DIR_NAME
+      ~Submission.JS_STD_DIR_NAME
+      ~Submission.JS_WIN_PIDS_DIR_NAME
+      ~Submission.JS_parallelism
+      ~Submission.LOG_DIR_NAME
+      ~Submission.SCRIPTS_DIR_NAME
+      ~Submission.TMP_DIR_NAME
+      ~Submission.WORKFLOW_APP_ALIAS
+      ~Submission.all_EAR_IDs
+      ~Submission.all_EARs
+      ~Submission.all_EARs_IDs_by_jobscript
+      ~Submission.all_EARs_by_jobscript
+      ~Submission.app_log_path
+      ~Submission.app_std_path
+      ~Submission.at_submit_metadata
+      ~Submission.commands_path
+      ~Submission.end_time
+      ~Submission.environments
+      ~Submission.index
+      ~Submission.is_scheduled
+      ~Submission.jobscript_indices
+      ~Submission.jobscripts
+      ~Submission.js_funcs_path
+      ~Submission.js_path
+      ~Submission.js_run_ids_path
+      ~Submission.js_script_indices_path
+      ~Submission.js_std_path
+      ~Submission.js_win_pids_path
+      ~Submission.needs_app_log_dir
+      ~Submission.needs_script_indices_dir
+      ~Submission.needs_submit
+      ~Submission.needs_win_pids_dir
+      ~Submission.outstanding_jobscripts
+      ~Submission.path
+      ~Submission.scripts_path
+      ~Submission.start_time
+      ~Submission.status
+      ~Submission.submission_parts
+      ~Submission.submitted_jobscripts
+      ~Submission.tmp_path
+      ~Submission.use_EARs_cache
+      ~Submission.workflow
+   
+   
