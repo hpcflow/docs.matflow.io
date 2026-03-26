@@ -1,0 +1,6 @@
+matflow.tests.conftest.cli\_runner
+==================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: cli_runner
