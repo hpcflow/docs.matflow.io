@@ -1,0 +1,35 @@
+matflow.NumCores
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: NumCores
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~NumCores.from_json_like
+      ~NumCores.to_dict
+      ~NumCores.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NumCores.step
+      ~NumCores.start
+      ~NumCores.stop
+   
+   
