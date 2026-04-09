@@ -1,0 +1,32 @@
+matflow.TaskList
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: TaskList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TaskList.add_object
+      ~TaskList.add_objects
+      ~TaskList.from_json_like
+      ~TaskList.get
+      ~TaskList.get_all
+      ~TaskList.list_attrs
+      ~TaskList.to_dict
+      ~TaskList.to_json_like
+   
+   
+
+   
+   
+   

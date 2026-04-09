@@ -1,0 +1,25 @@
+matflow.param_classes.orientations.QuatOrder
+============================================
+
+.. currentmodule:: matflow.param_classes.orientations
+
+.. autoclass:: QuatOrder
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~QuatOrder.SCALAR_VECTOR
+      ~QuatOrder.VECTOR_SCALAR
+   
+   
