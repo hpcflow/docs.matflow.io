@@ -1,0 +1,6 @@
+matflow.tests.test\_encoders\_decoders.test\_encode\_decode\_arviz\_inference\_data
+===================================================================================
+
+.. currentmodule:: matflow.tests.test_encoders_decoders
+
+.. autofunction:: test_encode_decode_arviz_inference_data
