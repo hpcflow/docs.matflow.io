@@ -1,0 +1,50 @@
+matflow.tests.subset_simulation
+===============================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow.tests.subset_simulation
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      estimate_cov
+      generate_next_state
+      generate_next_state_ACS
+      generate_next_state_CS
+      get_stats
+      get_toy_model_results_from_matflow_workflows
+      get_y_star
+      model
+      plot_cov_dist
+      plot_cov_estimates
+      plot_pf_dist
+      plot_pf_num_samples
+      run_convergence
+      run_repeats
+      sample_direct_MC
+      subset_simulation
+      system_analysis_toy_model
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
