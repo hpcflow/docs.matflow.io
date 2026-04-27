@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.plot\_cov\_dist
+================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: plot_cov_dist
