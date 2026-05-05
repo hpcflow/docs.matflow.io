@@ -1,0 +1,35 @@
+matflow.encoders
+================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow.encoders
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      get_decoders
+      get_encoders
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
