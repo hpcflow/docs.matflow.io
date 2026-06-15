@@ -1,0 +1,136 @@
+matflow.Workflow
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: Workflow
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Workflow.abort_run
+      ~Workflow.add_loop
+      ~Workflow.add_submission
+      ~Workflow.add_task
+      ~Workflow.add_task_after
+      ~Workflow.add_task_before
+      ~Workflow.batch_update
+      ~Workflow.cached_merged_parameters
+      ~Workflow.cancel
+      ~Workflow.check_parameters_exist
+      ~Workflow.copy
+      ~Workflow.delete
+      ~Workflow.elements
+      ~Workflow.ensure_commands_file
+      ~Workflow.execute_combined_runs
+      ~Workflow.execute_run
+      ~Workflow.from_JSON_file
+      ~Workflow.from_JSON_string
+      ~Workflow.from_YAML_file
+      ~Workflow.from_YAML_string
+      ~Workflow.from_file
+      ~Workflow.from_template
+      ~Workflow.from_template_data
+      ~Workflow.get_EAR_IDs_of_tasks
+      ~Workflow.get_EAR_skipped
+      ~Workflow.get_EARs_from_IDs
+      ~Workflow.get_EARs_of_tasks
+      ~Workflow.get_all_EARs
+      ~Workflow.get_all_element_iterations
+      ~Workflow.get_all_elements
+      ~Workflow.get_all_parameter_data
+      ~Workflow.get_all_parameter_sources
+      ~Workflow.get_all_parameters
+      ~Workflow.get_all_submission_run_IDs
+      ~Workflow.get_element_IDs_from_EAR_IDs
+      ~Workflow.get_element_iteration_IDs_from_EAR_IDs
+      ~Workflow.get_element_iterations_from_IDs
+      ~Workflow.get_element_iterations_of_tasks
+      ~Workflow.get_elements_from_IDs
+      ~Workflow.get_iteration_task_pathway
+      ~Workflow.get_parameter
+      ~Workflow.get_parameter_data
+      ~Workflow.get_parameter_set_statuses
+      ~Workflow.get_parameter_source
+      ~Workflow.get_parameter_sources
+      ~Workflow.get_parameters
+      ~Workflow.get_process_IDs
+      ~Workflow.get_run_directories
+      ~Workflow.get_running_elements
+      ~Workflow.get_running_runs
+      ~Workflow.get_scheduler_job_IDs
+      ~Workflow.get_store_EARs
+      ~Workflow.get_store_element_iterations
+      ~Workflow.get_store_elements
+      ~Workflow.get_store_tasks
+      ~Workflow.get_task_IDs_from_element_IDs
+      ~Workflow.get_task_elements
+      ~Workflow.get_task_unique_names
+      ~Workflow.get_text_file
+      ~Workflow.is_parameter_set
+      ~Workflow.list_jobscripts
+      ~Workflow.list_task_jobscripts
+      ~Workflow.process_shell_parameter_output
+      ~Workflow.rechunk
+      ~Workflow.rechunk_parameter_base
+      ~Workflow.rechunk_runs
+      ~Workflow.reload
+      ~Workflow.resolve_jobscripts
+      ~Workflow.save_parameter
+      ~Workflow.set_EAR_end
+      ~Workflow.set_EAR_skip
+      ~Workflow.set_EAR_start
+      ~Workflow.set_EARs_initialised
+      ~Workflow.set_multi_run_ends
+      ~Workflow.set_multi_run_starts
+      ~Workflow.set_parameter_value
+      ~Workflow.set_parameter_values
+      ~Workflow.show_all_EAR_statuses
+      ~Workflow.submit
+      ~Workflow.temporary_rename
+      ~Workflow.unzip
+      ~Workflow.wait
+      ~Workflow.zip
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Workflow.artifacts_path
+      ~Workflow.creation_info
+      ~Workflow.execution_path
+      ~Workflow.id_
+      ~Workflow.input_files_path
+      ~Workflow.loops
+      ~Workflow.name
+      ~Workflow.num_EARs
+      ~Workflow.num_added_tasks
+      ~Workflow.num_element_iterations
+      ~Workflow.num_elements
+      ~Workflow.num_loops
+      ~Workflow.num_submissions
+      ~Workflow.num_tasks
+      ~Workflow.store_format
+      ~Workflow.submissions
+      ~Workflow.submissions_path
+      ~Workflow.task_artifacts_path
+      ~Workflow.tasks
+      ~Workflow.template
+      ~Workflow.template_components
+      ~Workflow.ts_fmt
+      ~Workflow.ts_name_fmt
+      ~Workflow.url
+   
+   

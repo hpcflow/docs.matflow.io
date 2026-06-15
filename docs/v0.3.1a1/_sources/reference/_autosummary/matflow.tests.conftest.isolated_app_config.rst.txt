@@ -1,0 +1,6 @@
+matflow.tests.conftest.isolated\_app\_config
+============================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: isolated_app_config

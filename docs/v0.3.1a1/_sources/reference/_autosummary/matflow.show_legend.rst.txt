@@ -1,0 +1,6 @@
+matflow.show\_legend
+====================
+
+.. currentmodule:: matflow
+
+.. autofunction:: show_legend

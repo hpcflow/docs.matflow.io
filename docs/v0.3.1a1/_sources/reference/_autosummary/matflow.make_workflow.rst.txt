@@ -1,0 +1,6 @@
+matflow.make\_workflow
+======================
+
+.. currentmodule:: matflow
+
+.. autofunction:: make_workflow

@@ -1,0 +1,6 @@
+matflow.tests.conftest.reference\_array\_data
+=============================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: reference_array_data

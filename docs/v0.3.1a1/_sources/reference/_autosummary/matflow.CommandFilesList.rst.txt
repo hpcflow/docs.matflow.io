@@ -1,0 +1,32 @@
+matflow.CommandFilesList
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: CommandFilesList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~CommandFilesList.add_object
+      ~CommandFilesList.add_objects
+      ~CommandFilesList.from_json_like
+      ~CommandFilesList.get
+      ~CommandFilesList.get_all
+      ~CommandFilesList.list_attrs
+      ~CommandFilesList.to_dict
+      ~CommandFilesList.to_json_like
+   
+   
+
+   
+   
+   

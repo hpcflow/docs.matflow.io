@@ -1,0 +1,34 @@
+matflow.tests.test_encoders_decoders
+====================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow.tests.test_encoders_decoders
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      test_encode_decode_arviz_inference_data
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
