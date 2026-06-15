@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.run\_repeats
+=============================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: run_repeats
