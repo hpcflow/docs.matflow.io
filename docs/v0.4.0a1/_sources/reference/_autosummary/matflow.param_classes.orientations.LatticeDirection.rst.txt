@@ -1,0 +1,29 @@
+matflow.param_classes.orientations.LatticeDirection
+===================================================
+
+.. currentmodule:: matflow.param_classes.orientations
+
+.. autoclass:: LatticeDirection
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LatticeDirection.A
+      ~LatticeDirection.B
+      ~LatticeDirection.C
+      ~LatticeDirection.A_STAR
+      ~LatticeDirection.B_STAR
+      ~LatticeDirection.C_STAR
+   
+   

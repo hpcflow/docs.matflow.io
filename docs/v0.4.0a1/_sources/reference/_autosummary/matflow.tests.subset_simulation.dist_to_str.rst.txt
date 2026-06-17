@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.dist\_to\_str
+==============================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: dist_to_str

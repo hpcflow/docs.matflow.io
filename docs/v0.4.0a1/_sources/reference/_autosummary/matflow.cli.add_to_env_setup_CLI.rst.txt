@@ -1,0 +1,6 @@
+matflow.cli.add\_to\_env\_setup\_CLI
+====================================
+
+.. currentmodule:: matflow.cli
+
+.. autofunction:: add_to_env_setup_CLI
