@@ -1,0 +1,26 @@
+matflow.ParameterPropagationMode
+================================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ParameterPropagationMode
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ParameterPropagationMode.IMPLICIT
+      ~ParameterPropagationMode.EXPLICIT
+      ~ParameterPropagationMode.NEVER
+   
+   
