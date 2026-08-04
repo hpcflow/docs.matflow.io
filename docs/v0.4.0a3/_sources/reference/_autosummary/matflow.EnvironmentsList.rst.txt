@@ -1,0 +1,32 @@
+matflow.EnvironmentsList
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: EnvironmentsList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~EnvironmentsList.add_object
+      ~EnvironmentsList.add_objects
+      ~EnvironmentsList.from_json_like
+      ~EnvironmentsList.get
+      ~EnvironmentsList.get_all
+      ~EnvironmentsList.list_attrs
+      ~EnvironmentsList.to_dict
+      ~EnvironmentsList.to_json_like
+   
+   
+
+   
+   
+   

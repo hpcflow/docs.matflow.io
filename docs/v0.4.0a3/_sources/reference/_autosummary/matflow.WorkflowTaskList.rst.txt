@@ -1,0 +1,32 @@
+matflow.WorkflowTaskList
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: WorkflowTaskList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowTaskList.add_object
+      ~WorkflowTaskList.add_objects
+      ~WorkflowTaskList.from_json_like
+      ~WorkflowTaskList.get
+      ~WorkflowTaskList.get_all
+      ~WorkflowTaskList.list_attrs
+      ~WorkflowTaskList.to_dict
+      ~WorkflowTaskList.to_json_like
+   
+   
+
+   
+   
+   
