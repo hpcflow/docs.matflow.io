@@ -1,0 +1,6 @@
+matflow.tests.test\_utils.test\_masked\_array\_from\_list\_2D
+=============================================================
+
+.. currentmodule:: matflow.tests.test_utils
+
+.. autofunction:: test_masked_array_from_list_2D
