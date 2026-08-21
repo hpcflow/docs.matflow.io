@@ -1,0 +1,6 @@
+matflow.run\_hpcflow\_tests
+===========================
+
+.. currentmodule:: matflow
+
+.. autofunction:: run_hpcflow_tests

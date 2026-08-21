@@ -1,0 +1,95 @@
+matflow.ElementActionRun
+========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementActionRun
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementActionRun.compose_commands
+      ~ElementActionRun.get
+      ~ElementActionRun.get_EAR_dependencies
+      ~ElementActionRun.get_IFG_input_values
+      ~ElementActionRun.get_OFP_output_files
+      ~ElementActionRun.get_OFP_outputs
+      ~ElementActionRun.get_all_previous_iteration_runs
+      ~ElementActionRun.get_app_log_path
+      ~ElementActionRun.get_app_std_path
+      ~ElementActionRun.get_commands_file_hash
+      ~ElementActionRun.get_data_idx
+      ~ElementActionRun.get_data_in_values
+      ~ElementActionRun.get_data_in_values_direct
+      ~ElementActionRun.get_dependent_EARs
+      ~ElementActionRun.get_directory
+      ~ElementActionRun.get_environment
+      ~ElementActionRun.get_environment_spec
+      ~ElementActionRun.get_input_dependencies
+      ~ElementActionRun.get_parameter_names
+      ~ElementActionRun.get_parameter_sources
+      ~ElementActionRun.get_py_script_func_kwargs
+      ~ElementActionRun.get_resources
+      ~ElementActionRun.get_script_artifact_name
+      ~ElementActionRun.raise_on_failure_threshold
+      ~ElementActionRun.render_jinja_template
+      ~ElementActionRun.try_write_commands
+      ~ElementActionRun.write_jinja_template
+      ~ElementActionRun.write_program_data_in_files
+      ~ElementActionRun.write_script_data_in_files
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementActionRun.action
+      ~ElementActionRun.commands_file_ID
+      ~ElementActionRun.commands_idx
+      ~ElementActionRun.data_idx
+      ~ElementActionRun.dir_diff
+      ~ElementActionRun.element
+      ~ElementActionRun.element_action
+      ~ElementActionRun.element_iteration
+      ~ElementActionRun.end_time
+      ~ElementActionRun.env_spec
+      ~ElementActionRun.env_spec_hashable
+      ~ElementActionRun.exit_code
+      ~ElementActionRun.id_
+      ~ElementActionRun.index
+      ~ElementActionRun.input_files
+      ~ElementActionRun.inputs
+      ~ElementActionRun.is_pending
+      ~ElementActionRun.is_snippet_script
+      ~ElementActionRun.jinja_template_path_actual
+      ~ElementActionRun.metadata
+      ~ElementActionRun.output_files
+      ~ElementActionRun.outputs
+      ~ElementActionRun.port_number
+      ~ElementActionRun.program_path_actual
+      ~ElementActionRun.resources
+      ~ElementActionRun.resources_with_defaults
+      ~ElementActionRun.run_hostname
+      ~ElementActionRun.skip
+      ~ElementActionRun.skip_reason
+      ~ElementActionRun.snapshot_end
+      ~ElementActionRun.snapshot_start
+      ~ElementActionRun.start_time
+      ~ElementActionRun.status
+      ~ElementActionRun.submission_idx
+      ~ElementActionRun.success
+      ~ElementActionRun.task
+      ~ElementActionRun.workflow
+   
+   

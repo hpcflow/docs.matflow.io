@@ -1,0 +1,28 @@
+matflow.ActionScopeType
+=======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ActionScopeType
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ActionScopeType.ANY
+      ~ActionScopeType.MAIN
+      ~ActionScopeType.PROCESSING
+      ~ActionScopeType.INPUT_FILE_GENERATOR
+      ~ActionScopeType.OUTPUT_FILE_PARSER
+   
+   
