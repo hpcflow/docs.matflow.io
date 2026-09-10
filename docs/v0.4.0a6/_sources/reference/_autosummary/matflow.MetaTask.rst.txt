@@ -1,0 +1,27 @@
+matflow.MetaTask
+================
+
+.. currentmodule:: matflow
+
+.. autoclass:: MetaTask
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MetaTask.from_json_like
+      ~MetaTask.to_dict
+      ~MetaTask.to_json_like
+   
+   
+
+   
+   
+   

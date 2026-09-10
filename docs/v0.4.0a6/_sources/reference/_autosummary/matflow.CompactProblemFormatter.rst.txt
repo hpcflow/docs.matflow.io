@@ -1,0 +1,37 @@
+matflow.CompactProblemFormatter
+===============================
+
+.. currentmodule:: matflow
+
+.. autoclass:: CompactProblemFormatter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~CompactProblemFormatter.disable
+      ~CompactProblemFormatter.enable
+      ~CompactProblemFormatter.get_console
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CompactProblemFormatter.ERROR_COLOUR
+      ~CompactProblemFormatter.WARNING_COLOUR
+      ~CompactProblemFormatter.ipython_shell
+      ~CompactProblemFormatter.show_tracebacks
+      ~CompactProblemFormatter.use_rich_tracebacks
+   
+   

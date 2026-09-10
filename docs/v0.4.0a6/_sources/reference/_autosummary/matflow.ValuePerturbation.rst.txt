@@ -1,0 +1,41 @@
+matflow.ValuePerturbation
+=========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ValuePerturbation
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ValuePerturbation.from_json_like
+      ~ValuePerturbation.from_spec
+      ~ValuePerturbation.make_persistent
+      ~ValuePerturbation.to_dict
+      ~ValuePerturbation.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ValuePerturbation.additive_factor
+      ~ValuePerturbation.multiplicative_factor
+      ~ValuePerturbation.name
+      ~ValuePerturbation.normalised_path
+      ~ValuePerturbation.path
+      ~ValuePerturbation.value
+      ~ValuePerturbation.workflow
+   
+   

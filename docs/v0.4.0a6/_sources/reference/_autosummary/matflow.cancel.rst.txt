@@ -1,0 +1,6 @@
+matflow.cancel
+==============
+
+.. currentmodule:: matflow
+
+.. autofunction:: cancel

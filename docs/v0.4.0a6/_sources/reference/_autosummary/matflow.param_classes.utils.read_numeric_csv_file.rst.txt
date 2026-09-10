@@ -1,0 +1,6 @@
+matflow.param\_classes.utils.read\_numeric\_csv\_file
+=====================================================
+
+.. currentmodule:: matflow.param_classes.utils
+
+.. autofunction:: read_numeric_csv_file

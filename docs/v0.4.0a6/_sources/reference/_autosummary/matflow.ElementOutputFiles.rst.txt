@@ -1,0 +1,31 @@
+matflow.ElementOutputFiles
+==========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementOutputFiles
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementOutputFiles.prefixed_names_unlabelled
+      ~ElementOutputFiles.prefixed_names_unlabelled_str
+   
+   

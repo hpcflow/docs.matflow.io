@@ -1,0 +1,6 @@
+matflow.tests.conftest.save\_fig
+================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: save_fig

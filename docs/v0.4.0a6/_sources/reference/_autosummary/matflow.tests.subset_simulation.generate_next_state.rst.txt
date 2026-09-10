@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.generate\_next\_state
+======================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: generate_next_state

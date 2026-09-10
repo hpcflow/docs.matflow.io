@@ -1,0 +1,36 @@
+matflow.SchemaOutput
+====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: SchemaOutput
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SchemaOutput.from_json_like
+      ~SchemaOutput.to_dict
+      ~SchemaOutput.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SchemaOutput.input_or_output
+      ~SchemaOutput.typ
+      ~SchemaOutput.parameter
+      ~SchemaOutput.propagation_mode
+   
+   
