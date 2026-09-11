@@ -1,0 +1,38 @@
+matflow.TaskCondition
+=====================
+
+.. currentmodule:: matflow
+
+.. autoclass:: TaskCondition
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TaskCondition.from_string
+      ~TaskCondition.test
+      ~TaskCondition.test_group
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskCondition.get_path
+      ~TaskCondition.group_function
+      ~TaskCondition.group_name
+      ~TaskCondition.source_task_ID
+      ~TaskCondition.input_or_output
+      ~TaskCondition.source_parameter
+   
+   

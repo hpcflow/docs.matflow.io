@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.make\_voxel\_grouping
+======================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: make_voxel_grouping

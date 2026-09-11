@@ -1,0 +1,45 @@
+matflow.Command
+===============
+
+.. currentmodule:: matflow
+
+.. autoclass:: Command
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Command.from_json_like
+      ~Command.get_command_line
+      ~Command.get_output_types
+      ~Command.get_required_executables
+      ~Command.process_std_stream
+      ~Command.to_dict
+      ~Command.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Command.action
+      ~Command.arguments
+      ~Command.command
+      ~Command.executable
+      ~Command.stderr
+      ~Command.stdin
+      ~Command.stdout
+      ~Command.variables
+      ~Command.rules
+   
+   

@@ -1,0 +1,36 @@
+matflow.ExecutableInstance
+==========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ExecutableInstance
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ExecutableInstance.from_json_like
+      ~ExecutableInstance.from_spec
+      ~ExecutableInstance.to_dict
+      ~ExecutableInstance.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ExecutableInstance.parallel_mode
+      ~ExecutableInstance.num_cores
+      ~ExecutableInstance.command
+   
+   

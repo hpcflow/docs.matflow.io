@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.get\_approx\_pf\_random\_walk
+==============================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: get_approx_pf_random_walk

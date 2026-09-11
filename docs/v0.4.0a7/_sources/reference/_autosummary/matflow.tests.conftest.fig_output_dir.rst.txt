@@ -1,0 +1,6 @@
+matflow.tests.conftest.fig\_output\_dir
+=======================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: fig_output_dir

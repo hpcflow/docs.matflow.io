@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.get\_approx\_y\_star\_random\_walk
+===================================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: get_approx_y_star_random_walk
