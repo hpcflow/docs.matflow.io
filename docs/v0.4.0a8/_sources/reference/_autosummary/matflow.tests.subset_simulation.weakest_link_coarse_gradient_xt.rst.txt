@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.weakest\_link\_coarse\_gradient\_xt
+====================================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: weakest_link_coarse_gradient_xt

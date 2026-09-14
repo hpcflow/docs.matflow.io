@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.system\_analysis\_toy\_model
+=============================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: system_analysis_toy_model

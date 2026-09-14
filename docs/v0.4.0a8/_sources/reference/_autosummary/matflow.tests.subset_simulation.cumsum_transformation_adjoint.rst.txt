@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.cumsum\_transformation\_adjoint
+================================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: cumsum_transformation_adjoint

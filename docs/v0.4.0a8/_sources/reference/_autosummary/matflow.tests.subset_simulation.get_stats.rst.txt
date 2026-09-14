@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.get\_stats
+===========================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: get_stats

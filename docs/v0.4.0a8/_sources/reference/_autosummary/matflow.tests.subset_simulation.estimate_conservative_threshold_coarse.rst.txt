@@ -1,0 +1,6 @@
+matflow.tests.subset\_simulation.estimate\_conservative\_threshold\_coarse
+==========================================================================
+
+.. currentmodule:: matflow.tests.subset_simulation
+
+.. autofunction:: estimate_conservative_threshold_coarse
