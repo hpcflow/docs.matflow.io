@@ -1,0 +1,6 @@
+matflow.show
+============
+
+.. currentmodule:: matflow
+
+.. autofunction:: show

@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.log\_surrogate\_weight
+====================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: log_surrogate_weight

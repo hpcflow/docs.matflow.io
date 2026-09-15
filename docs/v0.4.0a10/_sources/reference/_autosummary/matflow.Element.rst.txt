@@ -1,0 +1,66 @@
+matflow.Element
+===============
+
+.. currentmodule:: matflow
+
+.. autoclass:: Element
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Element.get
+      ~Element.get_EAR_dependencies
+      ~Element.get_data_idx
+      ~Element.get_dependent_EARs
+      ~Element.get_dependent_element_iterations
+      ~Element.get_dependent_elements
+      ~Element.get_dependent_elements_recursively
+      ~Element.get_dependent_tasks
+      ~Element.get_element_dependencies
+      ~Element.get_element_iteration_dependencies
+      ~Element.get_input_dependencies
+      ~Element.get_parameter_sources
+      ~Element.get_sequence_value
+      ~Element.get_task_dependencies
+      ~Element.to_element_set_data
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Element.action_runs
+      ~Element.actions
+      ~Element.dir_name
+      ~Element.element_set
+      ~Element.element_set_idx
+      ~Element.id_
+      ~Element.index
+      ~Element.input_files
+      ~Element.input_source_idx
+      ~Element.input_sources
+      ~Element.inputs
+      ~Element.is_pending
+      ~Element.iteration_IDs
+      ~Element.iterations
+      ~Element.latest_iteration
+      ~Element.latest_iteration_non_skipped
+      ~Element.output_files
+      ~Element.outputs
+      ~Element.schema_parameters
+      ~Element.sequence_idx
+      ~Element.task
+      ~Element.workflow
+   
+   

@@ -1,0 +1,49 @@
+matflow.subset_simulation.subset_simulation_result.LevelSamplingResult
+======================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation_result
+
+.. autoclass:: LevelSamplingResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LevelSamplingResult.component_acceptance_rate
+      ~LevelSamplingResult.debug_data
+      ~LevelSamplingResult.g
+      ~LevelSamplingResult.jump_distance_sum
+      ~LevelSamplingResult.jump_distances
+      ~LevelSamplingResult.mean_jump_distance
+      ~LevelSamplingResult.num_chains
+      ~LevelSamplingResult.num_coarse_evals
+      ~LevelSamplingResult.num_components_accepted
+      ~LevelSamplingResult.num_components_proposed
+      ~LevelSamplingResult.num_fine_evals
+      ~LevelSamplingResult.num_outer_moves
+      ~LevelSamplingResult.num_states
+      ~LevelSamplingResult.num_subset_accepts
+      ~LevelSamplingResult.num_subset_trials
+      ~LevelSamplingResult.num_transitions
+      ~LevelSamplingResult.outer_move_rate
+      ~LevelSamplingResult.subset_acceptance_rate
+      ~LevelSamplingResult.x
+      ~LevelSamplingResult.chains
+   
+   
