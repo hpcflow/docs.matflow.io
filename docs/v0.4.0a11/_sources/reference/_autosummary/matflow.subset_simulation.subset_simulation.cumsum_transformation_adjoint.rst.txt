@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.cumsum\_transformation\_adjoint
+=============================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: cumsum_transformation_adjoint

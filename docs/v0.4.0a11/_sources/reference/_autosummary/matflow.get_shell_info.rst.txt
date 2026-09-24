@@ -1,0 +1,6 @@
+matflow.get\_shell\_info
+========================
+
+.. currentmodule:: matflow
+
+.. autofunction:: get_shell_info

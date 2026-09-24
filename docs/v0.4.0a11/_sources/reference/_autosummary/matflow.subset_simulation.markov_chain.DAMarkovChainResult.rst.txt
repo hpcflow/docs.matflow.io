@@ -1,0 +1,60 @@
+matflow.subset_simulation.markov_chain.DAMarkovChainResult
+==========================================================
+
+.. currentmodule:: matflow.subset_simulation.markov_chain
+
+.. autoclass:: DAMarkovChainResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DAMarkovChainResult.coarse_acceptance_rate
+      ~DAMarkovChainResult.coarse_given_fine
+      ~DAMarkovChainResult.component_acceptance_rate
+      ~DAMarkovChainResult.dimension
+      ~DAMarkovChainResult.endpoint_move_rate
+      ~DAMarkovChainResult.fine_correction_acceptance_rate
+      ~DAMarkovChainResult.fine_eval_rate
+      ~DAMarkovChainResult.fine_subset_pass_rate
+      ~DAMarkovChainResult.gc
+      ~DAMarkovChainResult.jump_distances
+      ~DAMarkovChainResult.mean_jump_distance
+      ~DAMarkovChainResult.num_coarse_accepts
+      ~DAMarkovChainResult.num_coarse_and_fine_subset_passes
+      ~DAMarkovChainResult.num_coarse_evals
+      ~DAMarkovChainResult.num_coarse_proposals
+      ~DAMarkovChainResult.num_endpoint_moves
+      ~DAMarkovChainResult.num_fine_correction_accepts
+      ~DAMarkovChainResult.num_fine_subset_passes
+      ~DAMarkovChainResult.num_states
+      ~DAMarkovChainResult.num_transitions
+      ~DAMarkovChainResult.outer_move_rate
+      ~DAMarkovChainResult.subset_acceptance_rate
+      ~DAMarkovChainResult.x
+      ~DAMarkovChainResult.g
+      ~DAMarkovChainResult.num_components_accepted
+      ~DAMarkovChainResult.num_components_proposed
+      ~DAMarkovChainResult.num_subset_accepts
+      ~DAMarkovChainResult.num_subset_trials
+      ~DAMarkovChainResult.num_outer_moves
+      ~DAMarkovChainResult.jump_distance_sum
+      ~DAMarkovChainResult.num_fine_evals
+   
+   

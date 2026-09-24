@@ -1,0 +1,6 @@
+matflow.tests.test\_subset\_simulation.test\_subset\_simulation\_toy\_model
+===========================================================================
+
+.. currentmodule:: matflow.tests.test_subset_simulation
+
+.. autofunction:: test_subset_simulation_toy_model

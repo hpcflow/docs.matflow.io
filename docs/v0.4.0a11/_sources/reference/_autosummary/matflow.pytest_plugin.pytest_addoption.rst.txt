@@ -1,0 +1,6 @@
+matflow.pytest\_plugin.pytest\_addoption
+========================================
+
+.. currentmodule:: matflow.pytest_plugin
+
+.. autofunction:: pytest_addoption

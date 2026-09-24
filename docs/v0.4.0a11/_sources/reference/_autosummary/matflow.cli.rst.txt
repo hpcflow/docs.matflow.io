@@ -1,0 +1,34 @@
+matflow.cli
+===========
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: matflow.cli
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      add_to_env_setup_CLI
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
