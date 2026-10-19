@@ -1,0 +1,6 @@
+matflow.encoders.get\_decoders
+==============================
+
+.. currentmodule:: matflow.encoders
+
+.. autofunction:: get_decoders
