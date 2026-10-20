@@ -1,0 +1,30 @@
+matflow.WorkflowBlueprint
+=========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: WorkflowBlueprint
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowBlueprint.workflow_template
+   
+   

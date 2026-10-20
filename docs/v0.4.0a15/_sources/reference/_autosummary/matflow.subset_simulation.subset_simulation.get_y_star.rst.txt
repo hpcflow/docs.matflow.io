@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.get\_y\_star
+==========================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: get_y_star
