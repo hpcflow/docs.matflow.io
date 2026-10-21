@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.model
+===================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: model

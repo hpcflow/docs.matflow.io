@@ -1,0 +1,56 @@
+matflow.subset_simulation.subset_simulation_result.DALevelSamplingResult
+========================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation_result
+
+.. autoclass:: DALevelSamplingResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DALevelSamplingResult.coarse_acceptance_rate
+      ~DALevelSamplingResult.coarse_given_fine
+      ~DALevelSamplingResult.component_acceptance_rate
+      ~DALevelSamplingResult.debug_data
+      ~DALevelSamplingResult.endpoint_move_rate
+      ~DALevelSamplingResult.fine_correction_acceptance_rate
+      ~DALevelSamplingResult.fine_eval_rate
+      ~DALevelSamplingResult.fine_subset_pass_rate
+      ~DALevelSamplingResult.g
+      ~DALevelSamplingResult.gc
+      ~DALevelSamplingResult.jump_distance_sum
+      ~DALevelSamplingResult.jump_distances
+      ~DALevelSamplingResult.mean_jump_distance
+      ~DALevelSamplingResult.num_chains
+      ~DALevelSamplingResult.num_coarse_evals
+      ~DALevelSamplingResult.num_components_accepted
+      ~DALevelSamplingResult.num_components_proposed
+      ~DALevelSamplingResult.num_fine_evals
+      ~DALevelSamplingResult.num_outer_moves
+      ~DALevelSamplingResult.num_states
+      ~DALevelSamplingResult.num_subset_accepts
+      ~DALevelSamplingResult.num_subset_trials
+      ~DALevelSamplingResult.num_transitions
+      ~DALevelSamplingResult.outer_move_rate
+      ~DALevelSamplingResult.subset_acceptance_rate
+      ~DALevelSamplingResult.x
+      ~DALevelSamplingResult.chains
+   
+   
