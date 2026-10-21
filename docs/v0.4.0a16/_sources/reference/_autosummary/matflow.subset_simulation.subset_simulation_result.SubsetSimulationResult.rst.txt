@@ -1,0 +1,55 @@
+matflow.subset_simulation.subset_simulation_result.SubsetSimulationResult
+=========================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation_result
+
+.. autoclass:: SubsetSimulationResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SubsetSimulationResult.dump_element_group_to_HDF5_group
+      ~SubsetSimulationResult.dump_to_HDF5_group
+      ~SubsetSimulationResult.prepare_JSON_dump
+      ~SubsetSimulationResult.save_from_HDF5_group
+      ~SubsetSimulationResult.save_from_JSON
+      ~SubsetSimulationResult.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubsetSimulationResult.component_acceptance_rates
+      ~SubsetSimulationResult.debug_data
+      ~SubsetSimulationResult.final_all_g
+      ~SubsetSimulationResult.final_all_x
+      ~SubsetSimulationResult.final_chain_g
+      ~SubsetSimulationResult.final_chain_seeds
+      ~SubsetSimulationResult.mean_jump_distances
+      ~SubsetSimulationResult.num_conditional_levels
+      ~SubsetSimulationResult.outer_move_rates
+      ~SubsetSimulationResult.subset_acceptance_rates
+      ~SubsetSimulationResult.x_original
+      ~SubsetSimulationResult.pf
+      ~SubsetSimulationResult.cov
+      ~SubsetSimulationResult.converged
+      ~SubsetSimulationResult.thresholds
+      ~SubsetSimulationResult.level_covs
+      ~SubsetSimulationResult.levels
+      ~SubsetSimulationResult.num_fine_evals
+      ~SubsetSimulationResult.num_coarse_evals
+      ~SubsetSimulationResult.num_failed_per_level
+   
+   
