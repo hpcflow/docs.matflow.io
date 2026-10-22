@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.plot\_cov\_estimates
+==================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: plot_cov_estimates

@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.weakest\_link\_performance\_fine
+==============================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: weakest_link_performance_fine
