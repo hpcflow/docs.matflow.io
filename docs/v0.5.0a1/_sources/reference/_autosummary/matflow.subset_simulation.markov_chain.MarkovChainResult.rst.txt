@@ -1,0 +1,47 @@
+matflow.subset_simulation.markov_chain.MarkovChainResult
+========================================================
+
+.. currentmodule:: matflow.subset_simulation.markov_chain
+
+.. autoclass:: MarkovChainResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MarkovChainResult.component_acceptance_rate
+      ~MarkovChainResult.dimension
+      ~MarkovChainResult.jump_distances
+      ~MarkovChainResult.mean_jump_distance
+      ~MarkovChainResult.num_coarse_evals
+      ~MarkovChainResult.num_states
+      ~MarkovChainResult.num_transitions
+      ~MarkovChainResult.outer_move_rate
+      ~MarkovChainResult.subset_acceptance_rate
+      ~MarkovChainResult.x
+      ~MarkovChainResult.g
+      ~MarkovChainResult.num_components_accepted
+      ~MarkovChainResult.num_components_proposed
+      ~MarkovChainResult.num_subset_accepts
+      ~MarkovChainResult.num_subset_trials
+      ~MarkovChainResult.num_outer_moves
+      ~MarkovChainResult.jump_distance_sum
+      ~MarkovChainResult.num_fine_evals
+   
+   
