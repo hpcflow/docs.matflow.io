@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.get\_stats
+========================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: get_stats
