@@ -1,0 +1,6 @@
+matflow.tests.utils.values\_equal
+=================================
+
+.. currentmodule:: matflow.tests.utils
+
+.. autofunction:: values_equal
