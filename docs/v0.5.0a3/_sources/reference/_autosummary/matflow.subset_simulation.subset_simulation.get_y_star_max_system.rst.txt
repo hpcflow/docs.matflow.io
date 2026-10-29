@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.get\_y\_star\_max\_system
+=======================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: get_y_star_max_system
