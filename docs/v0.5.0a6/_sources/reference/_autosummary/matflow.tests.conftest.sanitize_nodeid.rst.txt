@@ -1,0 +1,6 @@
+matflow.tests.conftest.sanitize\_nodeid
+=======================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: sanitize_nodeid

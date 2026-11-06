@@ -1,0 +1,31 @@
+matflow.ElementInputFiles
+=========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ElementInputFiles
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementInputFiles.prefixed_names_unlabelled
+      ~ElementInputFiles.prefixed_names_unlabelled_str
+   
+   

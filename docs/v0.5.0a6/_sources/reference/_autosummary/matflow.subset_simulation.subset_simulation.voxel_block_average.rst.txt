@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.voxel\_block\_average
+===================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: voxel_block_average

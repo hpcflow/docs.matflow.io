@@ -1,0 +1,6 @@
+matflow.tests.test\_plot\_orientations\_mtex.test\_matlab\_plot\_quaternion\_component\_order
+=============================================================================================
+
+.. currentmodule:: matflow.tests.test_plot_orientations_mtex
+
+.. autofunction:: test_matlab_plot_quaternion_component_order

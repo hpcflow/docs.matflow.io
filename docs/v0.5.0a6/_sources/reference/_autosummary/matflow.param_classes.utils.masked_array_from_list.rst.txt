@@ -1,0 +1,6 @@
+matflow.param\_classes.utils.masked\_array\_from\_list
+======================================================
+
+.. currentmodule:: matflow.param_classes.utils
+
+.. autofunction:: masked_array_from_list
