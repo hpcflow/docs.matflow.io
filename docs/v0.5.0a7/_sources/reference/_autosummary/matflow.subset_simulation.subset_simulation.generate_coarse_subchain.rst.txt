@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.generate\_coarse\_subchain
+========================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: generate_coarse_subchain

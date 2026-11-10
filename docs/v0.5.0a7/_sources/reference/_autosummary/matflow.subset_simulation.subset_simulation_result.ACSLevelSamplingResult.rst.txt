@@ -1,0 +1,50 @@
+matflow.subset_simulation.subset_simulation_result.ACSLevelSamplingResult
+=========================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation_result
+
+.. autoclass:: ACSLevelSamplingResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ACSLevelSamplingResult.component_acceptance_rate
+      ~ACSLevelSamplingResult.debug_data
+      ~ACSLevelSamplingResult.g
+      ~ACSLevelSamplingResult.jump_distance_sum
+      ~ACSLevelSamplingResult.jump_distances
+      ~ACSLevelSamplingResult.lambda_
+      ~ACSLevelSamplingResult.mean_jump_distance
+      ~ACSLevelSamplingResult.num_chains
+      ~ACSLevelSamplingResult.num_coarse_evals
+      ~ACSLevelSamplingResult.num_components_accepted
+      ~ACSLevelSamplingResult.num_components_proposed
+      ~ACSLevelSamplingResult.num_fine_evals
+      ~ACSLevelSamplingResult.num_outer_moves
+      ~ACSLevelSamplingResult.num_states
+      ~ACSLevelSamplingResult.num_subset_accepts
+      ~ACSLevelSamplingResult.num_subset_trials
+      ~ACSLevelSamplingResult.num_transitions
+      ~ACSLevelSamplingResult.outer_move_rate
+      ~ACSLevelSamplingResult.subset_acceptance_rate
+      ~ACSLevelSamplingResult.x
+      ~ACSLevelSamplingResult.chains
+   
+   
