@@ -1,0 +1,42 @@
+matflow.param_classes.single_crystal_parameters.Perturbation
+============================================================
+
+.. currentmodule:: matflow.param_classes.single_crystal_parameters
+
+.. autoclass:: Perturbation
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Perturbation.clear
+      ~Perturbation.copy
+      ~Perturbation.fromkeys
+      ~Perturbation.get
+      ~Perturbation.items
+      ~Perturbation.keys
+      ~Perturbation.pop
+      ~Perturbation.popitem
+      ~Perturbation.setdefault
+      ~Perturbation.update
+      ~Perturbation.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Perturbation.path
+      ~Perturbation.multiplicative
+   
+   

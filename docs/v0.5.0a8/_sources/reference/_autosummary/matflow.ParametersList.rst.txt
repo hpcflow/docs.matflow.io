@@ -1,0 +1,32 @@
+matflow.ParametersList
+======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ParametersList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ParametersList.add_object
+      ~ParametersList.add_objects
+      ~ParametersList.from_json_like
+      ~ParametersList.get
+      ~ParametersList.get_all
+      ~ParametersList.list_attrs
+      ~ParametersList.to_dict
+      ~ParametersList.to_json_like
+   
+   
+
+   
+   
+   

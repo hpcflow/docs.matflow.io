@@ -1,0 +1,44 @@
+matflow.param_classes.surrogate.Surrogate
+=========================================
+
+.. currentmodule:: matflow.param_classes.surrogate
+
+.. autoclass:: Surrogate
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Surrogate.build_model
+      ~Surrogate.dump_element_group_to_HDF5_group
+      ~Surrogate.dump_to_HDF5_group
+      ~Surrogate.fit
+      ~Surrogate.generate_sobol
+      ~Surrogate.get_unscaled_data
+      ~Surrogate.make_prediction
+      ~Surrogate.make_prediction_sobol
+      ~Surrogate.perform_inference
+      ~Surrogate.prepare_JSON_dump
+      ~Surrogate.save_from_HDF5_group
+      ~Surrogate.save_from_JSON
+      ~Surrogate.scale_data
+      ~Surrogate.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Surrogate.pytensor_config_cxx
+   
+   

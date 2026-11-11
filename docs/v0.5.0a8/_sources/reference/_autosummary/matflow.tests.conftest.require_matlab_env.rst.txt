@@ -1,0 +1,6 @@
+matflow.tests.conftest.require\_matlab\_env
+===========================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: require_matlab_env
