@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.run\_convergence
+==============================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: run_convergence

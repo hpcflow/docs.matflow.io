@@ -1,0 +1,6 @@
+matflow.unregister
+==================
+
+.. currentmodule:: matflow
+
+.. autofunction:: unregister

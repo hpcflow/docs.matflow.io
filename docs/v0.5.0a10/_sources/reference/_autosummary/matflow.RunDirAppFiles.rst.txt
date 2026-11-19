@@ -1,0 +1,29 @@
+matflow.RunDirAppFiles
+======================
+
+.. currentmodule:: matflow
+
+.. autoclass:: RunDirAppFiles
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RunDirAppFiles.get_commands_file_name
+      ~RunDirAppFiles.get_run_file_prefix
+      ~RunDirAppFiles.get_run_param_dump_file_prefix
+      ~RunDirAppFiles.get_run_param_load_file_prefix
+      ~RunDirAppFiles.take_snapshot
+   
+   
+
+   
+   
+   
