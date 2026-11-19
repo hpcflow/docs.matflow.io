@@ -1,0 +1,6 @@
+matflow.app
+===========
+
+.. currentmodule:: matflow
+
+.. autodata:: app

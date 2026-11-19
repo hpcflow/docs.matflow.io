@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.plot\_pf\_num\_samples
+====================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: plot_pf_num_samples

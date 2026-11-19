@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.sample\_direct\_MC
+================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: sample_direct_MC

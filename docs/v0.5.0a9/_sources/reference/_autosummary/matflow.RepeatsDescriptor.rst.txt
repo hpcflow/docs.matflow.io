@@ -1,0 +1,38 @@
+matflow.RepeatsDescriptor
+=========================
+
+.. currentmodule:: matflow
+
+.. autoclass:: RepeatsDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RepeatsDescriptor.from_json_like
+      ~RepeatsDescriptor.normalise
+      ~RepeatsDescriptor.to_dict
+      ~RepeatsDescriptor.to_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RepeatsDescriptor.generate_seed_sequence
+      ~RepeatsDescriptor.master_seed
+      ~RepeatsDescriptor.name
+      ~RepeatsDescriptor.nesting_order
+      ~RepeatsDescriptor.number
+   
+   
