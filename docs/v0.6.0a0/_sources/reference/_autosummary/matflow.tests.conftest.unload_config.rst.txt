@@ -1,0 +1,6 @@
+matflow.tests.conftest.unload\_config
+=====================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: unload_config

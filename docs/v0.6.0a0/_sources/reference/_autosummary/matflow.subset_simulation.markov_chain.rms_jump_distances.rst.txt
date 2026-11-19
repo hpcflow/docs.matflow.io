@@ -1,0 +1,6 @@
+matflow.subset\_simulation.markov\_chain.rms\_jump\_distances
+=============================================================
+
+.. currentmodule:: matflow.subset_simulation.markov_chain
+
+.. autofunction:: rms_jump_distances
