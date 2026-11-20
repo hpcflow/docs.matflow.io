@@ -1,0 +1,6 @@
+matflow.tests.conftest.nodeid\_str
+==================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: nodeid_str

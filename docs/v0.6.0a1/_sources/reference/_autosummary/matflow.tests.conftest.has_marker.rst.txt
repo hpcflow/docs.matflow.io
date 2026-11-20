@@ -1,0 +1,6 @@
+matflow.tests.conftest.has\_marker
+==================================
+
+.. currentmodule:: matflow.tests.conftest
+
+.. autofunction:: has_marker
