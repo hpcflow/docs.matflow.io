@@ -1,0 +1,6 @@
+matflow.subset\_simulation.utils.plot\_convergence\_comparison
+==============================================================
+
+.. currentmodule:: matflow.subset_simulation.utils
+
+.. autofunction:: plot_convergence_comparison

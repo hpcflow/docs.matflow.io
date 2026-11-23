@@ -1,0 +1,50 @@
+matflow.subset_simulation.subset_simulation.SubsetSimulationACSNumChainsPerUpdateConvergence
+============================================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autoclass:: SubsetSimulationACSNumChainsPerUpdateConvergence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.from_file
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.plot_cov_empiricals
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.plot_cov_means
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.plot_pf_means
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.run
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.to_file
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.cov_empiricals
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.cov_means
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.pf_means
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.results
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.seed
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.transformation
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.num_repeats
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.num_chains_per_update
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.dimension
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.performance
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.p_0
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.num_samples
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.num_levels
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.mimic_matflow
+      ~SubsetSimulationACSNumChainsPerUpdateConvergence.sampling_method_kwargs
+   
+   

@@ -1,0 +1,6 @@
+matflow.subset\_simulation.utils.level\_plot
+============================================
+
+.. currentmodule:: matflow.subset_simulation.utils
+
+.. autofunction:: level_plot

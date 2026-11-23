@@ -1,0 +1,47 @@
+matflow.subset_simulation.subset_simulation_result.SubsetSimulationRepeatsResult
+================================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation_result
+
+.. autoclass:: SubsetSimulationRepeatsResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SubsetSimulationRepeatsResult.from_results
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubsetSimulationRepeatsResult.all_component_acceptance_rates
+      ~SubsetSimulationRepeatsResult.all_mean_jump_distances
+      ~SubsetSimulationRepeatsResult.all_num_levels
+      ~SubsetSimulationRepeatsResult.all_outer_move_rates
+      ~SubsetSimulationRepeatsResult.all_subset_acceptance_rates
+      ~SubsetSimulationRepeatsResult.level_average_component_acceptance_rates
+      ~SubsetSimulationRepeatsResult.level_average_mean_jump_distances
+      ~SubsetSimulationRepeatsResult.level_average_outer_move_rates
+      ~SubsetSimulationRepeatsResult.level_average_subset_acceptance_rates
+      ~SubsetSimulationRepeatsResult.num_repeats
+      ~SubsetSimulationRepeatsResult.pf
+      ~SubsetSimulationRepeatsResult.results
+      ~SubsetSimulationRepeatsResult.pf_mean
+      ~SubsetSimulationRepeatsResult.pf_std
+      ~SubsetSimulationRepeatsResult.cov_empirical
+      ~SubsetSimulationRepeatsResult.cov_mean
+      ~SubsetSimulationRepeatsResult.cov_std
+   
+   

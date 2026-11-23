@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.standard\_normal\_to\_uniform
+===========================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: standard_normal_to_uniform

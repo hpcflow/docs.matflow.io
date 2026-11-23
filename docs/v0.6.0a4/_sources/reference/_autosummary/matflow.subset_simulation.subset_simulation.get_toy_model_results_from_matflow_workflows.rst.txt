@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.get\_toy\_model\_results\_from\_matflow\_workflows
+================================================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: get_toy_model_results_from_matflow_workflows

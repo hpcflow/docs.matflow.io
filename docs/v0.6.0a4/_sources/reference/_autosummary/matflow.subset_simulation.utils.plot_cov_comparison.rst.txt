@@ -1,0 +1,6 @@
+matflow.subset\_simulation.utils.plot\_cov\_comparison
+======================================================
+
+.. currentmodule:: matflow.subset_simulation.utils
+
+.. autofunction:: plot_cov_comparison

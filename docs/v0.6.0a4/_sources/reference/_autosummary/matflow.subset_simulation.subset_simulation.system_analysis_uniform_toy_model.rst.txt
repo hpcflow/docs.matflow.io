@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.system\_analysis\_uniform\_toy\_model
+===================================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: system_analysis_uniform_toy_model

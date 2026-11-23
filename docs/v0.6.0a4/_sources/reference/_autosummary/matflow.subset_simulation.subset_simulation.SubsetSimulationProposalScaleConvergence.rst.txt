@@ -1,0 +1,51 @@
+matflow.subset_simulation.subset_simulation.SubsetSimulationProposalScaleConvergence
+====================================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autoclass:: SubsetSimulationProposalScaleConvergence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SubsetSimulationProposalScaleConvergence.from_file
+      ~SubsetSimulationProposalScaleConvergence.plot_cov_empiricals
+      ~SubsetSimulationProposalScaleConvergence.plot_cov_means
+      ~SubsetSimulationProposalScaleConvergence.plot_pf_means
+      ~SubsetSimulationProposalScaleConvergence.run
+      ~SubsetSimulationProposalScaleConvergence.to_file
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubsetSimulationProposalScaleConvergence.cov_empiricals
+      ~SubsetSimulationProposalScaleConvergence.cov_means
+      ~SubsetSimulationProposalScaleConvergence.pf_means
+      ~SubsetSimulationProposalScaleConvergence.results
+      ~SubsetSimulationProposalScaleConvergence.seed
+      ~SubsetSimulationProposalScaleConvergence.transformation
+      ~SubsetSimulationProposalScaleConvergence.num_repeats
+      ~SubsetSimulationProposalScaleConvergence.dimension
+      ~SubsetSimulationProposalScaleConvergence.performance
+      ~SubsetSimulationProposalScaleConvergence.p_0
+      ~SubsetSimulationProposalScaleConvergence.num_samples
+      ~SubsetSimulationProposalScaleConvergence.num_levels
+      ~SubsetSimulationProposalScaleConvergence.sampling_method
+      ~SubsetSimulationProposalScaleConvergence.scales
+      ~SubsetSimulationProposalScaleConvergence.mimic_matflow
+      ~SubsetSimulationProposalScaleConvergence.sampling_method_kwargs
+   
+   
