@@ -1,0 +1,6 @@
+matflow.subset\_simulation.subset\_simulation.generate\_next\_level\_samples\_DA\_single\_inner
+===============================================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autofunction:: generate_next_level_samples_DA_single_inner

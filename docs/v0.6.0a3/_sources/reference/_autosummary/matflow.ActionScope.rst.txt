@@ -1,0 +1,40 @@
+matflow.ActionScope
+===================
+
+.. currentmodule:: matflow
+
+.. autoclass:: ActionScope
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ActionScope.any
+      ~ActionScope.from_json_like
+      ~ActionScope.input_file_generator
+      ~ActionScope.main
+      ~ActionScope.output_file_parser
+      ~ActionScope.processing
+      ~ActionScope.to_dict
+      ~ActionScope.to_json_like
+      ~ActionScope.to_string
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ActionScope.typ
+      ~ActionScope.kwargs
+   
+   
