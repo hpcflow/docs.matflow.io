@@ -1,0 +1,6 @@
+matflow.make\_and\_submit\_workflow
+===================================
+
+.. currentmodule:: matflow
+
+.. autofunction:: make_and_submit_workflow

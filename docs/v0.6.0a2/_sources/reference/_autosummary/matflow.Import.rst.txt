@@ -1,0 +1,29 @@
+matflow.Import
+==============
+
+.. currentmodule:: matflow
+
+.. autoclass:: Import
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Import.from_json_like
+      ~Import.get_import_parameter_from_type
+      ~Import.get_parameters
+      ~Import.to_dict
+      ~Import.to_json_like
+   
+   
+
+   
+   
+   
