@@ -1,0 +1,6 @@
+matflow.subset\_simulation.utils.plot
+=====================================
+
+.. currentmodule:: matflow.subset_simulation.utils
+
+.. autofunction:: plot

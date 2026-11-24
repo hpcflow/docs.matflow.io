@@ -1,0 +1,32 @@
+matflow.GroupList
+=================
+
+.. currentmodule:: matflow
+
+.. autoclass:: GroupList
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~GroupList.add_object
+      ~GroupList.add_objects
+      ~GroupList.from_json_like
+      ~GroupList.get
+      ~GroupList.get_all
+      ~GroupList.list_attrs
+      ~GroupList.to_dict
+      ~GroupList.to_json_like
+   
+   
+
+   
+   
+   

@@ -1,0 +1,6 @@
+matflow.tests.test\_sample\_texture\_mtex.test\_sample\_texture\_matlab\_schema
+===============================================================================
+
+.. currentmodule:: matflow.tests.test_sample_texture_mtex
+
+.. autofunction:: test_sample_texture_matlab_schema

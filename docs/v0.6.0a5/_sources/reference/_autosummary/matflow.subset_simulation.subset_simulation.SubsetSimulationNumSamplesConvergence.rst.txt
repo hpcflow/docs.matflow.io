@@ -1,0 +1,54 @@
+matflow.subset_simulation.subset_simulation.SubsetSimulationNumSamplesConvergence
+=================================================================================
+
+.. currentmodule:: matflow.subset_simulation.subset_simulation
+
+.. autoclass:: SubsetSimulationNumSamplesConvergence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SubsetSimulationNumSamplesConvergence.from_file
+      ~SubsetSimulationNumSamplesConvergence.plot_convergence
+      ~SubsetSimulationNumSamplesConvergence.plot_cov_comparison
+      ~SubsetSimulationNumSamplesConvergence.plot_cov_empiricals
+      ~SubsetSimulationNumSamplesConvergence.plot_cov_means
+      ~SubsetSimulationNumSamplesConvergence.plot_pf_distribution
+      ~SubsetSimulationNumSamplesConvergence.plot_pf_means
+      ~SubsetSimulationNumSamplesConvergence.run
+      ~SubsetSimulationNumSamplesConvergence.to_file
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubsetSimulationNumSamplesConvergence.cov_empiricals
+      ~SubsetSimulationNumSamplesConvergence.cov_means
+      ~SubsetSimulationNumSamplesConvergence.cov_std
+      ~SubsetSimulationNumSamplesConvergence.pf_means
+      ~SubsetSimulationNumSamplesConvergence.results
+      ~SubsetSimulationNumSamplesConvergence.seed
+      ~SubsetSimulationNumSamplesConvergence.transformation
+      ~SubsetSimulationNumSamplesConvergence.num_repeats
+      ~SubsetSimulationNumSamplesConvergence.dimension
+      ~SubsetSimulationNumSamplesConvergence.performance
+      ~SubsetSimulationNumSamplesConvergence.p_0
+      ~SubsetSimulationNumSamplesConvergence.num_samples
+      ~SubsetSimulationNumSamplesConvergence.num_levels
+      ~SubsetSimulationNumSamplesConvergence.sampling_method
+      ~SubsetSimulationNumSamplesConvergence.mimic_matflow
+      ~SubsetSimulationNumSamplesConvergence.sampling_method_kwargs
+   
+   

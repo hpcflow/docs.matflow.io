@@ -1,0 +1,6 @@
+matflow.subset\_simulation.utils.plot\_proposal\_scale\_study\_data\_DAMASK\_CP
+===============================================================================
+
+.. currentmodule:: matflow.subset_simulation.utils
+
+.. autofunction:: plot_proposal_scale_study_data_DAMASK_CP

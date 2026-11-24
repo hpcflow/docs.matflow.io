@@ -1,0 +1,6 @@
+matflow.run\_tests
+==================
+
+.. currentmodule:: matflow
+
+.. autofunction:: run_tests
